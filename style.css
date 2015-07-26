@@ -1,0 +1,254 @@
+/*ヘッダー*/
+#header {
+	margin: 40px auto 90px;
+}
+#header h1 {
+	font-size: 200%;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/*book block*/
+.bb-wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 850px;
+	height: 480px;
+	position: relative;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #173c4a;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.bb-wrapper::before,
+.bb-wrapper::after {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	width: 10px;
+	height: 100%;
+	background: -webkit-linear-gradient(left, #dddddd 33.33%, #f0f0f0 33.33%, #f0f0f0 66.66%, white 66.66%);
+	background: linear-gradient(to right, #dddddd 33.33%, #f0f0f0 33.33%, #f0f0f0 66.66%, white 66.66%);
+	background-size: 3px 100%;
+	content: '';
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-wrapper::before { left: 0 }
+
+.bb-wrapper::after { right: 0 }
+
+.bb-wrapper .bb-bookblock {
+	width: 100%;
+	height: 100%;
+	-webkit-perspective: 2000px;
+	perspective: 2000px;
+}
+
+.bb-side {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 50%;
+	height: 100%;
+}
+
+.bb-side::before {
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	width: 80px;
+	height: 100%;
+	box-shadow: inset 30px 0 40px -20px rgba(0, 0, 0, 0.1);
+	content: '';
+}
+
+.bb-side:first-child::before {
+	right: 0;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05), inset -30px 0 40px -20px rgba(0, 0, 0, 0.15);
+}
+
+/*bb nav*/
+.head-nav li {
+	position: absolute;
+	left:-9%;
+	z-index: 10;
+	height: 30px; 
+	width: 110px;
+	margin-bottom: 12px;
+	background-color: rgb(218, 171, 255);
+	padding-left: 15px;
+}
+
+.head-nav li a{
+	text-decoration: none;
+}
+.head-nav li.active {
+	z-index: 2000;
+}
+
+.head-nav li#concept{
+	top:10%;
+	background-color: red;
+}
+
+.head-nav li#menu{
+	top:20%;
+	background-color: blue;
+}
+
+.head-nav li#policy{
+	top:30%;
+	background-color: pink;
+}
+
+.head-nav li#info{
+	top:40%;
+	background-color: yellow;
+}
+
+.head-nav li#other{
+	top:50%;
+	background-color: green;
+}
+
+.bb-wrapper > .page-nav a {
+	position: absolute;
+	z-index: 1000;
+	font-size: 0;
+	opacity: 0.4;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: rgba(221, 221, 221, 0.7);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bb-wrapper > .page-nav a:hover { opacity: 1 }
+
+#bb-nav-prev,
+#bb-nav-next {
+	bottom: 10%;
+	left: -8%;
+}
+
+#bb-nav-next {
+	right: -8%;
+	left: auto;
+}
+
+.bb-wrapper > .page-nav a::before,
+.bb-wrapper > .page-nav a::after {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	width: 1px;
+	height: 50%;
+	background: #333;
+	content: '';
+}
+
+.bb-wrapper > .page-nav a::after {
+	top: 50%;
+}
+
+
+
+.page-layout-1 h3,
+.page-layout-1 p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	max-width: 260px;
+	width: 100%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+}
+
+.page-layout-1 h3 {
+	text-align: center;
+	font-weight: 400;
+	font-size: 3em;
+	font-family: "Sacramento", serif;
+}
+
+.page-layout-1 h3 span {
+	display: block;
+	padding: 5px 0 15px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-family: "Six Caps", sans-serif;
+	line-height: 1;
+}
+
+.page-layout-1 p {
+	padding: 0 10px;
+	text-align: right;
+	font-style: italic;
+	font-family: "Cardo", serif;
+}
+
+
+.page-layout-2 {
+	background: -webkit-linear-gradient(left, #64696a 50%, white 50%);
+	background: linear-gradient(to right, #64696a 50%, white 50%);
+}
+
+.page-layout-2:first-child {
+	background: -webkit-linear-gradient(left, white 50%, #64696a 50%);
+	background: linear-gradient(to right, white 50%, #64696a 50%);
+}
+
+.page-layout-2 div {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	padding: 0 10% 10%;
+	width: 50%;
+}
+
+.page-layout-2 div:first-child { left: 0 }
+
+.page-layout-2:first-child div:last-child,
+.page-layout-2:last-child div:first-child { color: #fff }
+
+.page-layout-2 h3 {
+	margin: 0;
+	font-size: 6em;
+	font-family: "Cardo", serif;
+}
+
+.page-layout-3:last-child {
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background: url(../img/portrait.jpg) no-repeat top left;
+	background-size: cover;
+}
+
+.page-layout-3 div { padding: 10% }
+
+.page-layout-3 h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 3em;
+	font-family: "Six Caps", sans-serif;
+}
+
+.page-layout-3 p {
+	margin: 0;
+	text-indent: 5px;
+	font-style: italic;
+	font-family: "Cardo", serif;
+}
