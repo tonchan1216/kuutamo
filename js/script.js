@@ -5,8 +5,9 @@ var Page = (function() {
 		$navNext : $( '#bb-nav-next' ),
 		$navPrev : $( '#bb-nav-prev' ),
 		$navFirst : $( '#bb-nav-first' ),
-		$navLast : $( '#bb-nav-last' )
+		$navmark : $( '#head-nav' ),
 	},
+	pages = {"concept":1,"menu":2,"info":6,"access":7,"news":8},
 	init = function() {
 		config.$bookBlock.bookblock( {
 			speed : 800,
@@ -18,6 +19,7 @@ var Page = (function() {
 	initEvents = function() {
 
 		var $slides = config.$bookBlock.children();
+		var $nav = config.$navmark.find( 'li' );
 
 					// add navigation events
 					config.$navNext.on( 'click touchstart', function() {
@@ -30,14 +32,11 @@ var Page = (function() {
 						return false;
 					} );
 
-					config.$navFirst.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'first' );
-						return false;
-					} );
-
-					config.$navLast.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'last' );
-						return false;
+					$.each(pages, function(i,val) {
+						$(".nav-"+i).children('a').on( 'click touchstart', function( event ) {
+							config.$bookBlock.bookblock( 'jump', val);
+							return false;
+						} );
 					} );
 					
 					// add swipe events

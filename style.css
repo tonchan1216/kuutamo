@@ -1,9 +1,13 @@
+html {
+	background: url(images/bg.jpg) repeat;
+}
+
 /*ヘッダー*/
 #header {
-	margin: 40px auto 90px;
+	margin: 40px auto 70px;
 }
 #header h1 {
-	font-size: 200%;
+	font-size: 250%;
 	font-weight: bold;
 	text-align: center;
 }
@@ -73,61 +77,77 @@
 	box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05), inset -30px 0 40px -20px rgba(0, 0, 0, 0.15);
 }
 
-/*bb nav*/
-.head-nav li {
+/*bb nav bookmark*/
+#head-nav li {
 	position: absolute;
-	left:-9%;
+	left:-11%;
 	z-index: 10;
 	height: 30px; 
-	width: 110px;
+	width: 130px;
 	margin-bottom: 12px;
-	background-color: rgb(218, 171, 255);
 	padding-left: 15px;
 }
 
-.head-nav li a{
+.bb-side .nav {
+	content: "";
+	position: absolute;
+	left:0%;
+	height: 30px; 
+	width: 20px;
+	margin-bottom: 12px;
+	padding-left: 15px;
+}
+
+#head-nav li a{
+	font-size: 120%;
+	font-weight: bold;
 	text-decoration: none;
 }
-.head-nav li.active {
-	z-index: 2000;
-}
 
-.head-nav li#concept{
+.nav-concept{
 	top:10%;
-	background-color: red;
+	background-color: #ffa07a;
 }
 
-.head-nav li#menu{
+.nav-menu{
 	top:20%;
-	background-color: blue;
+	background-color: #b8b8ff;
 }
 
-.head-nav li#policy{
+.nav-info{
 	top:30%;
-	background-color: pink;
+	background-color: #c0ffca;
 }
 
-.head-nav li#info{
+.nav-access{
 	top:40%;
-	background-color: yellow;
+	background-color: #ffff8e;
 }
 
-.head-nav li#other{
+.nav-news{
 	top:50%;
-	background-color: green;
+	background-color: #6ce9ff;
 }
 
+/*page navigation*/
 .bb-wrapper > .page-nav a {
 	position: absolute;
+	display: inline-block;
 	z-index: 1000;
-	font-size: 0;
 	opacity: 0.4;
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
 	border-radius: 50%;
 	background: rgba(221, 221, 221, 0.7);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+.bb-wrapper > .page-nav i {
+	margin: 15% 0;
 }
 
 .bb-wrapper > .page-nav a:hover { opacity: 1 }
@@ -143,27 +163,11 @@
 	left: auto;
 }
 
-.bb-wrapper > .page-nav a::before,
-.bb-wrapper > .page-nav a::after {
-	position: absolute;
-	top: 0;
-	left: 25%;
-	width: 1px;
-	height: 50%;
-	background: #333;
-	content: '';
-}
-
-.bb-wrapper > .page-nav a::after {
-	top: 50%;
-}
-
-
-
+/*page-layout*/
 .page-layout-1 h3,
 .page-layout-1 p {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	margin: 0;
 	max-width: 260px;
@@ -184,7 +188,7 @@
 	padding: 5px 0 15px;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-size: 1em;
 	font-family: "Six Caps", sans-serif;
 	line-height: 1;
@@ -232,7 +236,7 @@
 	right: 0;
 	width: 50%;
 	height: 100%;
-	background: url(../img/portrait.jpg) no-repeat top left;
+	background: url(images/portrait.jpg) no-repeat top left;
 	background-size: cover;
 }
 
