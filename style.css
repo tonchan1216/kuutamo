@@ -6,7 +6,7 @@ html {
 #header {
 	width: 300px;
 	height: 50px;
-	margin: 30px 0 80px 100px;
+	margin: 30px 0 90px 100px;
 	background-color: #E4E4E4;
 }
 #header h1 {
@@ -86,8 +86,7 @@ html {
 	top:-18%;
 	z-index: 10;
 	width: 23px; 
-	height: 20px;
-	padding-top: 65px;
+	height: 120px;
 	padding-left: 4px;
 }
 
@@ -95,12 +94,12 @@ html {
 	display: inline-block;
 	font-weight: bold;
 	text-decoration: none;
-	transform-origin:left top;
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+	transform-origin:left bottom;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .bb-side .nav {
