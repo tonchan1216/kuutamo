@@ -85,9 +85,20 @@ html {
 	position: absolute;
 	top:-18%;
 	z-index: 10;
-	width: 23px; 
+	width: 30px; 
 	height: 120px;
 	padding-left: 4px;
+}
+
+#head-nav li:before {
+	content: "";
+	position: absolute;
+	top: -20%;
+	width: 24px;
+	height: 36px;
+	background: url(images/bookmark.png) no-repeat;
+	background-position: top center;
+	background-size: contain;
 }
 
 #head-nav li a{
@@ -107,7 +118,7 @@ html {
 	position: absolute;
 	top:-25%;
 	z-index: 10;
-	width: 27px; 
+	width: 34px; 
 	height: 130px;
 }
 
