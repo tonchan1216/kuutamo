@@ -6,7 +6,7 @@ html {
 #header {
 	width: 300px;
 	height: 50px;
-	margin: 40px 0 100px 100px;
+	margin: 30px 0 80px 100px;
 	background-color: #E4E4E4;
 }
 #header h1 {
@@ -83,11 +83,11 @@ html {
 /*bb nav bookmark*/
 #head-nav li {
 	position: absolute;
-	top:-20%;
+	top:-18%;
 	z-index: 10;
 	width: 23px; 
-	height: 130px;
-	padding-top: 70px;
+	height: 20px;
+	padding-top: 65px;
 	padding-left: 4px;
 }
 
@@ -108,34 +108,53 @@ html {
 	position: absolute;
 	top:-25%;
 	z-index: 10;
-	width: 20px; 
+	width: 27px; 
 	height: 130px;
-	padding-left: 2px;
 }
 
 .nav-concept{
-	right:30px;
+	right:250px;
 	background-color: #ffa07a;
 }
 
+.bb-side .nav-concept{
+	right:240px;
+}
+
 .nav-menu{
-	right:24%;
+	right:200px;
 	background-color: #b8b8ff;
 }
 
+.bb-side .nav-menu{
+	right:190px;
+}
+
 .nav-info{
-	right:18%;
+	right: 150px;
 	background-color: #c0ffca;
 }
 
+.bb-side .nav-info{
+	right:140px;
+}
+
 .nav-access{
-	right:12%;
+	right:100px;
 	background-color: #ffff8e;
 }
 
+.bb-side .nav-access{
+	right:90px;
+}
+
 .nav-news{
-	right:6%;
+	right:50px;
 	background-color: #6ce9ff;
+}
+
+.bb-side .nav-news{
+	right:40px;
 }
 
 /*page navigation*/
