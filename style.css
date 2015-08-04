@@ -172,6 +172,8 @@ html {
 .bb-wrapper > .page-nav a {
 	position: absolute;
 	display: inline-block;
+	text-decoration: none;
+	line-height: 1.5;
 	z-index: 1000;
 	opacity: 0.4;
 	width: 50px;
