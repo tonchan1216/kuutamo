@@ -7,7 +7,7 @@ html {
 #header {
 	width: 300px;
 	height: 50px;
-	margin: 30px 0 90px 100px;
+	margin: 30px 0 100px 100px;
 	background-color: #E4E4E4;
 }
 #header h1 {
@@ -296,4 +296,46 @@ html {
 	text-indent: 5px;
 	font-style: italic;
 	font-family: "Cardo", serif;
+}
+
+@media screen and (max-width:960px){
+	.bb-wrapper {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		right: 65%;
+		border-width: 5px 10px 5px 0px;
+		margin: 0 auto;
+		padding-left: 0px;
+	}
+
+	.bb-item {
+		width: 50%;
+		left: 50%;
+	}
+
+	.bb-before {
+		content: "";
+		width: 50%;
+		height: 100%;
+		right: 50%;
+		background-color: #fff;
+	}
+
+	.bb-item::before, .bb-before::before {
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		width: 80px;
+		height: 100%;
+		box-shadow: inset 30px 0 40px -20px rgba(0, 0, 0, 0.1);
+		content: '';
+	}
+
+	.bb-before::before {
+		right: 50%;
+		box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05), inset -30px 0 40px -20px rgba(0, 0, 0, 0.15);
+	}
+
 }
