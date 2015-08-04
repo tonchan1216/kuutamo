@@ -1,7 +1,7 @@
 $(function(){
 	//960px以下では半ページ分を1ページと換算
 	var w = $(window).width();
-	if (w <= 960) {
+	if (w <= 768) {
 		$('.bb-side:first-child').unwrap();
 		$('.bb-side').addClass('bb-item');
 		$('.bb-side').removeClass('bb-side');

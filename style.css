@@ -300,11 +300,26 @@ html {
 
 @media screen and (max-width:960px){
 	.bb-wrapper {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		position: relative;
-		right: 65%;
+		width: 100%;
+		margin: 0 5px;
+	}
+
+	#bb-nav-next {
+		bottom: 1%;
+		right: 2%;
+	}
+
+	#bb-nav-prev {
+		bottom: 1%;
+		left: 2%;
+	}
+}
+
+@media screen and (max-width:768px){
+	.bb-wrapper {
+		width: 900px;
+		position: absolute;
+		right: 16%;
 		border-width: 5px 10px 5px 0px;
 		margin: 0 auto;
 		padding-left: 0px;
@@ -337,5 +352,15 @@ html {
 		right: 50%;
 		box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.05), inset -30px 0 40px -20px rgba(0, 0, 0, 0.15);
 	}
-
+}
+@media screen and (max-width:640px){
+	.bb-wrapper {
+		width: 800px;
+		right: 8%;
+	}
+}
+@media screen and (max-width:480px){
+	.bb-wrapper {
+		right: -2%;
+	}
 }
