@@ -3,6 +3,10 @@ html {
 	background:url(images/zarazara.jpg) repeat;
 }
 
+body {
+	background: none;
+}
+
 /*ヘッダー*/
 #header {
 	width: 300px;
