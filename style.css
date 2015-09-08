@@ -219,13 +219,15 @@ body {
 	left: auto;
 }
 
+/*///////////*/
 /*page-layout*/
+/*///////////*/
 .page-layout-1 > div{
 	position: absolute;
 	top: 30%;
 	left: 50%;
 	margin: 0;
-	max-width: 260px;
+	max-width: 300px;
 	width: 100%;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
@@ -238,20 +240,20 @@ body {
 	font-family: "Sacramento", serif;
 }
 
-.page-layout-1 > div h3 span {
+/*.page-layout-1 > div h3 span {
 	display: block;
 	padding: 5px 0 15px;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 	font-size: 1em;
 	font-family: "Six Caps", sans-serif;
 	line-height: 1;
-}
+}*/
 
 .page-layout-1 > div  p {
 	padding: 0 10px;
-	text-align: right;
+	/*text-align: right;*/
 	font-style: italic;
 	font-family: "Cardo", serif;
 }
