@@ -1,23 +1,49 @@
+* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-overflow-scrolling: touch;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: none;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+		text-justify: inter-ideograph;
+		-webkit-font-smoothing: antialiased;
+}
+
+img {
+	zoom: 1;
+	*zoom: 1;
+	zoom: 1;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
 html {
 	height: 100%;
 	background:url(images/zarazara.jpg) repeat;
 }
 
-body {
-	background: none;
-}
-
 /*ヘッダー*/
 #header {
-	width: 300px;
+	width: 280px;
 	height: 50px;
-	margin: 30px 0 100px 100px;
+	margin: 30px 0 50px 100px;
 	background-color: #E4E4E4;
 }
-#header h1 {
-	font-size: 250%;
-	font-weight: bold;
-	text-align: center;
+
+#header .logo {
+	width: 100%;
+	height: auto;
 }
 
 
@@ -32,7 +58,7 @@ body {
 	border-width: 5px 10px;
 	border-style: solid;
 	border-color: #C79165;
-	margin: 0 auto;
+	margin: 0 auto 15px;
 	padding: 0 10px;
 }
 
@@ -88,11 +114,19 @@ body {
 /*bb nav bookmark*/
 #head-nav li {
 	position: absolute;
-	top:-18%;
+	top:-8%;
 	z-index: 10;
 	width: 30px; 
 	height: 120px;
 	padding-left: 4px;
+	-moz-transition: top 0.1s ease;
+	-webkit-transition: top 0.1s ease;
+	-o-transition: top 0.1s ease;
+	-ms-transition: top 0.1s ease;
+}
+
+#head-nav li.active, #head-nav li:hover {
+	top: -18%;
 }
 
 #head-nav li:before {
@@ -108,7 +142,6 @@ body {
 
 #head-nav li a{
 	display: inline-block;
-	font-weight: bold;
 	text-decoration: none;
 	transform-origin:left bottom;
 	-webkit-transform: rotate(90deg);
@@ -116,6 +149,11 @@ body {
 	-ms-transform: rotate(90deg);
 	-o-transform: rotate(90deg);
 	transform: rotate(90deg);
+}
+
+#head-nav li a span {
+	font-weight: bold;
+	font-size: 120%;
 }
 
 .bb-side .nav {
@@ -208,40 +246,41 @@ body {
 	left: auto;
 }
 
+/*###########*/
 /*page-layout*/
-.page-layout-1 h3,
-.page-layout-1 p {
+/*###########*/
+.page-layout-1 > div{
 	position: absolute;
 	top: 30%;
 	left: 50%;
 	margin: 0;
-	max-width: 260px;
+	max-width: 300px;
 	width: 100%;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
 }
 
-.page-layout-1 h3 {
+.page-layout-1 > div h3 {
 	text-align: center;
 	font-weight: 400;
-	font-size: 3em;
+	font-size: 1.5em;
 	font-family: "Sacramento", serif;
 }
 
-.page-layout-1 h3 span {
+/*.page-layout-1 > div h3 span {
 	display: block;
 	padding: 5px 0 15px;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 	font-size: 1em;
 	font-family: "Six Caps", sans-serif;
 	line-height: 1;
-}
+}*/
 
-.page-layout-1 p {
+.page-layout-1 > div  p {
 	padding: 0 10px;
-	text-align: right;
+	/*text-align: right;*/
 	font-style: italic;
 	font-family: "Cardo", serif;
 }
@@ -302,6 +341,10 @@ body {
 	font-family: "Cardo", serif;
 }
 
+
+/*###################*/
+/*レスポンシブデザイン*/
+/*###################*/
 @media screen and (max-width:960px){
 	.bb-wrapper {
 		width: 100%;
