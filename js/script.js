@@ -46,8 +46,6 @@ var Page = (function() {
 
 					$.each(pages, function(i,val) {
 						$(".nav-"+i).children('a').on( 'click touchstart', function( event ) {
-							$(this).parent().siblings().removeClass("active");
-							$(this).parent().addClass("active");
 							config.$bookBlock.bookblock( 'jump', val);
 							return false;
 						} );
