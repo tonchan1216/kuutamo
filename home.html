@@ -15,7 +15,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- custom style -->
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="blog.css" rel="stylesheet" type="text/css" />
 	<!--[if lt IE 9]>
   <script src="js/html5.js" type="text/javascript"></script>
   <![endif]-->
@@ -27,20 +27,53 @@
 <body>
 	<div class="container">
 		<header id="header">
-			<h1>kuutamo</h1>
+			<img class="logo" src="images/kuutamo_logo1.jpg" alt="logo">
 		</header><!-- /header -->
 
 		<div id="main" class="row">
-			<div class="col-sm-3">
-				<div id="sidebar"></div>
+			<h1>タイトル</h1>
+
+			<div class="col-sm-2">
+				<div id="sidebar-left">
+					<div id="category">
+						<h3>カテゴリー</h3>
+						<ul>
+							<li><a href="" title="">A</a></li>
+							<li><a href="" title="">B</a></li>
+							<li><a href="" title="">C</a></li>
+						</ul>
+					</div>
+
+					<div id="">
+						<h3>最新の投稿</h3>
+						<ul>
+							<li><a href="" title="">A</a></li>
+							<li><a href="" title="">B</a></li>
+							<li><a href="" title="">C</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 
-			<div class="col-sm-6">
-				<div id="contents"></div>
+			<div class="col-sm-7">
+				<div id="contents">
+					<h2>ブログタイトル</h2>
+					<p>2015/1/1</p>
+					<article>
+						テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+					</article>
+				</div>
 			</div>
 
 			<div class="col-sm-3">
-				
+				<div class="sidebar-right">
+					<div class="calender">
+						<h3>月間カレンダー</h3>
+					</div>
+					<div class="facebook">
+						<h3>Facebook</h3>
+					</div>
+				</div>
 			</div>
 			
 		</div>
@@ -53,8 +86,5 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/script.js"></script>
-	<script>
-		Page.init();
-	</script>
 </body>
 </html>
