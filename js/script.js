@@ -1,13 +1,13 @@
 $(function(){
 	//960px以下では半ページ分を1ページと換算
 	var w = $(window).width();
-	if (w <= 768) {
-		$('.bb-side:first-child').unwrap();
-		$('.bb-side').addClass('bb-item');
-		$('.bb-side').removeClass('bb-side');
-		$('.bb-item:first').before('<div class="bb-before"></div>')
-		Page.init();
-	}
+	// if (w <= 768) {
+	// 	$('.bb-side:first-child').unwrap();
+	// 	$('.bb-side').addClass('bb-item');
+	// 	$('.bb-side').removeClass('bb-side');
+	// 	$('.bb-item:first').before('<div class="bb-before"></div>')
+	// 	Page.init();
+	// }
 });
 
 var Page = (function() {
@@ -19,73 +19,103 @@ var Page = (function() {
 		$navFirst : $( '#bb-nav-first' ),
 		$navmark : $( '#head-nav' ),
 	},
-	pages = {"concept":1,"menu":2,"info":6,"access":7,"news":8},
-	init = function() {
+	current = 0,
+	pages = {1:"concept",2:"menu",6:"info",7:"access",8:"news"};
+	function init() {
 		config.$bookBlock.bookblock( {
 			speed : 800,
 			shadowSides : 0.8,
-			shadowFlip : 0.7
+			shadowFlip : 0.7,
+			onEndFlip : function(old, page, isLimit) {
+				current = page;
+				updateNavigation( isLimit );
+				updateBookmark(page+1);
+				return false; 
+			},
 		} );
 		initEvents();
-	},
-	initEvents = function() {
+		config.$navPrev.hide();
+	}
+
+	function initEvents() {
 
 		var $slides = config.$bookBlock.children();
 		var $nav = config.$navmark.find( 'li' );
 
-					// add navigation events
-					config.$navNext.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'next' );
-						return false;
-					} );
+		// add navigation events
+		config.$navNext.on( 'click touchstart', function() {
+			config.$bookBlock.bookblock( 'next' );
+			return false;
+		} );
 
-					config.$navPrev.on( 'click touchstart', function() {
-						config.$bookBlock.bookblock( 'prev' );
-						return false;
-					} );
+		config.$navPrev.on( 'click touchstart', function() {
+			config.$bookBlock.bookblock( 'prev' );
+			return false;
+		} );
 
-					$.each(pages, function(i,val) {
-						$(".nav-"+i).children('a').on( 'click touchstart', function( event ) {
-							$(this).parent().siblings().removeClass("active");
-							$(this).parent().addClass("active");
-							config.$bookBlock.bookblock( 'jump', val);
-							return false;
-						} );
-					} );
-					
-					// add swipe events
-					$slides.on( {
-						'swipeleft' : function( event ) {
-							config.$bookBlock.bookblock( 'next' );
-							return false;
-						},
-						'swiperight' : function( event ) {
-							config.$bookBlock.bookblock( 'prev' );
-							return false;
-						}
-					} );
+		$.each(pages, function(i,val) {
+			$(".nav-"+val).children('a').on( 'click touchstart', function( event ) {
 
-					// add keyboard events
-					$( document ).keydown( function(e) {
-						var keyCode = e.keyCode || e.which,
-						arrow = {
-							left : 37,
-							up : 38,
-							right : 39,
-							down : 40
-						};
+				config.$bookBlock.bookblock('jump', i);
+				return false;
+			} );
+		} );
 
-						switch (keyCode) {
-							case arrow.left:
-							config.$bookBlock.bookblock( 'prev' );
-							break;
-							case arrow.right:
-							config.$bookBlock.bookblock( 'next' );
-							break;
-						}
-					} );
-				};
+		// add swipe events
+		$slides.on( {
+			'swipeleft' : function( event ) {
+				config.$bookBlock.bookblock( 'next' );
+				return false;
+			},
+			'swiperight' : function( event ) {
+				config.$bookBlock.bookblock( 'prev' );
+				return false;
+			}
+		} );
 
-				return { init : init };
+		// add keyboard events
+		$( document ).keydown( function(e) {
+			var keyCode = e.keyCode || e.which,
+			arrow = {
+				left : 37,
+				up : 38,
+				right : 39,
+				down : 40
+			};
 
-			})();
+			switch (keyCode) {
+				case arrow.left:
+				config.$bookBlock.bookblock( 'prev' );
+				break;
+				case arrow.right:
+				config.$bookBlock.bookblock( 'next' );
+				break;
+			}
+		} );
+	}
+	function updateNavigation(isLastPage) {
+		if( current === 0 ) {
+			config.$navNext.show();
+			config.$navPrev.hide();
+		}
+		else if( isLastPage ) {
+			config.$navNext.hide();
+			config.$navPrev.show();
+		}
+		else {
+			config.$navNext.show();
+			config.$navPrev.show();
+		}
+	}
+	function updateBookmark(page) {
+		$('#head-nav').find('li').removeClass("active");
+		if (!pages[page]) {
+			$(".nav-menu").addClass("active");
+		}else{
+			$(".nav-"+pages[page]).addClass("active");
+		}
+	}
+
+	return { init : init };
+
+})();
