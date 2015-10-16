@@ -30,18 +30,43 @@ img {
 
 html {
 	height: 100%;
-	background:url(images/zarazara.jpg) repeat;
+	background:url(../images/bg.jpg) repeat;
 }
 
 /*ヘッダー*/
 #header {
-	width: 280px;
-	height: 50px;
-	margin: 30px 0 70px 100px;
-	background-color: #E4E4E4;
+	width: 300px;
+	height: 60px;
+	margin: 30px 0 70px 20px;
 }
 
 #header .logo {
 	width: 100%;
 	height: auto;
+}
+
+/*メイン*/
+#main {
+	min-height: 1000px;
+}
+
+#main #subtitle {
+	background: #f1f1f1;
+	box-shadow: inset 0px 0px 10px 0px rgba(11, 4, 7, 0.14);
+	margin: 1.5rem 0 2rem;
+	padding: 3rem;
+}
+
+/*サイドバー*/
+#main #sidebar-left,#main #sidebar-right {
+	background: #f4f1e9;
+	color: #7a706a;
+	padding: 0 0.5rem 1.5rem;
+}
+
+/*フッター*/
+#footer {
+	width: 100%;
+	margin:20px auto;
+	border-top: 1px solid #692020;
 }
