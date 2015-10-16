@@ -34,10 +34,11 @@ html {
 }
 
 /*ヘッダー*/
-#header {
-	width: 280px;
-	height: 50px;
-	margin: 30px 0 70px 100px;
+#header h1{
+	width: 300px;
+	height: 60px;
+	margin: 30px 0 60px 100px;
+	overflow: hidden;
 }
 
 #header .logo {
@@ -45,6 +46,15 @@ html {
 	height: auto;
 }
 
+#header nav {
+	float: right;
+	margin-right: 60%;
+	margin-top: -7%;
+}
+
+#header nav li {
+	display: inline;
+}
 
 /*book block*/
 .bb-wrapper {
@@ -312,32 +322,6 @@ html {
 .page-layout-2 h3 {
 	margin: 0;
 	font-size: 6em;
-	font-family: "Cardo", serif;
-}
-
-.page-layout-3:last-child {
-	position: absolute;
-	right: 0;
-	width: 50%;
-	height: 100%;
-	background: url(images/portrait.jpg) no-repeat top left;
-	background-size: cover;
-}
-
-.page-layout-3 div { padding: 10% }
-
-.page-layout-3 h3 {
-	margin: 0;
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: 3em;
-	font-family: "Six Caps", sans-serif;
-}
-
-.page-layout-3 p {
-	margin: 0;
-	text-indent: 5px;
-	font-style: italic;
 	font-family: "Cardo", serif;
 }
 
