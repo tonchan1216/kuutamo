@@ -43,6 +43,10 @@ html {
 }
 
 /*ヘッダー*/
+#header {
+	padding-top: 20px;
+}
+
 #header h1{
 	width: 300px;
 	height: 60px;

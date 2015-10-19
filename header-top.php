@@ -30,12 +30,12 @@
 	<div class="container">
 		<header id="header">
 			<h1>
-				<a href="index.html" title=""><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
+				<a href="<?php echo home_url();?>" title=""><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
 			</h1>
 
 			<nav>
 				<ul>
-					<li><a href="home.html" title="">BLOG</a></li>
+					<li><a href="<?php echo home_url('/blog/');?>" title="ブログトップ">BLOG</a></li>
 					<li><a href="home.html" title="">Facebook</a></li>
 				</ul>
 			</nav>
