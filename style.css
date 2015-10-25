@@ -303,8 +303,8 @@ html {
 .page-layout-1 > div p {
 	padding: 0 10px;
 	font-style: italic;
-	font-family: "Cardo", serif;
-}
+/*	font-family: "Cardo", serif;
+*/}
 
 .page-layout-1 > div img {
 	display: block;
