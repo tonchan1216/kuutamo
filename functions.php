@@ -12,3 +12,20 @@ function add_googleanalytics() { ?>
 
 </script>
 <?php }
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'book_contents',
+    array(
+      'labels' => array(
+        'name' => __( 'Books' ),
+        'singular_name' => __( 'Book' )
+      ),
+      'public' => true,
+      'exclude_from_search' => true,
+      'show_in_nav_menus' => false,
+      'menu_position' => 10,
+      'has_archive' => false,
+    )
+  );
+}

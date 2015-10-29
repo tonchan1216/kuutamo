@@ -46,7 +46,7 @@
 				<div>
 					<h2 class="h2_jp">今月のおすすめ</h2>
 					<p>
-						<?php query_posts('pagename=top/menu/monthly'); ?>
+						<?php query_posts('post_type=book_contents&name=monthly'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 						the_content();
 						endwhile; endif;
@@ -62,7 +62,7 @@
 				<div>
 					<h2>Lunch</h2>
 					<dl>
-						<?php query_posts('pagename=top/menu/today'); ?>
+						<?php query_posts('post_type=book_contents&name=today'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
 						<dt>ほんじつのデリ</dt>
@@ -168,7 +168,7 @@
 				<div>
 					<h2>Gallary</h2>
 					<p>
-						<?php query_posts('pagename=top/gallary'); ?>
+						<?php query_posts('post_type=book_contents&name=gallary'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 						the_content();
 						endwhile; endif;
@@ -209,7 +209,7 @@
 							<?php query_posts('category_name=infomation,event,news'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 								<li>
-									<?php the_time('Y/m/d');?>
+									<?php the_time('Y.m.d');?>
 									<a href="<?php echo the_permalink();?>"><? the_title();?></a>
 								</li>
 							<? endwhile; endif; wp_reset_query();?>
