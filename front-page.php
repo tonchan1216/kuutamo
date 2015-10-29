@@ -62,15 +62,15 @@
 				<div>
 					<h2>Lunch</h2>
 					<dl>
+						<?php query_posts('pagename=top/menu/today'); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+
 						<dt>ほんじつのデリ</dt>
-						<dd>お味噌汁（山口県産合わせみそ）</dd>
-						<dd>お味噌汁（山口県産合わせみそ）</dd>
-						<dd>お味噌汁（山口県産合わせみそ）</dd>
-						<dd>お味噌汁（山口県産合わせみそ）</dd>
-						<dd>お味噌汁（山口県産合わせみそ）</dd>
+						<?php the_field("deli", $post->ID); ?>
 
 						<dt>ほんじつのプレート</dt>
-						<dd>サラダ</dd>
+						<?php the_field("plate", $post->ID); ?>
+						<?php	endwhile; endif; wp_reset_query();?>
 					</dl>
 				</div>
 			</div>
