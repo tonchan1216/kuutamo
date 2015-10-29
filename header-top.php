@@ -6,14 +6,13 @@
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<title>kuutamo</title>
-	<meta content="" name="description">
-	<meta content="" name="keywords">
 	<meta content="Tohn F" name="author">
 	<link href="<?php echo get_stylesheet_directory_uri();?>/favicon.ico" rel="shortcut icon" />
 	<link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" rel="stylesheet" type="text/css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="<?php echo get_stylesheet_directory_uri();?>/css/bookblock.css" rel="stylesheet" type="text/css" />
 	<!-- custom style -->
+	<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
 	<link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet" type="text/css" />
 	<script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
 
@@ -35,8 +34,8 @@
 
 			<nav>
 				<ul>
-					<li><a href="<?php echo home_url('/blog/');?>" title="ブログトップ">BLOG</a></li>
-					<li><a href="home.html" title="">Facebook</a></li>
+					<li><a href="<?php echo home_url('/blog/');?>" title="ブログトップ">Blog</a></li>
+					<li><a href="https://www.facebook.com/kuutamogohan" title="">Facebook</a></li>
 				</ul>
 			</nav>
 		</header><!-- /header -->

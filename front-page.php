@@ -1,5 +1,4 @@
 <?php get_header("top"); ?>
-
 <!-- div bb-wrapper -->
 <div class="bb-wrapper">
 	<div class="bb-bookblock" id="bb-bookblock">
@@ -31,19 +30,21 @@
 			<div class="bb-side page-layout-1">
 				<div>
 					<h2>Menu</h2>
-					<?php query_posts('pagename=top/menu'); ?>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-					the_content();
-					endwhile; endif;
-					wp_reset_query();
-					?>
+					<p>
+						<?php query_posts('pagename=top/menu'); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+						the_content();
+						endwhile; endif;
+						wp_reset_query();
+						?>
+					</p>
 				</div>
 			</div>
 
 			<div class="bb-side page-layout-1">
 				<p class="nav nav-menu"></p>
 				<div>
-					<h2>今月のおすすめ</h2>
+					<h2 class="h2_jp">今月のおすすめ</h2>
 					<p>
 						<?php query_posts('pagename=top/menu/monthly'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -57,44 +58,67 @@
 		</div>
 
 		<div class="bb-item">
-			<div class="bb-side page-layout-1">
+			<div class="bb-side page-layout-2">
+				<div>
+					<h2>Lunch</h2>
+					<dl>
+						<dt>ほんじつのデリ</dt>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+
+						<dt>ほんじつのプレート</dt>
+						<dd>サラダ</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="bb-side page-layout-2">
+				<div>
+					<dl>
+						<dt>Aランチ</dt>
+						<dd>ほんじつのデリの中から３品</dd>
+						<dd>kuutamo手作りパンor雑穀入りごはん</dd>
+						<dd>お味噌汁（山口県産合わせみそ）</dd>
+
+						<dt>Bランチ</dt>
+						<dd>ほんじつのプレート</dd>
+						<dd>サラダ</dd>
+
+						<dt>Set drink</dt>
+						<dd>コーヒー（HOT/ICE）</dd>
+						<dd>紅茶（HOT/ICE）</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<div class="bb-item">
+			<div class="bb-side page-layout-2">
 				<div>
 					<h2>Soft Drink</h2>
-					あたたかいもの
-					<ul>							
-						<li>コーヒー</li>
-						<li>カフェオレ</li>
-						<li>紅茶</li>
-						<li>紅茶ラテ</li>
-						<li>チャイ</li>
-						<li>ホットジンジャー</li>
-						<li>ジンジャーラテ</li>
-					</ul>
-					つめたいもの
-					<ul>
-						<li>コーヒー</li>
-						<li>ボトルコーヒー</li>
-						<li>カフェオレ</li>
-						<li>紅茶</li>
-						<li>紅茶オレ</li>
-						<li>チャイ</li>
-						<li>ティーソーダ</li>
-						<li>１００％オレンジジュース</li>
-						<li>100％りんごジュース</li>
-						<li>１００％グレープフルーツジュース</li>
-						<li>ジンジャーエール</li>
-						<li>東京牛乳</li>
-					</ul>
+					<dl>
+						<dt>コーヒー</dt>
+						<dd>名古屋の「TaoCoffee」さんより、その時々お薦めをご提供致します</dd>
+
+						<dt>紅茶</dt>
+						<dd>「沖縄ティーファクトリー」さんより、琉球紅茶を使ったオリジナルブレンド</dd>
+
+						<dt>cafevino(ボトルコーヒー)</dt>
+						<dd>「COFFEE COUNTY」さんのコーヒーをワインのようにボトルに閉じ込めた新しい味わいのコーヒー</dd>
+					</dl>
 				</div>
 			</div>
 
-			<div class="bb-side page-layout-1">
+			<div class="bb-side page-layout-2">
 				<div>
-					<h2>WINE＆BEER</h2>
-					<ul>							
-						<li>ハートランド　生ビール</li>
-						<li>グラスワイン（赤/白）　</li>
-					</ul>
+					<h2>Alcohol</h2>
+					<dl>							
+						<dt>Beer ハートランド　生ビール</dt>
+						<dt>グラスワイン（赤/白）　</dt>
+					</dl>
 				</div>
 			</div>
 		</div>
@@ -102,91 +126,24 @@
 		<div class="bb-item">
 			<div class="bb-side page-layout-2">
 				<div>
-					<h2>Aa</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
-				</div>
-
-				<div>
-					<h2>Bb</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
+					<h2>Food</h2>
+					<dl>							
+						<dt>自家製ピクルス</dt>
+						<dt>おいなりさん</dt>
+						<dd>むさしの豆腐店の肉厚のお揚げさんを使ったKuutamo特製</dd>
+						<dt>サンドイッチ</dt>
+					</dl>
 				</div>
 			</div>
 
 			<div class="bb-side page-layout-2">
 				<div>
-					<h2>Cc</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
-				</div>
-
-				<div>
-					<h2>Dd</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="bb-item">
-			<div class="bb-side page-layout-2">
-				<div>
-					<h2>Aa</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
-				</div>
-
-				<div>
-					<h2>Bb</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
-				</div>
-			</div>
-
-			<div class="bb-side page-layout-2">
-				<div>
-					<h2>Cc</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé
-					</p>
-				</div>
-
-				<div>
-					<h2>Dd</h2>
-
-					<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé
-						tootsie roll jelly beans. Sweet icing croissant dessert bear
-						claw. Brownie dessert cheesecake danish jelly pudding bear claw
-						soufflé.
-					</p>
+					<h2>Sweets</h2>
+					<dl>							
+						<dt>本日のケーキ</dt>
+						<dt>濃厚チーズプリン</dt>
+						<dt>アイスクリーム</dt>
+					</dl>
 				</div>
 			</div>
 		</div>
@@ -196,7 +153,7 @@
 				<div>
 					<h2>Infomation</h2>
 					<p>
-						<?php query_posts('pagename=top/infomation'); ?>
+						<?php query_posts('pagename=top/information'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 						the_content();
 						endwhile; endif;
@@ -209,7 +166,7 @@
 			<div class="bb-side page-layout-1">
 				<p class="nav nav-info"></p>
 				<div>
-					<h2>〜gallary〜</h2>
+					<h2>Gallary</h2>
 					<p>
 						<?php query_posts('pagename=top/gallary'); ?>
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -246,7 +203,7 @@
 		<div class="bb-item" id="page-news">
 			<div class="bb-side page-layout-1">
 				<div>
-					<h2>News</h2>
+					<h2>News & Blog</h2>
 					<p>
 						<ul>			
 							<?php query_posts('category_name=infomation,event,news'); ?>

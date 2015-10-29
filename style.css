@@ -62,12 +62,27 @@ html {
 
 #header nav {
 	float: right;
-	margin-right: 60%;
+	margin-right: 55%;
 	margin-top: -7%;
 }
 
 #header nav li {
-	display: inline;
+	display: inline-block;
+	background-color: #553830;
+	width: 90px;
+	height: 30px;
+	border-radius: 10%;
+	text-align: center;
+}
+
+#header nav li a {
+	text-decoration: none;
+	color: #E3CFB6;
+	vertical-align: middle;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	font-weight: 800;
 }
 
 /*book block*/
@@ -80,7 +95,7 @@ html {
 	position: relative;
 	border-width: 5px 10px;
 	border-style: solid;
-	border-color: #8E8E8E;
+	border-color: #553830;
 	margin: 0 auto 15px;
 	padding: 0 10px;
 }
@@ -163,7 +178,7 @@ html {
 }
 
 #head-nav li a{
-	color: #f56993;
+	color: #37190E;
 	position: absolute;
 	top: -10px;
 	display: inline-block;
@@ -194,7 +209,7 @@ html {
 
 .nav-concept{
 	right:250px;
-	background-color: #ffa07a;
+	background-color: #E3CFB6;
 }
 
 .bb-side .nav-concept{
@@ -203,7 +218,7 @@ html {
 
 .nav-menu{
 	right:200px;
-	background-color: #b8b8ff;
+	background-color: #5D9F95;
 }
 
 .bb-side .nav-menu{
@@ -212,7 +227,7 @@ html {
 
 .nav-info{
 	right: 150px;
-	background-color: #c0ffca;
+	background-color: #E3CFB6;
 }
 
 .bb-side .nav-info{
@@ -221,7 +236,7 @@ html {
 
 .nav-access{
 	right:100px;
-	background-color: #ffff8e;
+	background-color: #5D9F95;
 }
 
 .bb-side .nav-access{
@@ -230,7 +245,7 @@ html {
 
 .nav-news{
 	right:50px;
-	background-color: #6ce9ff;
+	background-color: #E3CFB6;
 }
 
 .bb-side .nav-news{
@@ -276,7 +291,7 @@ html {
 /*###########*/
 /*page-layout*/
 /*###########*/
-.page-layout-1 > div{
+.bb-side > div{
 	position: absolute;
 	top: 60px;
 	left: 15%;
@@ -285,26 +300,29 @@ html {
 	width: 100%;
 }
 
-.page-layout-1 h2, .page-layout-1 h3 {
+.bb-side h2, .bb-side h3 {
 	color: #41250c;
 	clear: both;
 	line-height: 1.3;
 	margin: 1em 0;
 }
 
-.page-layout-1 > div h2 {
+.bb-side > div h2 {
 	text-align: center;
 	margin-top: -10px;
 	font-weight: 400;
-	font-size: 1.5em;
-	font-family: "Sacramento", serif;
+	font-size: 2em;
+	font-family: 'Italianno', cursive;
 }
 
-.page-layout-1 > div p {
+.bb-side > div .h2_jp {
+	font-size: 1.4em;
+}
+
+.bb-side > div p {
 	padding: 0 10px;
 	font-style: italic;
-/*	font-family: "Cardo", serif;
-*/}
+}
 
 .page-layout-1 > div img {
 	display: block;
@@ -318,35 +336,25 @@ html {
 	width: 420px;
 }
 
-
-.page-layout-2 {
-	background: -webkit-linear-gradient(left, #64696a 50%, white 50%);
-	background: linear-gradient(to right, #64696a 50%, white 50%);
+.page-layout-2 > div dl {
+	margin-top: -18px;
 }
 
-.page-layout-2:first-child {
-	background: -webkit-linear-gradient(left, white 50%, #64696a 50%);
-	background: linear-gradient(to right, white 50%, #64696a 50%);
+.page-layout-2 > div dd {
+	margin-left: 5%;
 }
 
-.page-layout-2 div {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	padding: 0 10% 10%;
-	width: 50%;
+.page-layout-2 > div dt{
+	margin-top: 8%;
 }
 
-.page-layout-2 div:first-child { left: 0 }
-
-.page-layout-2:first-child div:last-child,
-.page-layout-2:last-child div:first-child { color: #fff }
-
-.page-layout-2 h3 {
-	margin: 0;
-	font-size: 6em;
-	font-family: "Cardo", serif;
+.page-layout-2 > div img {
+	display: block;
+	width: 200px;
+	height: 100%;
+	margin: 50px auto;
 }
+
 
 
 /*###################*/
