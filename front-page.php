@@ -206,7 +206,7 @@
 					<h2>News & Blog</h2>
 					<p>
 						<ul>			
-							<?php query_posts('category_name=infomation,event,news'); ?>
+							<?php query_posts('category_name=notice,event,news'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 								<li>
 									<?php the_time('Y.m.d');?>
