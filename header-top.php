@@ -14,6 +14,12 @@
 	<!-- custom style -->
 	<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
 	<link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet" type="text/css" />
+	<?php if(!is_mobile()):?>
+		<link href="<?php echo get_stylesheet_directory_uri();?>/css/pc.css" rel="stylesheet" type="text/css" />
+	<?php else: ?>
+		<link href="<?php echo get_stylesheet_directory_uri();?>/css/sp.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo get_stylesheet_directory_uri();?>/css/jquery.jscrollpane.custom.css" rel="stylesheet" type="text/css" />
+	<?php endif;?>
 	<script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
 
 	<!--[if lt IE 9]>
@@ -26,16 +32,3 @@
 </head>
 
 <body>
-	<div class="container">
-		<header id="header">
-			<h1>
-				<a href="<?php echo home_url();?>" title=""><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
-			</h1>
-
-			<nav>
-				<ul>
-					<li><a href="<?php echo home_url('/blog/');?>" title="ブログトップ">Blog</a></li>
-					<li><a href="https://www.facebook.com/kuutamogohan" title="">Facebook</a></li>
-				</ul>
-			</nav>
-		</header><!-- /header -->
