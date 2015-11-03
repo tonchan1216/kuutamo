@@ -248,6 +248,14 @@ a:hover {
 	text-align: justify;
 }
 
+.content dl {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 300;
+    padding: 5px 8%;
+    text-align: justify;
+}
+
 @media screen and (max-width: 800px){
 	.no-js .menu-panel {
 		display: none;

@@ -285,8 +285,9 @@
 					<li class="menu-toc-current"><a href="#item1">Conept</a></li>
 					<li><a href="#item2">Menu</a></li>
 					<li><a href="#item3">Info</a></li>
-					<li><a href="#item4">Acccess</a></li>
-					<li><a href="#item5">News</a></li>
+					<li><a href="#item4">Gallery</a></li>
+					<li><a href="#item5">Acccess</a></li>
+					<li><a href="#item6">News</a></li>
 				</ul>
 				<div>
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ">Blog</a>
@@ -301,14 +302,14 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Hello kuutamo</h2>
-							<p>
+							<div>
 								<?php query_posts('pagename=top/concept'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -317,38 +318,39 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Menu</h2>
-							<p>
+							<div>
 								<?php query_posts('pagename=top/menu'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 
 							<h3>今月のおすすめ</h3>
-							<p>
+							<div>
 								<?php query_posts('post_type=book_contents&name=monthly'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 
 							<h3>Lunch</h3>
-							<dl>
-								<?php query_posts('post_type=book_contents&name=today'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+							<div>
+								<dl>
+									<?php query_posts('post_type=book_contents&name=today'); ?>
+									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-									<dt>ほんじつのデリ</dt>
-									<?php the_field("deli", $post->ID); ?>
+										<dt>ほんじつのデリ</dt>
+										<?php the_field("deli", $post->ID); ?>
 
-									<dt>ほんじつのプレート</dt>
-									<?php the_field("plate", $post->ID); ?>
-								<?php	endwhile; endif; wp_reset_query();?>
-							</dl>
-
+										<dt>ほんじつのプレート</dt>
+										<?php the_field("plate", $post->ID); ?>
+									<?php	endwhile; endif; wp_reset_query();?>
+								</dl>
+							</div>
 
 						</div>
 					</div>
@@ -358,14 +360,14 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Infomation</h2>
-							<p>
+							<div>
 								<?php query_posts('pagename=top/information'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -374,14 +376,14 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Gallery</h2>
-							<p>
+							<div>
 								<?php query_posts('post_type=book_contents&name=gallary'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -390,7 +392,7 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>Access</h2>
-							<p>
+							<div>
 								<img id="map" src="<?php echo get_stylesheet_directory_uri();?>/images/map.jpg" alt="">
 								<?php query_posts('pagename=top/access'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -398,18 +400,18 @@
 								endwhile; endif;
 								wp_reset_query();
 								?>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>					
 
-				<div class="bb-item" id="item5">
+				<div class="bb-item" id="item6">
 					<div class="content">
 						<div class="scroller">
 							<h2>News & Blog</h2>
 							<div class="fb-page" data-href="https://www.facebook.com/kuutamo-510368712445569/" data-width="300" data-height="360" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>
 
-							<p>
+							<div>
 								<ul>			
 									<?php query_posts('category_name=notice,event,news'); ?>
 									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -419,15 +421,15 @@
 										</li>
 									<? endwhile; endif; wp_reset_query();?>
 								</ul>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<nav>
-				<span id="bb-nav-prev">&larr;</span>
-				<span id="bb-nav-next">&rarr;</span>
+				<span id="bb-nav-prev"><i class="fa fa-arrow-left"></i></span>
+				<span id="bb-nav-next"><i class="fa fa-arrow-right"></i></span>
 			</nav>
 
 			<span id="tblcontents" class="menu-button">kuutamo</span>

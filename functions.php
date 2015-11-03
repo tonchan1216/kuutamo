@@ -20,14 +20,14 @@ function create_post_type() {
       'labels' => array(
         'name' => __( 'Books' ),
         'singular_name' => __( 'Book' )
-      ),
+        ),
       'public' => true,
       'exclude_from_search' => true,
       'show_in_nav_menus' => false,
       'menu_position' => 10,
       'has_archive' => false,
-    )
-  );
+      )
+    );
 }
 
 function is_mobile() {
@@ -45,7 +45,10 @@ function is_mobile() {
     'webOS',           // Palm Pre Experimental
     'incognito',       // Other iPhone browser
     'webmate'          // Other iPhone browser
-  );
-  $pattern = '/'.implode('|', $useragents).'/i';
-  return preg_match($pattern, $_SERVER['HTTP_USER_AGENT']);
+    );
+  $pattern1 = '/'.implode('|', $useragents).'/i';
+  $except = array('Nexus 10');
+  $pattern2 = '/'.implode('|', $except).'/i';
+  $target = $_SERVER['HTTP_USER_AGENT'];
+  return preg_match($pattern1, $target) xor preg_match($pattern2, $target);
 }
