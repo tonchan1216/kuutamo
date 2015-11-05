@@ -60,7 +60,7 @@
 					<div class="bb-side page-layout-1">
 						<p class="nav nav-menu"></p>
 						<div>
-							<h3 class="h2_jp">今月のおすすめ</h3>
+							<h2 class="h2_jp">今月のおすすめ</h2>
 							<p>
 								<?php query_posts('post_type=book_contents&name=menu2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -76,7 +76,7 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h3>Lunch</h3>
+							<h2>Lunch</h2>
 							<dl>
 								<?php query_posts('post_type=book_contents&name=today'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -106,7 +106,7 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h3>Soft Drink</h3>
+							<h2>Soft Drink</h2>
 							<?php query_posts('post_type=book_contents&name=menu5'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
@@ -118,7 +118,7 @@
 
 					<div class="bb-side page-layout-2">
 						<div>
-							<h3>Alcohol</h3>
+							<h2>Alcohol</h2>
 							<?php query_posts('post_type=book_contents&name=menu6'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
@@ -132,7 +132,7 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h3>Food</h3>
+							<h2>Food</h2>
 							<?php query_posts('post_type=book_contents&name=menu7'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
@@ -144,7 +144,7 @@
 
 					<div class="bb-side page-layout-2">
 						<div>
-							<h3>Sweets</h3>
+							<h2>Sweets</h2>
 							<?php query_posts('post_type=book_contents&name=menu8'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
@@ -353,7 +353,7 @@
 							</div>
 
 							<div>
-								<h2>Soft Drink</h2>
+								<h3>Soft Drink</h3>
 								<?php query_posts('post_type=book_contents&name=menu5'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
@@ -363,7 +363,7 @@
 							</div>
 
 							<div>
-								<h2>Alcohol</h2>
+								<h3>Alcohol</h3>
 								<?php query_posts('post_type=book_contents&name=menu6'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
@@ -373,7 +373,7 @@
 							</div>
 
 							<div>
-								<h2>Food</h2>
+								<h3>Food</h3>
 								<?php query_posts('post_type=book_contents&name=menu7'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();

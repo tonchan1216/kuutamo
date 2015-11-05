@@ -112,6 +112,7 @@ var Page = (function() {
 		else if( action === 'destroy' && apiJSP !== undefined ) {
 			apiJSP.destroy();
 		}
+
 	}
 
 	function updateTOC() {

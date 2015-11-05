@@ -23,10 +23,10 @@
 	<script src="<?php echo get_stylesheet_directory_uri();?>/js/modernizr.custom.js"></script>
 
 	<!--[if lt IE 9]>
-  <script src="<?php echo get_stylesheet_directory_uri();?>/js/html5.js" type="text/javascript"></script>
+  <script src="<?php echo get_stylesheet_directory_uri();?>/js/html5shiv.js" type="text/javascript"></script>
   <![endif]-->
  	<!--[if (gte IE 6)&(lte IE 8)]>
-  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri();?>/js/selectivizr.js"></script>
+  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri();?>/js/selectivizr-min.js"></script>
   <![endif]-->
   <?php wp_head();?>
 </head>
