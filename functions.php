@@ -28,6 +28,18 @@ function create_post_type() {
       'has_archive' => false,
       )
     );
+  register_taxonomy(
+    'book-cat', 
+    'book_contents', 
+    array(
+      'hierarchical' => true, 
+      'update_count_callback' => '_update_post_term_count',
+      'label' => '絵本のカテゴリー',
+      'singular_label' => '絵本のカテゴリー',
+      'public' => true,
+      'show_ui' => true
+      )
+    );
 }
 
 function is_mobile() {

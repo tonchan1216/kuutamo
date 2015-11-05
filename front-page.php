@@ -47,7 +47,7 @@
 						<div>
 							<h2>Menu</h2>
 							<p>
-								<?php query_posts('pagename=top/menu'); ?>
+								<?php query_posts('post_type=book_contents&name=menu1'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -60,9 +60,9 @@
 					<div class="bb-side page-layout-1">
 						<p class="nav nav-menu"></p>
 						<div>
-							<h2 class="h2_jp">今月のおすすめ</h2>
+							<h3 class="h2_jp">今月のおすすめ</h3>
 							<p>
-								<?php query_posts('post_type=book_contents&name=monthly'); ?>
+								<?php query_posts('post_type=book_contents&name=menu2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -76,7 +76,7 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Lunch</h2>
+							<h3>Lunch</h3>
 							<dl>
 								<?php query_posts('post_type=book_contents&name=today'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -93,20 +93,12 @@
 
 					<div class="bb-side page-layout-2">
 						<div>
-							<dl>
-								<dt>Aランチ</dt>
-								<dd>ほんじつのデリの中から３品</dd>
-								<dd>kuutamo手作りパンor雑穀入りごはん</dd>
-								<dd>お味噌汁（山口県産合わせみそ）</dd>
-
-								<dt>Bランチ</dt>
-								<dd>ほんじつのプレート</dd>
-								<dd>サラダ</dd>
-
-								<dt>Set drink</dt>
-								<dd>コーヒー（HOT/ICE）</dd>
-								<dd>紅茶（HOT/ICE）</dd>
-							</dl>
+							<?php query_posts('post_type=book_contents&name=menu4'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 				</div>
@@ -114,27 +106,25 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Soft Drink</h2>
-							<dl>
-								<dt>コーヒー</dt>
-								<dd>名古屋の「TaoCoffee」さんより、その時々お薦めをご提供致します</dd>
-
-								<dt>紅茶</dt>
-								<dd>「沖縄ティーファクトリー」さんより、琉球紅茶を使ったオリジナルブレンド</dd>
-
-								<dt>cafevino(ボトルコーヒー)</dt>
-								<dd>「COFFEE COUNTY」さんのコーヒーをワインのようにボトルに閉じ込めた新しい味わいのコーヒー</dd>
-							</dl>
+							<h3>Soft Drink</h3>
+							<?php query_posts('post_type=book_contents&name=menu5'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Alcohol</h2>
-							<dl>							
-								<dt>Beer ハートランド　生ビール</dt>
-								<dt>グラスワイン（赤/白）　</dt>
-							</dl>
+							<h3>Alcohol</h3>
+							<?php query_posts('post_type=book_contents&name=menu6'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 				</div>
@@ -142,24 +132,25 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Food</h2>
-							<dl>							
-								<dt>自家製ピクルス</dt>
-								<dt>おいなりさん</dt>
-								<dd>むさしの豆腐店の肉厚のお揚げさんを使ったKuutamo特製</dd>
-								<dt>サンドイッチ</dt>
-							</dl>
+							<h3>Food</h3>
+							<?php query_posts('post_type=book_contents&name=menu7'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Sweets</h2>
-							<dl>							
-								<dt>本日のケーキ</dt>
-								<dt>濃厚チーズプリン</dt>
-								<dt>アイスクリーム</dt>
-							</dl>
+							<h3>Sweets</h3>
+							<?php query_posts('post_type=book_contents&name=menu8'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 				</div>
@@ -327,8 +318,8 @@
 								?>
 							</div>
 
-							<h3>今月のおすすめ</h3>
 							<div>
+								<h3>今月のおすすめ</h3>
 								<?php query_posts('post_type=book_contents&name=monthly'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
@@ -337,8 +328,8 @@
 								?>
 							</div>
 
-							<h3>Lunch</h3>
 							<div>
+								<h3>Lunch</h3>
 								<dl>
 									<?php query_posts('post_type=book_contents&name=today'); ?>
 									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -352,6 +343,54 @@
 								</dl>
 							</div>
 
+							<div>
+								<?php query_posts('post_type=book_contents&name=menu4'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<h2>Soft Drink</h2>
+								<?php query_posts('post_type=book_contents&name=menu5'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<h2>Alcohol</h2>
+								<?php query_posts('post_type=book_contents&name=menu6'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<h2>Food</h2>
+								<?php query_posts('post_type=book_contents&name=menu7'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<h2>Sweets</h2>
+								<?php query_posts('post_type=book_contents&name=menu8'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -409,8 +448,6 @@
 					<div class="content">
 						<div class="scroller">
 							<h2>News & Blog</h2>
-							<div class="fb-page" data-href="https://www.facebook.com/kuutamo-510368712445569/" data-width="300" data-height="360" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>
-
 							<div>
 								<ul>			
 									<?php query_posts('category_name=notice,event,news'); ?>
@@ -422,6 +459,7 @@
 									<? endwhile; endif; wp_reset_query();?>
 								</ul>
 							</div>
+							<div class="fb-page" data-href="https://www.facebook.com/kuutamo-510368712445569/" data-width="300" data-height="360" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>
 						</div>
 					</div>
 				</div>

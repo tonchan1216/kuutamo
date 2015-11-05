@@ -38,6 +38,7 @@ var Page = (function() {
 				setJSP( 'destroy', old );
 			}
 		} ),
+		setJSP( 'init' );
 		initEvents();
 	}
 	
