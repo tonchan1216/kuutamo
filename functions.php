@@ -64,3 +64,21 @@ function is_mobile() {
   $target = $_SERVER['HTTP_USER_AGENT'];
   return preg_match($pattern1, $target) xor preg_match($pattern2, $target);
 }
+
+function myplugin_tinymce_buttons($buttons) {
+  array_unshift($buttons, 'fontsizeselect');
+  return $buttons;
+}
+// ↓ フックを mce_buttons_2 にする
+add_filter('mce_buttons_2','myplugin_tinymce_buttons');
+
+function _tinyMCESettings($arr){
+  $arr['block_formats'] = "pタグ=p;h1タグ=h1;h2タグ=h2;h3タグ=h3;h4タグ=h4;コード=pre";
+  // リサイズ禁止
+  $arr['object_resizing'] = false;
+  // CSSの変更
+  //$arr['content_css'] = src('css',true)."editor-style.css";
+    // フォーマットの設定
+  return $arr;
+}
+add_filter('tiny_mce_before_init','_tinyMCESettings',1000);
