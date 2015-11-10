@@ -281,11 +281,17 @@
 	padding: 0 10px;
 }
 
-.page-layout-1 > div img {
+.bb-side > div .rabbit {
 	display: block;
 	width: 200px;
 	height: 100%;
 	margin: 15% auto;
+}
+
+.bb-side > div .eyecatchimg {
+	display: block;
+	height: 100%;
+	margin: 10px auto 0;
 }
 
 .page-layout-1 > div ul {
@@ -318,14 +324,6 @@
 .page-layout-2 > div dt{
 	margin-top: 8%;
 }
-
-.page-layout-2 > div img {
-	display: block;
-	width: 200px;
-	height: 100%;
-	margin: 50px auto;
-}
-
 
 
 /*###################*/

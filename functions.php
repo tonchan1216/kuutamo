@@ -1,4 +1,12 @@
 <?php
+function load_cdn() {
+  if (!is_admin() ) {
+    wp_deregister_script( 'jquery');
+    wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3', false);
+    wp_enqueue_script( 'jquery-mig', '//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js', array(), '1.2.1', false);
+  }
+}
+add_action( 'wp_enqueue_scripts', 'load_cdn');
 add_action('wp_header', 'add_googleanalytics');
 function add_googleanalytics() { ?>
 <script>
@@ -13,6 +21,8 @@ function add_googleanalytics() { ?>
 </script>
 <?php }
 
+add_theme_support( 'post-thumbnails');
+
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
   register_post_type( 'book_contents',
@@ -26,6 +36,7 @@ function create_post_type() {
       'show_in_nav_menus' => false,
       'menu_position' => 10,
       'has_archive' => false,
+      'supports' => array('title','editor','thumbnail') 
       )
     );
   register_taxonomy(

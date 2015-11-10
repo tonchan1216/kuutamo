@@ -44,7 +44,7 @@
 						<div class="scroller">
 							<h2>Menu</h2>
 							<div>
-								<?php query_posts('pagename=top/menu'); ?>
+								<?php query_posts('post_type=book_contents&name=menu1'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -53,10 +53,12 @@
 							</div>
 
 							<div>
-								<h3>今月のおすすめ</h3>
-								<?php query_posts('post_type=book_contents&name=monthly'); ?>
+								<?php query_posts('post_type=book_contents&name=menu2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -81,6 +83,9 @@
 								<?php query_posts('post_type=book_contents&name=menu4'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -91,6 +96,9 @@
 								<?php query_posts('post_type=book_contents&name=menu5'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -101,6 +109,9 @@
 								<?php query_posts('post_type=book_contents&name=menu6'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -111,16 +122,22 @@
 								<?php query_posts('post_type=book_contents&name=menu7'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
 							</div>
 
 							<div>
-								<h2>Sweets</h2>
+								<h3>Sweets</h3>
 								<?php query_posts('post_type=book_contents&name=menu8'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -137,6 +154,9 @@
 								<?php query_posts('pagename=top/information'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -153,6 +173,9 @@
 								<?php query_posts('post_type=book_contents&name=gallary'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>

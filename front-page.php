@@ -23,19 +23,19 @@
 						<div>
 							<h2>Hello kuutamo</h2>
 
-							<img src="<?php echo get_stylesheet_directory_uri();?>/images/rabbit1.png" alt="kuutamo rabit">
+							<img  class="rabbit" src="<?php echo get_stylesheet_directory_uri();?>/images/rabbit1.png" alt="kuutamo rabbit">
 						</div>
 					</div>
 
 					<div class="bb-side page-layout-1">
 						<p class="nav nav-concept"></p>
 						<div>
-								<?php query_posts('pagename=top/concept'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								endwhile; endif;
-								wp_reset_query();
-								?>
+							<?php query_posts('pagename=top/concept'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 				</div>
@@ -44,25 +44,27 @@
 					<div class="bb-side page-layout-2">
 						<div>
 							<h2>Menu</h2>
-								<?php query_posts('post_type=book_contents&name=menu1'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								endwhile; endif;
-								wp_reset_query();
-								?>
+							<?php query_posts('post_type=book_contents&name=menu1'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 
 					<div class="bb-side page-layout-1">
 						<p class="nav nav-menu"></p>
 						<div>
-							<h2 class="h2_jp">今月のおすすめ</h2>
-								<?php query_posts('post_type=book_contents&name=menu2'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								endwhile; endif;
-								wp_reset_query();
-								?>
+							<?php query_posts('post_type=book_contents&name=menu2'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+							}
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 				</div>
@@ -104,6 +106,9 @@
 							<?php query_posts('post_type=book_contents&name=menu5'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+							}
 							endwhile; endif;
 							wp_reset_query();
 							?>
@@ -116,6 +121,9 @@
 							<?php query_posts('post_type=book_contents&name=menu6'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+							}
 							endwhile; endif;
 							wp_reset_query();
 							?>
@@ -130,6 +138,9 @@
 							<?php query_posts('post_type=book_contents&name=menu7'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+							}
 							endwhile; endif;
 							wp_reset_query();
 							?>
@@ -142,6 +153,9 @@
 							<?php query_posts('post_type=book_contents&name=menu8'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+							}
 							endwhile; endif;
 							wp_reset_query();
 							?>
@@ -157,6 +171,9 @@
 								<?php query_posts('pagename=top/information'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( array(100,100), 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
@@ -172,6 +189,9 @@
 								<?php query_posts('post_type=book_contents&name=gallary'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
 								endwhile; endif;
 								wp_reset_query();
 								?>
