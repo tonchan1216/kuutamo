@@ -1,7 +1,7 @@
 	<div id="container" class="container">
 		<header id="header">
 			<h1>
-				<a href="<?php echo home_url();?>" title="kuutamo　| 中村橋のdeli&cafe"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
+				<a href="<?php echo home_url();?>" title="中村橋のカフェkuutamo"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo | 中村橋のデリカフェ"></a>
 			</h1>
 
 			<div class="menu-panel">
@@ -14,7 +14,7 @@
 					<li><a href="#item5"　title="アクセス">Acccess</a></li>
 					<li><a href="#item6"　title="ニュース">News</a></li>
 				</ul>
-				<div>
+				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
 					<a href="https://www.facebook.com/kuutamogohan" title="Facebookページ">Facebook</a>
 				</div>
@@ -66,20 +66,15 @@
 
 							<div>
 								<h3>Lunch</h3>
-								<dl>
-									<?php query_posts('post_type=book_contents&name=today'); ?>
-									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-
-										<dt>ほんじつのデリ</dt>
-										<?php the_field("deli", $post->ID); ?>
-
-										<dt>ほんじつのプレート</dt>
-										<?php the_field("plate", $post->ID); ?>
-									<?php	endwhile; endif; wp_reset_query();?>
-								</dl>
-							</div>
-
-							<div>
+								<?php query_posts('post_type=book_contents&name=menu3'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
 								<?php query_posts('post_type=book_contents&name=menu4'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();

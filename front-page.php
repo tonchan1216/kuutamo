@@ -4,7 +4,7 @@
 	<div class="container">
 		<header id="header">
 			<h1>
-				<a href="<?php echo home_url();?>" title="kuutamo　| 中村橋のdeli&cafe"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
+				<a href="<?php echo home_url();?>" title="中村橋のカフェkuutamo"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo | 中村橋のデリカフェ"></a>
 			</h1>
 
 			<nav>
@@ -73,17 +73,12 @@
 					<div class="bb-side page-layout-2">
 						<div>
 							<h2>Lunch</h2>
-							<dl>
-								<?php query_posts('post_type=book_contents&name=today'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-
-									<dt>ほんじつのデリ</dt>
-									<?php the_field("deli", $post->ID); ?>
-
-									<dt>ほんじつのプレート</dt>
-									<?php the_field("plate", $post->ID); ?>
-								<?php	endwhile; endif; wp_reset_query();?>
-							</dl>
+							<?php query_posts('post_type=book_contents&name=menu3'); ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_content();
+							endwhile; endif;
+							wp_reset_query();
+							?>
 						</div>
 					</div>
 
@@ -224,7 +219,7 @@
 				<div class="bb-item" id="page-news">
 					<div class="bb-side page-layout-1">
 						<div>
-							<h2>News & Blog</h2>
+							<h2>News &amp; Blog</h2>
 							<p>
 								<ul>			
 									<?php query_posts('category_name=notice,event,news'); ?>
@@ -249,23 +244,23 @@
 			<nav id="head-nav">
 				<ul>
 					<li class="nav-concept active">
-						<a href="#" title=""><span>C</span>oncept</a>
+						<a href="#" title="カフェのコンセプト"><span>C</span>oncept</a>
 					</li>
 
 					<li class="nav-menu">
-						<a href="#" title=""><span>M</span>enu</a>
+						<a href="#" title="メニュー"><span>M</span>enu</a>
 					</li>
 
 					<li class="nav-info">
-						<a href="#" title=""><span style="padding-left: 4px">I</span>nfo</a>
+						<a href="#" title="インフォメーション"><span style="padding-left: 4px">I</span>nfo</a>
 					</li>
 
 					<li class="nav-access">
-						<a href="#" title=""><span>A</span>ccess</a>
+						<a href="#" title="お店までのアクセス"><span>A</span>ccess</a>
 					</li>
 
 					<li class="nav-news">
-						<a href="#" title=""><span>N</span>ews</a>
+						<a href="#" title="最新情報"><span>N</span>ews</a>
 					</li>
 				</ul>
 			</nav>
