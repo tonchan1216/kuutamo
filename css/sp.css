@@ -61,6 +61,7 @@ a:hover {
 	padding-left: 240px;
 }
 
+/*メニューサイドバー*/
 .menu-panel {
 	background: #553830;
 	width: 240px;
@@ -128,6 +129,12 @@ a:hover {
 	text-shadow: none;
 }
 
+.menu-panel .menu-link a {
+	font-size: 1.0em;
+	margin-bottom: 10px;
+}
+
+/*book block*/
 .bb-custom-wrapper nav {
 	bottom: 50px;
 	right: 80px;
@@ -138,14 +145,14 @@ a:hover {
 .bb-custom-wrapper nav span,
 .menu-button {
 	position: absolute;
-	width: 32px;
-	height: 32px;
+	width: 40px;
+	height: 40px;
 	top: 0;
-	left: 0;
+	left: -15px;
 	background: #5D9F95;
 	border-radius: 50%;
 	color: #fff;
-	line-height: 30px;
+	line-height: 40px;
 	text-align: center;
 	speak: none;
 	font-weight: bold;
@@ -164,8 +171,8 @@ a:hover {
 .menu-button {
 	z-index: 1000;
 	background: #553830;
-	left: 20px;
-	top: 25px;
+	left: 15px;
+	top: 20px;
 	text-indent: -9000px;
 }
 
@@ -256,6 +263,15 @@ a:hover {
 	display: block;
 	height: 100%;
 	margin: 20px auto;
+}
+
+.content .fb-page {
+	display: block;
+	margin: 20px auto;
+}
+
+.content .fb-page iframe {
+	left:8%;
 }
 
 @media screen and (max-width: 800px){
