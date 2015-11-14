@@ -1,7 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
 	background: #fff;
 	font-weight: 400;
 	font-size: 100%;
@@ -23,29 +20,9 @@ a:hover {
 	color: #000;
 }
 
-/*ヘッダー*/
-#header {
-	padding-bottom: 70px;
-}
-
-#header h1{
-	top: 15px;
-	left: 50px;
-	position: absolute;
-	z-index: 1000;
-	width: 240px;
-	height: 50px;
-	overflow: hidden;
-}
-
-.container,
-.bb-custom-wrapper,
-.bb-bookblock {
+.container {
 	width: 100%;
 	height: 100%;
-}
-
-.container {
 	position: relative;
 	left: 0px;
 	-webkit-transition: left 0.3s ease-in-out;
@@ -59,6 +36,21 @@ a:hover {
 
 .no-js .container {
 	padding-left: 240px;
+}
+
+/*ヘッダー*/
+#header {
+	min-height: 12%;
+}
+
+#header h1{
+	top: 15px;
+	left: 50px;
+	position: absolute;
+	z-index: 1000;
+	width: 240px;
+	height: 50px;
+	overflow: hidden;
 }
 
 /*メニューサイドバー*/
@@ -135,6 +127,16 @@ a:hover {
 }
 
 /*book block*/
+.bb-custom-wrapper {
+	width: 100%;
+	height: 88%;
+}
+
+.bb-bookblock {
+	width: 100%;
+	height: 100%;
+}
+
 .bb-custom-wrapper nav {
 	bottom: 50px;
 	right: 80px;
@@ -159,13 +161,13 @@ a:hover {
 	cursor: pointer;
 }
 
-.bb-custom-wrapper nav span:hover,
-.menu-button:hover {
+.bb-custom-wrapper nav span:active,
+.menu-button:active {
 	background: #000;
 }
 
 .bb-custom-wrapper nav span:last-child {
-	left: 40px;
+	left: 35px;
 }
 
 .menu-button {
@@ -193,18 +195,19 @@ a:hover {
 	display: none;
 }
 
+/*content*/
 .js .content {
 	position: absolute;
-	top: 15px;
+	top: 0;
 	left: 0;
 	width: 100%;
-	bottom: 50px;
+	bottom: 1%;
 	overflow: hidden;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .scroller {
-	padding: 10px 5% 10px 5%;
+	padding: 0 5% 10px;
 }
 
 .js .content:before,
@@ -232,12 +235,13 @@ a:hover {
 	background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-.content h2 {
+.js .content h2 {
 	font-weight: 300;
 	font-size: 3em;
+	font-family: 'Italianno', cursive;
 	padding: 0 0 10px;
 	color: #333;
-	margin: 0 1% 40px;
+	margin: 5% 5% 40px;
 	text-align: left;
 	box-shadow: 0 10px 0 rgba(0,0,0,0.02);
 	text-shadow: 0 0 2px #fff;
@@ -245,18 +249,38 @@ a:hover {
 
 .no-js .content h2 {
 	padding: 40px 1% 20px;
+	font-family: 'Italianno', cursive;
 }
 
 .content h3 {
 	font-weight: 300;
-	font-size: 2em;
-	margin: 15px 2% 20px;
+	font-size: 2.4em;
+	font-family: 'Italianno', cursive;
+	margin: 15px 4% 20px;
 }
 
 .content p,.content dl,.content ul{
-	font-size: 1.2em;
+	font-size: 10px;
 	font-weight: 300;
 	padding: 5px 8%;
+}
+
+.content span{
+	font-size: 10px!important;
+}
+
+.content #news dt, .content #news dd {
+	padding-bottom:10px;
+}
+
+.content #news dt {
+	width : 70px;
+	float : left;/* 左に寄せる */
+	clear : both;/* フロートの解除 */
+}
+
+.content #news dd a {
+	color:#5D9F95;
 }
 
 .content .eyecatchimg {

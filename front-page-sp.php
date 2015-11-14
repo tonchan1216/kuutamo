@@ -201,15 +201,13 @@
 						<div class="scroller">
 							<h2>News & Blog</h2>
 							<div>
-								<ul>			
+								<dl id="news">			
 									<?php query_posts('category_name=notice,event,news'); ?>
 									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-										<li>
-											<?php the_time('Y.m.d');?>
-											<a href="<?php echo the_permalink();?>"><? the_title();?></a>
-										</li>
+										<dt><?php the_time('Y.m.d');?></dt>
+										<dd><a href="<?php echo the_permalink();?>"><? the_title();?></a></dd>
 									<? endwhile; endif; wp_reset_query();?>
-								</ul>
+								</dl>
 							</div>
 							<div class="fb-page" data-href="https://www.facebook.com/kuutamo-510368712445569/" data-width="300" data-height="360" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>
 						</div>
