@@ -1,0 +1,54 @@
+body{background:#fff;font-weight:400;font-size:100%;color:#333;height:100%;}
+.js body{overflow:hidden;}
+a{color:#555;text-decoration:none;outline:none;}
+a:hover{color:#000;}
+.container{width:100%;height:100%;position:relative;left:0px;-webkit-transition:left 0.3s ease-in-out;-o-transition:left 0.3s ease-in-out;transition:left 0.3s ease-in-out;}
+.slideRight{left:240px;}
+.no-js .container{padding-left:240px;}
+#header{min-height:12%;}
+#header h1{top:15px;left:50px;position:absolute;z-index:1000;width:240px;height:50px;overflow:hidden;}
+.menu-panel{background:#553830;width:240px;height:100%;position:fixed;z-index:1000;top:0;left:0;text-shadow:0 1px 1px rgba(0,0,0,0.1);}
+.js .menu-panel{position:absolute;left:-240px;}
+.menu-panel h3{font-size:1.8em;padding:20px;font-weight:300;color:#fff;box-shadow:inset 0 -1px 0 rgba(0,0,0,0.05);}
+.menu-toc{list-style:none;}
+.menu-toc li a{display:block;color:#fff;font-size:1.1em;line-height:3.5;padding:0 20px;cursor:pointer;background:#553830;border-bottom:1px solid #E3CFB6;}
+.menu-toc li a:hover,
+.menu-toc li.menu-toc-current a{background:#E3CFB6;}
+.menu-panel div{margin-top:20px;}
+.menu-panel div a{text-transform:uppercase;font-size:0.7em;line-height:1;padding:5px 20px;display:block;border:none;color:#5D9F95;letter-spacing:1px;font-weight:800;text-shadow:0 1px rgba(255,255,255,0.2);}
+.menu-panel div a:hover{background:inherit;color:#fff;text-shadow:none;}
+.menu-panel .menu-link a{font-size:1.0em;margin-bottom:10px;}
+.bb-custom-wrapper{width:100%;height:88%;}
+.bb-bookblock{width:100%;height:100%;}
+.bb-custom-wrapper nav{bottom:50px;right:80px;position:fixed;z-index:1000;}
+.bb-custom-wrapper nav span,
+.menu-button{position:absolute;width:40px;height:40px;top:0;left:-15px;background:#5D9F95;border-radius:50%;color:#fff;line-height:40px;text-align:center;speak:none;font-weight:bold;cursor:pointer;}
+.bb-custom-wrapper nav span:active,
+.menu-button:active{background:#000;}
+.bb-custom-wrapper nav span:last-child{left:35px;}
+.menu-button{z-index:1000;background:#553830;left:15px;top:20px;text-indent:-9000px;}
+.menu-button:after{position:absolute;content:'';width:50%;height:2px;background:#fff;top:50%;margin-top:-1px;left:25%;box-shadow:0 -4px #fff, 0 4px #fff;}
+.no-js .bb-custom-wrapper nav span,
+.no-js .menu-button{display:none;}
+.js .content{position:absolute;top:0;left:0;width:100%;bottom:1%;overflow:hidden;-webkit-font-smoothing:subpixel-antialiased;}
+.scroller{padding:0 5% 10px;}
+.js .content:before,
+.js .content:after{content:'';position:absolute;top:0;left:0;width:100%;height:20px;z-index:100;pointer-events:none;background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:-moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:-o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+.js .content:after{top:auto;bottom:0;background:-webkit-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:-moz-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:-o-linear-gradient(bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);}
+.js .content h2{font-weight:300;font-size:3em;font-family:'Italianno', cursive;padding:0 0 10px;color:#333;margin:5% 5% 40px;text-align:left;box-shadow:0 10px 0 rgba(0,0,0,0.02);text-shadow:0 0 2px #fff;}
+.no-js .content h2{padding:40px 1% 20px;font-family:'Italianno', cursive;}
+.content h3{font-weight:300;font-size:2.4em;font-family:'Italianno', cursive;margin:15px 4% 20px;}
+.content p,.content dl,.content ul{font-size:10px;font-weight:300;padding:5px 8%;}
+.content span{font-size:10px!important;}
+.content #news dt, .content #news dd{padding-bottom:10px;}
+.content #news dt{width:70px;float:left;clear:both;}
+.content #news dd a{color:#5D9F95;}
+.content .eyecatchimg{display:block;height:100%;margin:20px auto;}
+.content .fb-page{display:block;margin:20px auto;}
+.content .fb-page iframe{left:8%;}
+@media screen and (max-width:800px){.no-js .menu-panel{display:none;}
+.no-js .container{padding:0;}
+}
+@media screen and (max-width:400px){.menu-panel,
+.content{font-size:75%;}
+}

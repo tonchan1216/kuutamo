@@ -1,12 +1,12 @@
+	<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquerypp.custom.min.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bookblock.min.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri();?>/js/script.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquerypp.custom.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bookblock.js"></script>
 	<?php if(is_mobile()):?>
 		<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.jscrollpane.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.mousewheel.js"></script>
-		<script src="<?php echo get_stylesheet_directory_uri();?>/js/page_sp.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri();?>/js/page_sp.min.js"></script>
 	<?php else: ?>
-		<script src="<?php echo get_stylesheet_directory_uri();?>/js/page_pc.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri();?>/js/page_pc.min.js"></script>
 	<?php endif;?>
 	<script>
 		Page.init();
