@@ -9,11 +9,11 @@
 	<meta content="Tohn F" name="author">
 	<link href="<?php echo get_stylesheet_directory_uri();?>/favicon.ico" rel="shortcut icon" />
 	<link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" rel="stylesheet" type="text/css" />
-	<link href="<?php echo get_stylesheet_directory_uri();?>/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="<?php echo get_stylesheet_directory_uri();?>/css/bookblock.min.css" rel="stylesheet" type="text/css" />
 	<!-- custom style -->
 	<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
-	<link href="<?php echo get_stylesheet_directory_uri();?>/style.min.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet" type="text/css" />
 	<?php if(!is_mobile()):?>
 		<link href="<?php echo get_stylesheet_directory_uri();?>/css/pc.min.css" rel="stylesheet" type="text/css" />
 	<?php else: ?>
