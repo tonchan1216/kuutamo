@@ -28,7 +28,7 @@
 						<div class="scroller">
 							<h2>Hello kuutamo</h2>
 							<div>
-								<?php query_posts('pagename=top/concept'); ?>
+								<?php query_posts('post_type=book_contents&name=concept'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -146,7 +146,7 @@
 						<div class="scroller">
 							<h2>Infomation</h2>
 							<div>
-								<?php query_posts('pagename=top/information'); ?>
+								<?php query_posts('post_type=book_contents&name=information'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -185,7 +185,7 @@
 							<h2>Access</h2>
 							<div>
 								<img id="map" src="<?php echo get_stylesheet_directory_uri();?>/images/map.jpg" alt="中村橋駅からのアクセスマップ">
-								<?php query_posts('pagename=top/access'); ?>
+								<?php query_posts('post_type=book_contents&name=access'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;

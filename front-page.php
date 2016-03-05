@@ -30,7 +30,7 @@
 					<div class="bb-side page-layout-1">
 						<p class="nav nav-concept"></p>
 						<div>
-							<?php query_posts('pagename=top/concept'); ?>
+							<?php query_posts('post_type=book_contents&name=concept'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
 							endwhile; endif;
@@ -163,7 +163,7 @@
 						<div>
 							<h2>Infomation</h2>
 							<p>
-								<?php query_posts('pagename=top/information'); ?>
+								<?php query_posts('post_type=book_contents&name=information'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -200,7 +200,7 @@
 						<div>
 							<h2>Access</h2>
 							<p>
-								<?php query_posts('pagename=top/access'); ?>
+								<?php query_posts('post_type=book_contents&name=access'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
