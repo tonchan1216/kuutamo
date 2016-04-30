@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wordpress/wp-admin/
+Disallow: /wordpress/wp-includes/
+Disallow: /wordpress/xmlrpc.php
+Disallow: /top/*
+Disallow: /book_contents/*

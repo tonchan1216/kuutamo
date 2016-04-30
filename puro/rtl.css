@@ -1,0 +1,330 @@
+/*
+Theme Name: Puro
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Structure
+2.0 - Layout
+3.0 - Typography
+4.0 - Elements
+5.0 - Forms
+6.0 - Navigation
+7.0 - Alignments
+8.0 - Widgets
+9.0 - Content
+10.0 - Header
+11.0 - Footer
+12.0 - Contact Form 7
+13.0 - Gravity Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Structure
+--------------------------------------------------------------*/
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/*--------------------------------------------------------------
+2.0 - Layout
+--------------------------------------------------------------*/
+#primary {
+	float: right;
+}
+.sidebar #primary {
+	border-right-width: 0;
+	border-left-width: 0.0625em;
+	padding: 0 0 0 3.5%;
+}
+#secondary {
+	float: left;	
+	padding-right: 3.5%;
+}
+
+/*--------------------------------------------------------------
+3.0 - Typography
+--------------------------------------------------------------*/
+blockquote {
+	border: none;
+	border-right: 0.1875em solid #2AC176; 
+	padding: 0 1.6875em 0 0;
+}
+
+/*--------------------------------------------------------------
+4.0 - Elements
+--------------------------------------------------------------*/
+ul, ol {
+	margin: 0 1.5rem 1.6875em;
+}
+dl dd {
+	margin: 0 1.6875em 0 0;
+}
+
+/*--------------------------------------------------------------
+5.0 - Forms
+--------------------------------------------------------------*/
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0 0 0 0.3125em;  
+}
+
+/*--------------------------------------------------------------
+6.0 - Navigation
+--------------------------------------------------------------*/
+.main-navigation {
+	float: left;
+}
+.main-navigation ul li {
+	padding: 0 0 0 1.6518em; 
+}
+.main-navigation ul li:last-of-type {
+	padding-left: 0;
+}				
+.main-navigation ul ul {
+	right: 0;
+	left: initial;
+	text-align: right;
+}
+.main-navigation .menu-item-has-children {
+	margin-right: 0;
+	margin-left: 2.6607em;
+	padding-right: 0;
+	padding-left: 0;
+}
+.main-navigation .menu-item-has-children a:before {
+	left: -1.5625em;	
+	padding: 0 0.6em 0 0;	
+}
+.paging-navigation .prev { 
+	float: right;
+}	
+.paging-navigation .next {
+	float: left;
+}
+.menu-social-container ul li:last-of-type {
+	padding-right: 0.3125rem; 
+}
+.menu-toggle {
+  left: 0;
+}
+@media screen and (max-width: 48rem) { 
+	.main-navigation.toggled .nav-menu li a { 
+    	text-align: right; 
+	} 
+}
+
+/*--------------------------------------------------------------
+7.0 - Alignments
+--------------------------------------------------------------*/
+blockquote.alignleft,
+figure.wp-caption.alignleft,
+img.alignleft {
+	margin: 0 0 1.6875em 1.6875em;
+}
+blockquote.alignright,
+figure.wp-caption.alignright,
+img.alignright {
+	margin: 0 1.6875em 1.6875em 0;
+}
+
+/*--------------------------------------------------------------
+8.0 - Widgets
+--------------------------------------------------------------*/
+#secondary .widget ul, #colophon .widget ul {
+	margin-right: 0; 
+}
+#secondary .widget ul li > ul, #colophon .widget ul li > ul {
+	margin-right: 1em;	
+}
+#wp-calendar tfoot #next {
+	text-align: left;			
+}
+#wp-calendar tfoot #prev {
+	text-align: right;			
+}
+
+/*--------------------------------------------------------------
+9.0 - Content
+--------------------------------------------------------------*/
+.entry-header {
+	text-align: right;
+}
+.entry-header .entry-meta span {
+	margin: 0 0 0 1.0714em; 
+}
+.entry-header .entry-meta span span {
+	margin: 0;
+}
+.entry-header .entry-meta span:before, .entry-header .entry-meta a:before {
+	margin: 0; 
+}
+.entry-header .entry-meta span:after, .entry-header .entry-meta a:after {
+	font-family: 'FontAwesome';
+	margin: 0 0 0 0.4554em; 
+}
+.entry-header .entry-meta .featured-post:before, 
+.entry-header .entry-meta .entry-date a:before, 
+.entry-header .entry-meta .author a:before, 
+.entry-header .entry-meta .cat-links a:first-of-type:before,
+.entry-header .entry-meta .tags-links a:first-of-type:before,
+.entry-header .entry-meta .comments-link a:before {
+	content: none;
+}
+.entry-header .entry-meta .featured-post:after {
+	content: "\f08d";  
+}
+.entry-header .entry-meta .entry-date a:after {
+	content: "\f073"; 
+}
+.entry-header .entry-meta .author a:after {
+	content: "\f040";  
+}
+.entry-header .entry-meta .cat-links a:last-of-type:after {
+	content: "\f03a";   
+}
+.entry-header .entry-meta .tags-links a:last-of-type:after {
+	content: "\f02b"; 
+}
+.entry-header .entry-meta .comments-link {
+	margin-right: 0;
+}
+.entry-header .entry-meta .comments-link a:after {
+	content: "\f0e5";
+}
+.entry-footer .edit-link a:before {
+	content: none;
+}
+.entry-footer .edit-link a:after {
+	content: "\f044"; 
+	font-family: 'FontAwesome';
+	margin-left: 0.3839em;   	
+}
+.more-link:after {
+	display: none;
+}
+.more-link:before {
+	content: "\f060";
+	font-family: 'FontAwesome'; 
+	font-size: 0.8125em; 
+	padding: 0 0.5179em 0 0;
+}
+.page-links span {
+	margin: 0 0 0 0.3125em;  
+}
+.search-form label, .post-password-form label {
+	margin: 0 0 0 0.8438em; 
+}
+.comments-area .comment-list {
+	margin-right: 0;
+}
+.comments-area .comment-awaiting-moderation:before {
+	content: none;
+}
+.comments-area .comment-awaiting-moderation:after {
+	content: "\f071";
+	font-family: 'FontAwesome';  
+	font-size: 0.8125em;
+	font-weight: normal;
+	margin: 0 0 0 0.4465em; 
+}	
+.comments-area .comment-author, 
+.comments-area .comment-awaiting-moderation, 
+.comments-area .comment-content, 
+.comments-area .comment-list .reply, 
+.comments-area .comment-metadata {
+	padding: 0 4.2188em 0 0;
+}
+.comments-area .comment-author .avatar {
+	right: 0;
+	left: initial;
+}
+.comments-area 	.bypostauthor .fn:before {
+	content: none;
+}
+.comments-area .bypostauthor .fn:after {
+	content: "\f005";
+	font-family: 'FontAwesome';  
+	font-size: 0.8125em;
+	margin: 0 0 0 0.3125em; 
+}
+.comments-area .comment-list .children {
+	margin: 0 1.5em 0 0;
+}	
+@media (max-width: 30em) {
+	.comments-area .comment-list .children {
+		margin: 0 0.75em 0 0;
+	}
+}
+.comments-area .comment-reply-link:before, .comments-area .comment-reply-login:before {
+	content: none;
+}
+.comments-area .comment-reply-link:after, .comments-area .comment-reply-login:after {
+	content: "\f112"; 
+	font-family: 'FontAwesome'; 
+	margin: 0 0 0 0.3839em; 
+}
+.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link {
+	margin: 0 0.6522em 0 0; 
+}
+.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link:before {
+	content: none;
+}
+.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link:after {
+	content: "\f00d";
+	font-family: 'FontAwesome'; 
+	margin: 0 0 0 0.2589em;  
+}
+
+/*--------------------------------------------------------------
+10.0 - Header
+--------------------------------------------------------------*/
+.site-header .site-branding {
+	float: right;
+}
+
+/*--------------------------------------------------------------
+11.0 - Footer
+--------------------------------------------------------------*/
+.site-footer .site-info {
+	float: right;
+	text-align: right;
+}
+.site-footer .menu-social-container {
+	float: left;
+}
+
+/*--------------------------------------------------------------
+12.0 - Contact Form 7
+--------------------------------------------------------------*/
+.wpcf7 p span.wpcf7-list-item-label {
+	margin: 0 0 0 0.3125em;  
+}
+.wpcf7 p span.wpcf7-list-item {
+	margin: 0 0 0 0.75em; 
+}
+.wpcf7 p .wpcf7-form-control.wpcf7-submit {
+	float: right;
+}
+.wpcf7 p img.ajax-loader {
+	float: right;
+	margin: 0.75em 1.5em 0 0;
+}
+.wpcf7 .wpcf7-validation-errors {
+	float: right;
+}
+.wpcf7 .wpcf7-mail-sent-ok {
+	float: right;
+}
+
+/*--------------------------------------------------------------
+13.0 - Gravity Forms
+--------------------------------------------------------------*/
+.gform_wrapper .gfield_checkbox li input[type=checkbox],
+.gform_wrapper .gfield_radio li input[type=radio],
+.gform_wrapper .gfield_checkbox li input {
+	margin: 0 0.125em 0 0;
+}

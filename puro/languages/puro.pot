@@ -1,0 +1,1170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Puro\n"
+"POT-Creation-Date: 2015-09-25 20:28+0200\n"
+"PO-Revision-Date: 2015-09-25 20:28+0200\n"
+"Last-Translator: Puro <support@purothemes.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext;_n;__ngettext_noop;_n_noop;_x;_nx;"
+"_nx_noop;_ex;esc_attr__;esc_attr_e;esc_attr_x;esc_html__;esc_html_e;"
+"esc_html_x;_c;_nc\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../404.php:29
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: ../404.php:46
+msgid "Try looking in the monthly archives."
+msgstr ""
+
+#: ../comments.php:28
+msgid "One Comment"
+msgstr ""
+
+#: ../comments.php:35 ../comments.php:53
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:36 ../comments.php:54
+msgid "Older Comments"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:55
+msgid "Newer Comments"
+msgstr ""
+
+#: ../comments.php:65
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../content-page.php:25 ../content-single.php:28 ../content-video.php:43
+#: ../content.php:38 ../loops/loop-medium-left.php:49
+#: ../loops/loop-thumbnail-left.php:49
+#: ../page-templates/full-width-no-title.php:28
+#: ../page-templates/full-width-unconstrained-content-no-title.php:28
+#: ../page-templates/no-title.php:28
+msgid "Pages:"
+msgstr ""
+
+#: ../content-page.php:33 ../content-search.php:24 ../content-single.php:38
+#: ../content-video.php:53 ../content.php:48
+#: ../extras/settings/settings.php:548 ../loops/loop-medium-left.php:61
+#: ../loops/loop-thumbnail-left.php:61
+#: ../page-templates/full-width-no-title.php:35
+#: ../page-templates/full-width-unconstrained-content-no-title.php:35
+#: ../page-templates/no-title.php:35
+msgid "Edit"
+msgstr ""
+
+#: ../extras/panels-lite/inc/widgets.php:12
+msgid "Post Loop (PB)"
+msgstr ""
+
+#: ../extras/panels-lite/inc/widgets.php:14
+msgid "Displays a post loop."
+msgstr ""
+
+#: ../extras/panels-lite/inc/widgets.php:94
+msgid "Please install Page Builder to use this widget."
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:12
+msgid "Custom Home Page Builder"
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:13
+msgid "Home Page"
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:25
+#: ../extras/panels-lite/panels-lite.php:48
+#: ../extras/panels-lite/panels-lite.php:55
+#: ../extras/panels-lite/tpl/admin-home-page.php:4
+msgid "Page Builder"
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:56
+msgid "Refresh this page after you've installed Page Builder."
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:57
+msgid ""
+"Your theme has Page Builder support. Would you like to install it? It's free."
+msgstr ""
+
+#: ../extras/panels-lite/panels-lite.php:75
+msgid "Edit Home Page"
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:13
+msgid "Custom Home Page"
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:16
+msgid "ON"
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:17
+msgid "OFF"
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:23
+msgid ""
+"This theme is compatible with SiteOrigin's powerful drag and drop page "
+"builder."
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:24
+msgid ""
+"It allows you to build responsive columnized pages, populated with the "
+"widgets you know and love."
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:25
+msgid ""
+"It's a <strong>free plugin</strong> that works well with most WordPress "
+"themes."
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:26
+msgid ""
+"If you don't want to use it, click the toggle switch above to disable the "
+"default home page."
+msgstr ""
+
+#: ../extras/panels-lite/tpl/admin-home-page.php:30
+msgid "Install Page Builder"
+msgstr ""
+
+#: ../extras/plugin-activation/plugin-activation.php:7
+#: ../extras/plugin-activation/plugin-activation.php:8
+msgid "Install Theme Plugin"
+msgstr ""
+
+#: ../extras/plugin-activation/plugin-activation.php:74
+#, php-format
+msgid "Installing %s"
+msgstr ""
+
+#: ../extras/premium/premium.php:12 ../extras/premium/premium.php:179
+#: ../extras/premium/premium.php:279 ../extras/premium/tpl/upgrade-page.php:16
+#: ../extras/premium/tpl/upgrade-page.php:123
+#: ../extras/settings/settings.php:150 ../extras/settings/settings.php:463
+#: ../extras/update/update.php:51
+msgid "Premium"
+msgstr ""
+
+#: ../extras/premium/premium.php:64
+#, php-format
+msgid "Your Order Number is [%s]"
+msgstr ""
+
+#: ../extras/premium/premium.php:68
+msgid "There was a problem contacting our validation servers."
+msgstr ""
+
+#: ../extras/premium/premium.php:69 ../extras/premium/premium.php:95
+msgid ""
+"Please try again later, or upgrade manually using the ZIP file we sent you."
+msgstr ""
+
+#: ../extras/premium/premium.php:73
+msgid "We've validated your order number."
+msgstr ""
+
+#: ../extras/premium/premium.php:76
+#, php-format
+msgid "You can update now, or later on your <a href=\"%s\">Themes page</a>."
+msgstr ""
+
+#: ../extras/premium/premium.php:80
+msgid "This update will add all the premium features."
+msgstr ""
+
+#: ../extras/premium/premium.php:85
+msgid ""
+"Updating this theme will lose any code customizations (CSS, PHP, Javascript, "
+"etc) you have made to the free version. You will not lose your content, "
+"images or settings. 'Cancel' to stop, 'OK' to update."
+msgstr ""
+
+#: ../extras/premium/premium.php:88
+msgid "Update Theme"
+msgstr ""
+
+#: ../extras/premium/premium.php:93
+msgid "We couldn't validate your order number."
+msgstr ""
+
+#: ../extras/premium/premium.php:94
+msgid "There might be a problem with our validation server."
+msgstr ""
+
+#: ../extras/premium/premium.php:141
+msgid "Get Additional Templates"
+msgstr ""
+
+#: ../extras/premium/premium.php:143
+#, php-format
+msgid "%s Premium includes additional templates"
+msgstr ""
+
+#: ../extras/premium/premium.php:179 ../extras/settings/settings.php:463
+#, php-format
+msgid ""
+"Only available in <strong>%s</strong> - <strong class=\"upgrade\">Upgrade "
+"Now</strong>"
+msgstr ""
+
+#: ../extras/premium/premium.php:268
+msgid "Get Additional Customizations"
+msgstr ""
+
+#: ../extras/premium/premium.php:283
+#, php-format
+msgid "A Copy of %s Premium"
+msgstr ""
+
+#: ../extras/premium/premium.php:284
+#, php-format
+msgid ""
+"You get a copy of %s, delivered instantly to your PayPal email address. This "
+"includes the same basic support we offer users of our free themes."
+msgstr ""
+
+#: ../extras/premium/premium.php:289
+msgid "Premium Support"
+msgstr ""
+
+#: ../extras/premium/premium.php:290
+msgid ""
+"This includes Premium email support from our support team for a single site. "
+"We'll help you as quickly as possible with all your setup and configuration "
+"questions."
+msgstr ""
+
+#: ../extras/premium/premium.php:295
+msgid "Advanced Premium Support"
+msgstr ""
+
+#: ../extras/premium/premium.php:296
+#, php-format
+msgid ""
+"We'll go the extra mile and help you with minor CSS customizations, plugin "
+"conflicts and anything else that falls outside standard %s support."
+msgstr ""
+
+#: ../extras/premium/premium.php:301
+msgid "A Special Thank You"
+msgstr ""
+
+#: ../extras/premium/premium.php:302
+#, php-format
+msgid ""
+"Our highest level of support. If you need it, you'll get support directly "
+"from the developer of %s. We'll also include your name on our contributors "
+"list."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:15
+#, php-format
+msgid ""
+"After you pay for %s, we'll email you an order number to your <strong>PayPal "
+"email address</strong>. "
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:19
+#, php-format
+msgid ""
+"Use <a href='%s' target='_blank'>this form</a> if you don't receive your "
+"order number in the next 15 minutes. "
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:22
+msgid "To be sure, check your spam folder."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:26 ../extras/update/update.php:52
+msgid "Order Number"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:28
+msgid "Enable Upgrade"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:32
+msgid "Already Paid?"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:37
+msgid "Premium Upgrade"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:41
+msgid ""
+"The premium version of this theme is no longer available. If you need any "
+"help, please contact <a href='mailto:support@purothemes.com'>Puro support</"
+"a>."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:81
+msgid "Buy Now"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:87
+msgid ""
+"Although we appreciate and support all our users, we only offer prioritized "
+"support for orders of <strong>$15</strong> or more."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:91
+#, php-format
+msgid "You choose the price, so you can pay what %s is worth to you."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:95
+msgid "Building your site on a budget"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:96
+msgid "A fair price for a powerful theme"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:97
+msgid "Our sincere thanks"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:98
+msgid "We'll go that extra mile for you"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:99
+msgid "A huge contribution to its development"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:100
+msgid "Custom"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:103
+msgid "Please enable Javascript to change pricing"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:107
+#, php-format
+msgid ""
+"Happy customers are our first priority. In the event, however, that you "
+"decide %s isn't quite right for you, we want to make things right. Within 60 "
+"days of purchase, we'll refund the full price you paid upon request."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:118
+msgid "Download"
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:123
+#, php-format
+msgid "Sign up to our newsletter and download %s for free."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:132
+#, php-format
+msgid "Your contribution will help fund new features in %s."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:133
+#, php-format
+msgid "Find out more on our <a href=\"%s\" target=\"_blank\">roadmap</a>."
+msgstr ""
+
+#: ../extras/premium/tpl/upgrade-page.php:138
+msgid "Our User Feedback"
+msgstr ""
+
+#: ../extras/settings/page.php:6 ../extras/settings/settings.php:75
+#, php-format
+msgid "%s Theme Settings"
+msgstr ""
+
+#: ../extras/settings/page.php:16 ../extras/settings/page.php:98
+msgid "Save Settings"
+msgstr ""
+
+#: ../extras/settings/page.php:17 ../extras/settings/page.php:74
+msgid "Preview"
+msgstr ""
+
+#: ../extras/settings/page.php:19
+msgid "Theme Support Forum"
+msgstr ""
+
+#: ../extras/settings/page.php:34
+#, php-format
+msgid "%s Theme Settings Preview"
+msgstr ""
+
+#: ../extras/settings/page.php:76
+msgid "Continue"
+msgstr ""
+
+#: ../extras/settings/page.php:91
+#, php-format
+msgid "Step %s of %s"
+msgstr ""
+
+#: ../extras/settings/page.php:99
+msgid "Close"
+msgstr ""
+
+#: ../extras/settings/settings.php:76
+msgid "Theme Settings"
+msgstr ""
+
+#: ../extras/settings/settings.php:106 ../extras/settings/settings.php:153
+msgid "Theme Tour"
+msgstr ""
+
+#: ../extras/settings/settings.php:120
+msgid "Please update to the latest version of WordPress to use theme settings."
+msgstr ""
+
+#: ../extras/settings/settings.php:360
+msgid "Enabled"
+msgstr ""
+
+#: ../extras/settings/settings.php:417
+#, php-format
+msgid ""
+"You need to <a href=\"%s\">upgrade</a> to WordPress 3.5 to use media fields"
+msgstr ""
+
+#: ../extras/settings/settings.php:435
+msgid "Choose Media"
+msgstr ""
+
+#: ../extras/settings/settings.php:436
+msgid "Set Media"
+msgstr ""
+
+#: ../extras/settings/settings.php:450
+msgid "Remove"
+msgstr ""
+
+#: ../extras/settings/settings.php:480
+msgid "Select Images"
+msgstr ""
+
+#: ../extras/settings/settings.php:492 ../inc/metaslider.php:6
+msgid "None"
+msgstr ""
+
+#: ../extras/settings/settings.php:519
+#, php-format
+msgid "This field requires the %s plugin. "
+msgstr ""
+
+#: ../extras/settings/settings.php:522
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Install %s</a> now. "
+msgstr ""
+
+#: ../extras/settings/settings.php:556
+msgid "Unknown Field Type"
+msgstr ""
+
+#: ../extras/settings/settings.php:687
+msgid "Settings saved."
+msgstr ""
+
+#: ../extras/settings/settings.php:706
+#, php-format
+msgid ""
+"Read %s's <a href='%s' target='_blank'>theme documentation</a> for help with "
+"these settings."
+msgstr ""
+
+#: ../extras/settings/settings.php:713
+msgid "Settings Help"
+msgstr ""
+
+#: ../extras/settings/settings.php:763
+msgid "Set Media File"
+msgstr ""
+
+#: ../extras/settings/settings.php:814
+msgid "Meta Slider: "
+msgstr ""
+
+#: ../extras/settings/settings.php:824
+msgid "Revolution Slider: "
+msgstr ""
+
+#: ../extras/settings/settings.php:834
+msgid "LayerSlider: "
+msgstr ""
+
+#: ../extras/update/update.php:53
+msgid "Enter the Puro Premium order number sent to you via email."
+msgstr ""
+
+#: ../footer.php:32
+#, php-format
+msgid ""
+"<a href=\"%s\" title=\"A Free WordPress Theme by Puro\">Theme by Puro</a>"
+msgstr ""
+
+#: ../functions.php:87
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:88
+msgid "Social Network Icon Menu"
+msgstr ""
+
+#: ../functions.php:142
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:151 ../inc/settings.php:25
+msgid "Footer"
+msgstr ""
+
+#: ../functions.php:214
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../header.php:35
+msgid "Skip to content"
+msgstr ""
+
+#: ../inc/extras.php:80
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/metaslider.php:16
+msgid "Slider: "
+msgstr ""
+
+#: ../inc/settings.php:17
+msgid "Header"
+msgstr ""
+
+#: ../inc/settings.php:18
+msgid "Navigation"
+msgstr ""
+
+#: ../inc/settings.php:19
+msgid "Layout"
+msgstr ""
+
+#: ../inc/settings.php:20
+msgid "Home"
+msgstr ""
+
+#: ../inc/settings.php:21
+msgid "Pages"
+msgstr ""
+
+#: ../inc/settings.php:22
+msgid "Blog"
+msgstr ""
+
+#: ../inc/settings.php:23
+msgid "Comments"
+msgstr ""
+
+#: ../inc/settings.php:24
+msgid "Social"
+msgstr ""
+
+#: ../inc/settings.php:28
+msgid "Logo Image"
+msgstr ""
+
+#: ../inc/settings.php:29 ../inc/settings.php:35
+msgid "Choose Image"
+msgstr ""
+
+#: ../inc/settings.php:30 ../inc/settings.php:36
+msgid "Set Logo"
+msgstr ""
+
+#: ../inc/settings.php:31
+msgid "Your own custom logo."
+msgstr ""
+
+#: ../inc/settings.php:34 ../upgrade/upgrade.php:23
+msgid "Retina Logo"
+msgstr ""
+
+#: ../inc/settings.php:37
+msgid ""
+"A double sized version of your logo for use on high pixel density displays. "
+"Must be used in addition to standard logo."
+msgstr ""
+
+#: ../inc/settings.php:40
+msgid "Center Logo"
+msgstr ""
+
+#: ../inc/settings.php:41
+msgid "Display a centered header logo."
+msgstr ""
+
+#: ../inc/settings.php:44
+msgid "Display Tagline"
+msgstr ""
+
+#: ../inc/settings.php:45
+msgid "Display the website tagline."
+msgstr ""
+
+#: ../inc/settings.php:49
+msgid "Post Navigation"
+msgstr ""
+
+#: ../inc/settings.php:50
+msgid "Display next/previous post navigation."
+msgstr ""
+
+#: ../inc/settings.php:53
+msgid "Header Menu"
+msgstr ""
+
+#: ../inc/settings.php:54
+msgid "Display the header menu."
+msgstr ""
+
+#: ../inc/settings.php:57 ../upgrade/upgrade.php:28
+msgid "Responsive Menu"
+msgstr ""
+
+#: ../inc/settings.php:58
+msgid "Use a special responsive menu for small screen devices."
+msgstr ""
+
+#: ../inc/settings.php:63
+msgid "Responsive Layout"
+msgstr ""
+
+#: ../inc/settings.php:64
+msgid "Adapt the site layout for mobile devices."
+msgstr ""
+
+#: ../inc/settings.php:67
+msgid "Enable FitVids.js"
+msgstr ""
+
+#: ../inc/settings.php:68
+msgid "Include FitVids.js for fluid width video embeds."
+msgstr ""
+
+#: ../inc/settings.php:72
+msgid "Home Page Slider"
+msgstr ""
+
+#: ../inc/settings.php:75
+#, php-format
+msgid ""
+"This theme supports <a href=\"%s\" target=\"_blank\">Meta Slider</a>. <a "
+"href=\"%s\">Install it</a> for free to easily build beautiful responsive "
+"sliders - <a href=\"%s\" target=\"_blank\">read more</a>."
+msgstr ""
+
+#: ../inc/settings.php:83
+msgid "Page Featured Image"
+msgstr ""
+
+#: ../inc/settings.php:84
+msgid "Display the featured image on pages."
+msgstr ""
+
+#: ../inc/settings.php:89
+msgid "Blog Archive Layout"
+msgstr ""
+
+#: ../inc/settings.php:91
+msgid "Choose the layout to be used on blog and archive pages."
+msgstr ""
+
+#: ../inc/settings.php:94
+msgid "Archive Featured Image"
+msgstr ""
+
+#: ../inc/settings.php:95
+msgid "Display the featured image on the blog archive pages."
+msgstr ""
+
+#: ../inc/settings.php:98
+msgid "Archive Post Content"
+msgstr ""
+
+#: ../inc/settings.php:100
+msgid "Full Post Content"
+msgstr ""
+
+#: ../inc/settings.php:101
+msgid "Post Excerpt"
+msgstr ""
+
+#: ../inc/settings.php:103
+msgid ""
+"Choose how to display your post content on blog and archive pages. Select "
+"Full Post Content if using the \"more\" quicktag."
+msgstr ""
+
+#: ../inc/settings.php:106
+msgid "Read More Text"
+msgstr ""
+
+#: ../inc/settings.php:107
+msgid ""
+"The link text displayed when posts are split using the \"more\" quicktag."
+msgstr ""
+
+#: ../inc/settings.php:116
+msgid "Post Excerpt Length"
+msgstr ""
+
+#: ../inc/settings.php:117
+msgid ""
+"If no manual post excerpt is added one will be generated. How many words "
+"should it be?"
+msgstr ""
+
+#: ../inc/settings.php:126
+msgid "Post Featured Image"
+msgstr ""
+
+#: ../inc/settings.php:127
+msgid "Display the featured image on the single post page."
+msgstr ""
+
+#: ../inc/settings.php:130
+msgid "Post Date"
+msgstr ""
+
+#: ../inc/settings.php:131
+msgid "Display the post date."
+msgstr ""
+
+#: ../inc/settings.php:134
+msgid "Post Author"
+msgstr ""
+
+#: ../inc/settings.php:135
+msgid "Display the post author."
+msgstr ""
+
+#: ../inc/settings.php:138
+msgid "Post Categories"
+msgstr ""
+
+#: ../inc/settings.php:139
+msgid "Display the post categories."
+msgstr ""
+
+#: ../inc/settings.php:142
+msgid "Post Tags"
+msgstr ""
+
+#: ../inc/settings.php:143
+msgid "Display the post tags."
+msgstr ""
+
+#: ../inc/settings.php:146
+msgid "Post Comment Count"
+msgstr ""
+
+#: ../inc/settings.php:147
+msgid "Display the post comment count."
+msgstr ""
+
+#: ../inc/settings.php:150
+msgid "Post Edit Link"
+msgstr ""
+
+#: ../inc/settings.php:151
+msgid ""
+"Display an Edit link below post content. Visible if a user is logged in and "
+"allowed to edit the content. Also applies to Pages."
+msgstr ""
+
+#: ../inc/settings.php:155
+msgid "Comment Form Allowed Tags"
+msgstr ""
+
+#: ../inc/settings.php:156
+msgid ""
+"Display the explanatory text below the comment form that lets users know "
+"which HTML tags may be used."
+msgstr ""
+
+#: ../inc/settings.php:159 ../upgrade/upgrade.php:40
+msgid "Ajax Comments"
+msgstr ""
+
+#: ../inc/settings.php:160
+msgid "Allow users to submit comments without a page re-load on submit."
+msgstr ""
+
+#: ../inc/settings.php:165 ../upgrade/upgrade.php:46
+msgid "Post Sharing"
+msgstr ""
+
+#: ../inc/settings.php:166
+msgid ""
+"Show icons to share your posts on Facebook, Twitter, Google+ and LinkedIn."
+msgstr ""
+
+#: ../inc/settings.php:170
+msgid "Twitter Handle"
+msgstr ""
+
+#: ../inc/settings.php:171
+msgid "This handle will be recommended after a user shares one of your posts."
+msgstr ""
+
+#: ../inc/settings.php:176
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: ../inc/settings.php:177
+msgid ""
+"{site-title}, {copyright} and {year} can be used to display your website "
+"title, a copyright symbol and the current year."
+msgstr ""
+
+#: ../inc/settings.php:180
+msgid "Footer Attribution Link"
+msgstr ""
+
+#: ../inc/settings.php:181
+msgid ""
+"Remove the theme attribution link from your footer without editing any code."
+msgstr ""
+
+#: ../inc/settings.php:185
+msgid "Enqueue JavaScript in Footer"
+msgstr ""
+
+#: ../inc/settings.php:186
+msgid ""
+"Enqueue theme JavaScript files in the footer. Doing so can improve site load "
+"time."
+msgstr ""
+
+#: ../inc/settings.php:219
+msgid "Continue reading"
+msgstr ""
+
+#: ../inc/settings.php:235
+msgid "Copyright {year}"
+msgstr ""
+
+#: ../inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:36
+msgid "Previous"
+msgstr ""
+
+#: ../inc/template-tags.php:37
+msgid "Next"
+msgstr ""
+
+#: ../inc/template-tags.php:63
+msgid "Post navigation"
+msgstr ""
+
+#: ../inc/template-tags.php:66 ../inc/template-tags.php:67
+msgid "%title"
+msgstr ""
+
+#: ../inc/template-tags.php:83
+msgid "Sticky"
+msgstr ""
+
+#: ../inc/template-tags.php:99 ../inc/template-tags.php:103
+msgid ", "
+msgstr ""
+
+#: ../inc/template-tags.php:108
+msgid "Leave a comment"
+msgstr ""
+
+#: ../inc/template-tags.php:108
+msgid "1 Comment"
+msgstr ""
+
+#: ../inc/template-tags.php:108
+msgid "% Comments"
+msgstr ""
+
+#: ../inc/template-tags.php:151
+#, php-format
+msgid "%s Logo"
+msgstr ""
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../tour/tour.php:7
+msgid "Welcome to Puro"
+msgstr ""
+
+#: ../tour/tour.php:8
+msgid ""
+"Clean, crisp and lightweight. Puro is a theme for bloggers, creatives and "
+"small businesses. This quick tour will guide you through some of the basic "
+"setup and features."
+msgstr ""
+
+#: ../tour/tour.php:13
+msgid "Upload Your Logo"
+msgstr ""
+
+#: ../tour/tour.php:14
+msgid ""
+"Uploading a custom logo is a great place to start your customization. Click "
+"\"Choose Image\" below to set your logo image. The image will replace the "
+"text site title. If you don't have a logo, not to worry, the regular site "
+"title looks great on its own."
+msgstr ""
+
+#: ../tour/tour.php:20
+msgid "Upload Your Retina Logo"
+msgstr ""
+
+#: ../tour/tour.php:21
+msgid ""
+"Upload a double sized version of your logo. Puro will automatically display "
+"this logo to users on high pixel density displays. Apple devices with Retina "
+"displays are an example of this."
+msgstr ""
+
+#: ../tour/tour.php:27
+msgid "Add a Home Page Slider"
+msgstr ""
+
+#: ../tour/tour.php:28
+msgid ""
+"A home page slider can be used to show off your latest photos, feature pages "
+"or display a brand message. Add a home page Slider by installing the plugin, "
+"Meta Slider. Once you've created a slideshow in Meta Slider, it will appear "
+"in this drop down list."
+msgstr ""
+
+#: ../tour/tour.php:34
+msgid "Enable Post Sharing"
+msgstr ""
+
+#: ../tour/tour.php:35
+msgid ""
+"Toggle this setting to quickly add Facebook, Twitter and Google Plus sharing "
+"buttons below your single post content. "
+msgstr ""
+
+#: ../tour/tour.php:41
+msgid "Enter Your Footer Copyright Text"
+msgstr ""
+
+#: ../tour/tour.php:42
+msgid "Use this field to set the text found at the bottom left of your footer."
+msgstr ""
+
+#: ../tour/tour.php:48
+msgid "Additional Settings"
+msgstr ""
+
+#: ../tour/tour.php:49
+msgid ""
+"Puro has many additional settings not covered in this brief tour. Head to "
+"Appearance > Theme Settings to check them out."
+msgstr ""
+
+#: ../tour/tour.php:56
+msgid "Take a Look at Puro Premium"
+msgstr ""
+
+#: ../tour/tour.php:57
+msgid ""
+"Puro Premium offers a series of bonus features at a price of your choosing. "
+"A once off upgrade that never expires and includes priority support. Check "
+"out our premium upgrade page for more information."
+msgstr ""
+
+#: ../tour/tour.php:60
+msgid "More About Puro Premium"
+msgstr ""
+
+#: ../upgrade/upgrade.php:4
+msgid "Upgrade to Puro Premium"
+msgstr ""
+
+#: ../upgrade/upgrade.php:5
+msgid ""
+"Hi, my name is Andrew Misplon, the developer of Puro. If you've enjoyed Puro "
+"Free then I know you're going to love Puro Premium. Below you'll find an "
+"outline of the premium features."
+msgstr ""
+
+#: ../upgrade/upgrade.php:13
+msgid "Premium Email Support"
+msgstr ""
+
+#: ../upgrade/upgrade.php:14
+msgid ""
+"Puro Premium comes with email support. Let us know if you run into any "
+"challenges or simply need a hand getting setup. We're here to help."
+msgstr ""
+
+#: ../upgrade/upgrade.php:18
+msgid "Name the Price"
+msgstr ""
+
+#: ../upgrade/upgrade.php:19
+msgid ""
+"You choose the price, so you can pay what Puro is worth to you. Choose from "
+"one our suggested options or specify your own custom price. Regardless of "
+"what you pay you'll receive the same upgrade file and be supporting the "
+"continued development of the theme."
+msgstr ""
+
+#: ../upgrade/upgrade.php:24
+msgid ""
+"Puro Premium allows you to upload an additional, double-sized logo, to be "
+"displayed on Apple Retina displays only."
+msgstr ""
+
+#: ../upgrade/upgrade.php:29
+msgid ""
+"Improve your site's mobile experience with Puro's responsive menu. On "
+"smaller screens your menu will be neatly packed away. Clicking the three bar "
+"menu icon to the right of your logo will drop your menu down, revealing it's "
+"links. Each menu item has enough padding to ensure mobile users can easily "
+"touch the correct item."
+msgstr ""
+
+#: ../upgrade/upgrade.php:34
+msgid "Enhanced Customizer Integration"
+msgstr ""
+
+#: ../upgrade/upgrade.php:35
+msgid ""
+"Make Puro your own with enhanced Customizer integration. Change fonts, "
+"colors and more all using the live-updating WordPress Customizer."
+msgstr ""
+
+#: ../upgrade/upgrade.php:41
+msgid ""
+"Remove page re-loads from your comment forms. This means that users can "
+"submit comments without losing their place in a gallery or interuppting a "
+"video."
+msgstr ""
+
+#: ../upgrade/upgrade.php:47
+msgid ""
+"Add sharing icons for Facebook, Twitter, Google Plus and LinkedIn to the "
+"bottom of your posts."
+msgstr ""
+
+#: ../upgrade/upgrade.php:52
+msgid "Remove Attribution Links"
+msgstr ""
+
+#: ../upgrade/upgrade.php:53
+msgid ""
+"Puro Premium gives you the option to remove the \"Puro WordPress Theme\" "
+"text from your Footer without editing any code."
+msgstr ""
+
+#: ../upgrade/upgrade.php:58
+msgid "Continued Updates"
+msgstr ""
+
+#: ../upgrade/upgrade.php:59
+msgid ""
+"Your premium upgrade is a valuable contribution to the future development of "
+"Puro, ensuring it's compatible with future versions of WordPress."
+msgstr ""
+
+#: ../upgrade/upgrade.php:68
+msgid ""
+"<p>Solid theme. Clean, minimal, to the point, zero clutter, fast, does what "
+"it says. Found video post types useful for a client project and works well.</"
+"p>"
+msgstr ""
+
+#: ../upgrade/upgrade.php:74
+msgid ""
+"<p>Very clean and well documented theme. I'm very curious to work with it. "
+"Thanks for sharing.</p>"
+msgstr ""
+
+#: ../upgrade/upgrade.php:80
+msgid ""
+"<p>Great theme. Neat, simple, and modern. It suits my needs and preferences, "
+"and the small modification that I want was easily solved by Support. Highly "
+"recommended.</p> <p>My favorite feature was the option to move the logo to "
+"the center without adjusting the layout using CSS. I've been looking for "
+"minimalist portfolio-friendly themes with such feature and this is the only "
+"one that I've found so far.</p> <p>Thank you so much for sharing such a "
+"wonderful theme.</p>"
+msgstr ""
+
+#: ../upgrade/upgrade.php:92
+#, php-format
+msgid ""
+"Additional styles are available in <a href=\"%s\" target=\"_blank\">Puro "
+"Premium</a>."
+msgstr ""
