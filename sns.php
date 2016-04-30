@@ -1,22 +1,167 @@
-<div class="sns">
-  <ul class="snsb clearfix">
-    <li>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>">Tweet</a>
-      <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script> 
-    </li>
+<?php require_once('./wp-load.php');?>
 
-    <li class="like">
-      <iframe src="http://www.facebook.com/v2.0/plugins/like.php?href=<?php the_permalink(); ?>&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>
-    </li>
+<div class="cs-social-share clearfix">
 
-    <li>
-      <a href="http://b.hatena.ne.jp/entry/<?php the_permalink(); ?>" class="hatena-bookmark-button" data-hatena-bookmark-title="<?php the_title(); ?>｜<?php bloginfo('name'); ?>" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
-      <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script> 
-    </li>
+  <div class="cs-share-this-product facebook">
+    <a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/facebook.svg">
+        <span class="share-text">Share</span>
+      </div>
+    </a>
+  </div>
+  
+  <div class="cs-share-this-product twitter ">
+    <a title="Share on Twitter" target="_blank" href="https://twitter.com/share?url=<?php echo get_the_permalink();?>&text=<?php echo get_the_title();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/twitter.svg">
+        <span class="share-text">Tweet</span>
+      </div>
+    </a>
+  </div>
+  
+  <div class="cs-share-this-product google-plus ">
+    <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=<?php echo get_the_permalink();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/googleplus.svg">
+        <span class="share-text">Share</span>
+      </div>
+    </a>
+  </div>
+  
+  <div class="cs-share-this-product pocket ">
+    <a title="Share on Pocket" target="_blank" href="http://getpocket.com/edit?url=<?php echo get_the_permalink();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/pocket.svg">
+        <span class="share-text">Pocket</span>
+      </div>
+    </a>
+  </div>
+    
+  <div class="cs-share-this-product hatena ">
+    <a title="Share via Email" href="http://b.hatena.ne.jp/add?url=<?php echo get_the_permalink();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/hatena.svg">
+        <span class="share-text">はてブ</span>
+      </div>
+      <div class="count"></div>
+    </a>
+  </div>  
 
-    <li>
-      <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-      <g:plusone size="standard" href="<?php the_permalink(); ?>"></g:plusone>
-    </li>
-  </ul>
+  <div class="cs-share-this-product line ">
+    <a title="Share via Email" href="http://line.me/R/msg/text/?<?php echo get_the_title();?> <?php echo get_the_permalink();?>">
+      <div class="social-share-icon-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/line.svg">
+        <span class="share-text">Line</span>
+      </div>
+      <div class="count"></div>
+    </a>
+  </div>
+  
+  <div class="clearfix"></div>
+  
 </div>
+
+<style>
+  @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+  body {
+    font-family: Noto Sans;
+  }
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+/*/////////////////////////////////////////////////////////////
+    // Social Sharing Icons \
+    ///////////////////////////////////////////////////////////// */
+    .cs-social-share {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      display: block;
+      background: #424242;
+      border: solid 3px #2F2F2F;
+      padding: 2%;
+    }
+
+/*/////////////////////////////////////////////////////////////
+    // Social Sharing Icons On Product Page \
+    ///////////////////////////////////////////////////////////// */
+    .cs-share-this-product {
+      float: left;
+      width: 15%;
+      height: 30px;
+      padding: 1px 0px;
+      min-width: 68px;
+      margin: 2% .8%;
+      overflow: hidden;
+      -webkit-filter: brightness(90%);
+      -moz-filter: brightness(90%);
+      -ms-filter: brightness(90%);
+      -o-filter: brightness(90%);
+      filter: brightness(90%);
+      transition: all .45s ease-in-out;
+    }
+    .cs-share-this-product:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      border-radius: 3px;
+      -webkit-filter: brightness(120%);
+      -moz-filter: brightness(120%);
+      -ms-filter: brightness(120%);
+      -o-filter: brightness(120%);
+      filter: brightness(120%);
+    }
+    .cs-share-this-product:hover img {
+      left: 32%;
+      transform: scale(1);
+    }
+    .cs-share-this-product:hover span.share-text {
+      opacity: 0;
+      left: 20px;
+      transform: rotateX(90deg) scale(0.3);
+    }
+    .cs-share-this-product a {
+      text-decoration: none;
+    }
+    .cs-share-this-product img {
+      width: 28px;
+      transition: all .5s ease;
+      position: relative;
+      left: 0;
+      transform: scale(0.8);
+    }
+    .cs-share-this-product .social-share-icon-block span.share-text {
+      font-size: 12px;
+      color: #fff;
+      position: relative;
+      left: -3px;
+      top: -8px;
+      transition: all .45s ease-in-out;
+    }
+    .cs-share-this-product.facebook {
+      background: #527EBF;
+    }
+    .cs-share-this-product.twitter {
+      background: #25C0E2;
+    }
+    .cs-share-this-product.google-plus {
+      background: #DB4A37;
+    }
+    .cs-share-this-product.pocket {
+      background: #EE4056;
+    }
+    .cs-share-this-product.hatena {
+      background: #008FDE;
+    }    
+    .cs-share-this-product.line {
+      background: #00C300;
+    }
+
+
+  </style>
