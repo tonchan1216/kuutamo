@@ -1,9 +1,9 @@
 <?php require_once('./wp-load.php');?>
-
+<?php $p = $post->ID;?>
 <div class="cs-social-share clearfix">
 
   <div class="cs-share-this-product facebook">
-    <a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink();?>">
+    <a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/facebook.svg">
         <span class="share-text">Share</span>
@@ -12,7 +12,7 @@
   </div>
   
   <div class="cs-share-this-product twitter ">
-    <a title="Share on Twitter" target="_blank" href="https://twitter.com/share?url=<?php echo get_the_permalink();?>&text=<?php echo get_the_title();?>">
+    <a title="Share on Twitter" target="_blank" href="https://twitter.com/share?url=<?php echo wp_get_shortlink($p); ?>&text=<?php echo get_the_title();?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/twitter.svg">
         <span class="share-text">Tweet</span>
@@ -21,7 +21,7 @@
   </div>
   
   <div class="cs-share-this-product google-plus ">
-    <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=<?php echo get_the_permalink();?>">
+    <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/googleplus.svg">
         <span class="share-text">Share</span>
@@ -30,7 +30,7 @@
   </div>
   
   <div class="cs-share-this-product pocket ">
-    <a title="Share on Pocket" target="_blank" href="http://getpocket.com/edit?url=<?php echo get_the_permalink();?>">
+    <a title="Share on Pocket" target="_blank" href="http://getpocket.com/edit?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/pocket.svg">
         <span class="share-text">Pocket</span>
@@ -39,7 +39,7 @@
   </div>
     
   <div class="cs-share-this-product hatena ">
-    <a title="Share via Email" href="http://b.hatena.ne.jp/add?url=<?php echo get_the_permalink();?>">
+    <a title="Share via Email" href="http://b.hatena.ne.jp/add?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/hatena.svg">
         <span class="share-text">はてブ</span>
@@ -49,7 +49,7 @@
   </div>  
 
   <div class="cs-share-this-product line ">
-    <a title="Share via Email" href="http://line.me/R/msg/text/?<?php echo get_the_title();?> <?php echo get_the_permalink();?>">
+    <a title="Share via Email" href="http://line.me/R/msg/text/?<?php echo get_the_title();?> <?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
         <img src="<?php echo get_stylesheet_directory_uri();?>/images/sns/line.svg">
         <span class="share-text">Line</span>

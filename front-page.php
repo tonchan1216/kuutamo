@@ -221,15 +221,18 @@
 						<div>
 							<h2>News &amp; Blog</h2>
 							<p>
-								<ul>			
-									<?php query_posts('category_name=notice,event,news'); ?>
-									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-										<li>
-											<?php the_time('Y.m.d');?>
-											<a href="<?php echo the_permalink();?>"><? the_title();?></a>
-										</li>
-									<? endwhile; endif; wp_reset_query();?>
-								</ul>
+								<dl>			
+									<?php 
+									$query_args = array(
+										'post_type' => array('post','event') 
+										);
+									$the_query = new WP_Query($query_args);
+									if ( $the_query->have_posts() ) :	while ( $the_query->have_posts() ) : $the_query->the_post();?>
+										<dt><?php the_time('Y.m.d');?></dt>
+										<dd><a href="<?php echo the_permalink();?>"><? the_title();?></a></dd>
+									<?php endwhile;	endif;?>
+									<?php wp_reset_postdata();?>
+								</dl>
 							</p>
 						</div>
 					</div>

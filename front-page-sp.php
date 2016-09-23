@@ -202,11 +202,16 @@
 							<h2>News & Blog</h2>
 							<div>
 								<dl id="news">			
-									<?php query_posts('category_name=notice,event,news'); ?>
-									<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+									<?php 
+									$query_args = array(
+										'post_type' => array('post','event') 
+										);
+									$the_query = new WP_Query($query_args);
+									if ( $the_query->have_posts() ) :	while ( $the_query->have_posts() ) : $the_query->the_post();?>
 										<dt><?php the_time('Y.m.d');?></dt>
 										<dd><a href="<?php echo the_permalink();?>"><? the_title();?></a></dd>
-									<? endwhile; endif; wp_reset_query();?>
+									<?php endwhile;	endif;?>
+									<?php wp_reset_postdata();?>
 								</dl>
 							</div>
 							<div class="fb-page" data-href="https://www.facebook.com/kuutamo-510368712445569/" data-width="300" data-height="360" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"></div>

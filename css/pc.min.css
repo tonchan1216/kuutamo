@@ -44,6 +44,8 @@
 .bb-side > div .eyecatchimg{display:block;height:100%;margin:10px auto 0;}
 .page-layout-1 > div ul{font-size:0.9em;}
 .page-layout-1 > div a{text-decoration:none;color:#83B39D;}
+.page-layout-1 > div dl dt{width:30%;float:left;clear:left;}
+.page-layout-1 > div dl dd{width:70%;float:left;}
 .page-layout-1 #map{margin:2% auto 0;width:100%;}
 .page-layout-2 > div p{font-size:0.9em;}
 .page-layout-2 > div dl{margin-top:-5%;}
