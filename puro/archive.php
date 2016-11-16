@@ -13,7 +13,18 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+
+			<header class="page-header">
+				<h1 class="entry-title"><?php echo get_the_archive_title();?></h1> 
+				<?php 
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					if ( is_author() ) { 
+						echo '<div class="taxonomy-description"><p>';
+						the_author_meta( 'description' );
+						echo '</p></div>';
+					}
+				?>
+			</header><!-- .page-header -->
 			<?php get_template_part( 'loops/loop', siteorigin_setting( 'blog_archive_layout' ) ); ?>
 
 		</main><!-- #main -->
