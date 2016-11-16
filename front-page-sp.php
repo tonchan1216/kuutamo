@@ -11,12 +11,15 @@
 					<li><a href="#item2"　title="メニュー">Menu</a></li>
 					<li><a href="#item3"　title="インフォメーション">Info</a></li>
 					<li><a href="#item4"　title="ギャラリー">Gallery</a></li>
-					<li><a href="#item5"　title="アクセス">Acccess</a></li>
-					<li><a href="#item6"　title="ニュース">News</a></li>
+					<li><a href="#item5"　title="本の紹介">Book</a></li>
+					<li><a href="#item6"　title="アクセス">Acccess</a></li>
+					<li><a href="#item7"　title="ニュース">News</a></li>
 				</ul>
 				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
 					<a href="https://www.facebook.com/kuutamogohan" title="Facebookページ">Facebook</a>
+					<a href="https://twitter.com/kuutamo_gohan" title="Twitterページ">Twitter</a>
+					<a href="https://www.instagram.com/kuutamo_gohan/" title="Instagramページ">Instagram</a>
 				</div>
 			</div>
 		</header><!-- /header -->
@@ -54,28 +57,6 @@
 
 							<div>
 								<?php query_posts('post_type=book_contents&name=menu2'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<h3>Lunch</h3>
-								<?php query_posts('post_type=book_contents&name=menu3'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-								<?php query_posts('post_type=book_contents&name=menu4'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -182,6 +163,37 @@
 				<div class="bb-item" id="item5">
 					<div class="content">
 						<div class="scroller">
+							<h2>Book</h2>
+							<div>
+								<?php query_posts('post_type=book_contents&name=book1'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<?php query_posts('post_type=book_contents&name=book2'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bb-item" id="item6">
+					<div class="content">
+						<div class="scroller">
 							<h2>Access</h2>
 							<div>
 								<img id="map" src="<?php echo get_stylesheet_directory_uri();?>/images/map.jpg" alt="中村橋駅からのアクセスマップ">
@@ -196,7 +208,7 @@
 					</div>
 				</div>					
 
-				<div class="bb-item" id="item6">
+				<div class="bb-item" id="item7">
 					<div class="content">
 						<div class="scroller">
 							<h2>News & Blog</h2>
