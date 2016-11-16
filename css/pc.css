@@ -164,35 +164,44 @@
 }
 
 .nav-concept{
-	right:250px;
+	right:300px;
 	background-color: #E3CFB6;
 }
 
 .bb-side .nav-concept{
-	right:240px;
+	right:290px;
 }
 
 .nav-menu{
-	right:200px;
+	right:250px;
 	background-color: #5D9F95;
 }
 
 .bb-side .nav-menu{
-	right:190px;
+	right:240px;
 }
 
 .nav-info{
-	right: 150px;
+	right: 200px;
 	background-color: #E3CFB6;
 }
 
 .bb-side .nav-info{
+	right:190px;
+}
+
+.nav-book{
+	right: 150px;
+	background-color: #5D9F95;
+}
+
+.bb-side .nav-book{
 	right:140px;
 }
 
 .nav-access{
 	right:100px;
-	background-color: #5D9F95;
+	background-color: #E3CFB6;
 }
 
 .bb-side .nav-access{
@@ -201,7 +210,7 @@
 
 .nav-news{
 	right:50px;
-	background-color: #E3CFB6;
+	background-color: #5D9F95;
 }
 
 .bb-side .nav-news{

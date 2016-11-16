@@ -7,7 +7,7 @@ var Page = (function() {
 		$navmark : $( '#head-nav' ),
 	},
 	current = 0,
-	pages = {1:"concept",2:"menu",6:"info",7:"access",8:"news"};
+	pages = {1:"concept",2:"menu",5:"info",6:"book",7:"access",8:"news"};
 
 	function init() {
 		config.$bookBlock.bookblock( {

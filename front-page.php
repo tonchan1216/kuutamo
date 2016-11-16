@@ -72,31 +72,6 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
 						<div>
-							<h2>Lunch</h2>
-							<?php query_posts('post_type=book_contents&name=menu3'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-
-					<div class="bb-side page-layout-2">
-						<div>
-							<?php query_posts('post_type=book_contents&name=menu4'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-				</div>
-
-				<div class="bb-item">
-					<div class="bb-side page-layout-2">
-						<div>
 							<h2>Soft Drink</h2>
 							<?php query_posts('post_type=book_contents&name=menu5'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -125,6 +100,7 @@
 						</div>
 					</div>
 				</div>
+
 
 				<div class="bb-item">
 					<div class="bb-side page-layout-2">
@@ -182,6 +158,42 @@
 							<h2>Gallary</h2>
 							<p>
 								<?php query_posts('post_type=book_contents&name=gallary'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="bb-item">
+					<div class="bb-side page-layout-1">
+						<div>
+							<h2>Book</h2>
+							<p>
+								<?php query_posts('post_type=book_contents&name=book1'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( array(100,100), 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</p>
+						</div>
+					</div>
+
+					<div class="bb-side page-layout-1">
+						<p class="nav nav-book"></p>
+						<div>
+							<p>
+								<?php query_posts('post_type=book_contents&name=book2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -255,7 +267,11 @@
 					</li>
 
 					<li class="nav-info">
-						<a href="#" title="インフォメーション"><span style="padding-left: 4px">I</span>nfo</a>
+						<a href="#" title="インフォメーション"><span>G</span>llery</a>
+					</li>
+
+					<li class="nav-book">
+						<a href="#" title="本の紹介"><span>B</span>ook</a>
 					</li>
 
 					<li class="nav-access">
