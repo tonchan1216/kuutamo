@@ -1,0 +1,119 @@
+/*
+Theme Name: Puro
+Description: Adds support for WooCommerce.
+*/
+
+// Dependencies
+@import "bourbon";
+
+// Variables and Mixins
+@import "../sass/mixins";
+@import "../sass/variables";
+
+.woocommerce .woocommerce-breadcrumb {
+	@include font-size(0.8125);
+}
+
+.woocommerce #page .page-title {
+	@include font-size(2);
+	line-height: 1.6875em;
+	margin: 0; 
+
+	@media (max-width: $small) {
+		@at-root .resp#{&} {
+			@include font-size(1.4375);
+			line-height: normal;
+		}
+	}
+}
+
+.woocommerce .woocommerce-ordering, 
+.woocommerce .woocommerce-result-count {
+    @include font-size(0.8125);
+}
+
+.woocommerce a.added_to_cart {
+	@include font-size(0.875);
+}
+
+.woocommerce div.product .product_title {
+	margin-bottom: 0;
+}
+
+.woocommerce .product_meta {
+	@include font-size(0.875);
+}
+
+.woocommerce nav.woocommerce-pagination ul.page-numbers {
+	border: none;
+	
+	li {
+		border-right: 0;
+		margin-right: 0.3125em; 
+
+		a {
+			border: 1px solid $border-color;
+			border-radius: 4px;
+			color: $text-secondary-color; 
+			line-height: 1.6875;
+			min-width: auto; 
+			padding: 0.4375em 1.0625em 0.375em;
+			
+			&:hover {
+				background: none;
+				border-color: $highlight-color; 
+				color: $highlight-color;
+			}
+
+			&:focus {
+				background: none;
+			}	
+		}
+
+		span {
+			line-height: 1.6875;
+			min-width: auto; 
+			padding: 0.4375em 1.0625em 0.375em;
+		}
+
+		span.current {
+			background: none; 
+			border: 1px solid $border-color;
+			border-color: $highlight-color;
+			border-radius: 4px;
+			color: $highlight-color;
+		}		
+
+		.dots {
+			border: none;
+			padding-right: 0;
+			padding-left: 0; 
+			
+			&:hover {
+				color: $text-color;
+			}
+		}			
+	}				
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button,
+#add_payment_method .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+	line-height: 1.6875;
+	padding: 8px 16px 7px;
+}
+
+.woocommerce table.shop_table {
+	border-collapse: collapse;
+}
+
+#add_payment_method 
+.cart-collaterals .cart_totals table, 
+.woocommerce-cart .cart-collaterals .cart_totals table, 
+.woocommerce-checkout .cart-collaterals .cart_totals table {
+	border-collapse: collapse;
+}

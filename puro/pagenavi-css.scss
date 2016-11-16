@@ -1,0 +1,58 @@
+/*
+Theme Name: Puro
+Description: Adds support for WP PageNavi plugin.
+*/
+@import "sass/variables";
+
+/*--------------------------------------------------------------
+WP-PageNavi
+--------------------------------------------------------------*/
+.wp-pagenavi a, 
+.wp-pagenavi span {
+	border: 0.0625em solid $border-color;
+	border-radius: 0.25em;
+	color: $text-color;
+	display: inline-block;
+	margin: 0 0.3125em 0;
+	padding: 0.4375em 1.0625em 0.375em;
+	text-transform: uppercase;			 	
+}
+
+.wp-pagenavi a:last-of-type {
+	margin-right: 0;
+}
+
+.wp-pagenavi a:hover {
+	color: $highlight-color;
+	border-color: $highlight-color; 
+}			
+
+.wp-pagenavi span.pages {
+	border: none;
+	color: $heading-color; 
+}
+
+.wp-pagenavi span.extend {
+	border: none;
+	padding-right: 0;
+	padding-left: 0; 
+}
+
+@media (max-width: $large) {
+	.wp-pagenavi span.pages, 
+	.wp-pagenavi span.current, 
+	.wp-pagenavi a.page, 
+	.wp-pagenavi span.extend, 
+	.wp-pagenavi a.last, 
+	.wp-pagenavi a.first {
+		display: none;
+	}
+
+	.wp-pagenavi .previouspostslink {
+		float: left;
+	}
+
+	.wp-pagenavi .nextpostslink {
+		float: right;
+	}
+}

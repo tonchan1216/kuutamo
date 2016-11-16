@@ -13,16 +13,16 @@
 				<?php the_post_thumbnail(); ?>
 			</a>	
 		</div>	
-	<?php elseif ( is_single() && has_post_thumbnail() && siteorigin_setting('blog_archive_featured_image') ) : ?>
+	<?php elseif ( is_single() && has_post_thumbnail() && siteorigin_setting('blog_post_featured_image') ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>				
 	<?php endif; ?>
 	<header class="entry-header">
-		<?php if( is_single() ) : ?>	
+		<?php if ( is_single() ) : ?>	
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php endif; ?>	
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

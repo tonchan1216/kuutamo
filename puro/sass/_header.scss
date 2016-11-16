@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+13.0 - Header
+--------------------------------------------------------------*/
+.site-header {
+	border-bottom: 0.0625rem solid $border-color;
+	line-height: 1.31707em;
+	margin: 0 0 4.21875em;
+	padding: 2.53125em 0;
+	position: relative;
+	width: 100%;
+
+	/// Make the site header inner div a table when the center logo setting isn't enabled.
+	@at-root .site-header:not(.center-logo) .site-header-inner {
+		display: table;
+		position: relative;
+		width: 100%; 
+	}
+
+	.site-branding {
+		box-sizing: border-box;
+		margin: 0; 
+		max-width: 40%;
+		padding-right: 1.6875em;
+		
+		// Vertically center site branding with a table-cell if the center logo setting isn't enabled.
+		@at-root .site-header:not(.center-logo) .site-branding {
+			display: table-cell;
+			vertical-align: middle;
+		}		
+		
+		img {
+			margin-top: 0.625em; 
+		}
+
+		h1.site-title {
+			@include font-size(2.5625);
+			font-family: $arial;
+			font-weight: bold; 
+			letter-spacing: -1px; 
+			margin: 0; 
+			
+			@at-root .center-logo h1.site-title {
+				line-height: normal;
+			}			
+		
+			a {
+				color: #333;
+				text-decoration: none;
+			}
+		}
+
+		h2.site-description	{
+			@include font-size(1);
+			color: $text-secondary-color;
+			font-weight: normal;
+			line-height: 1.6875em;
+			margin: -0.375em 0 0.25em;	
+		}
+	}
+
+	// Center the site branding text if the center logo setting is enabled.
+	&.center-logo {
+	
+		.site-branding {
+			max-width: 100%; 
+			text-align: center; 
+			width: 100%;	
+		}
+	}
+}
+
+// Below breakpoint $medium, center the site branding if the responsive layout is enabled and the responsive menu is disabled.
+@media (max-width: $medium) {
+	.resp .site-header:not(.responsive-menu) .site-branding {
+		display: table-row;
+		padding-right: 0;
+		text-align: center;
+		max-width: 100%; 
+	}
+}

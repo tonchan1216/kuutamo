@@ -18,23 +18,15 @@
 	}
 ?>			
 	<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
-		<?php if ( ! is_single() && has_post_thumbnail() && siteorigin_setting('blog_archive_featured_image') ) : ?>
+		<?php if ( has_post_thumbnail() && siteorigin_setting('blog_archive_featured_image') ) : ?>
 			<div class="entry-thumbnail">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<?php the_post_thumbnail(); ?>
 				</a>	
-			</div>	
-		<?php elseif ( is_single() && has_post_thumbnail() && siteorigin_setting('blog_archive_featured_image') ) : ?>
-			<div class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div>				
+			</div>			
 		<?php endif; ?>
 		<header class="entry-header">
-			<?php if( is_single() ) : ?>	
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php else : ?>
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<?php endif; ?>	
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php puro_posted_on(); ?>

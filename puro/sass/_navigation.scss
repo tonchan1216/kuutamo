@@ -1,0 +1,698 @@
+/*--------------------------------------------------------------
+6.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.1 - Links
+--------------------------------------------------------------*/
+a {
+	color: $highlight-color; 
+	text-decoration: none;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $text-color;
+	}	
+}
+
+/*--------------------------------------------------------------
+6.2 - Main Menu
+--------------------------------------------------------------*/
+.main-navigation {
+	@include font-size(0.875);
+	line-height: 1.92857em;
+	text-align: right;
+	max-width: 60%;
+	
+	// Vertically center the main menu with a table-cell if the center logo setting isn't enabled.
+	@at-root .site-header:not(.center-logo) .main-navigation {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	@media (max-width: $medium) {
+		.resp & {
+			margin: 0 0 0.1875em; 
+		}
+
+		// If the responsive menu is disabled, center the menu in the header at breakpoint medium.
+		.resp .site-header:not(.responsive-menu) & {
+			text-align: center;
+			margin: 1.5804em 0 0.1875em; 
+			max-width: 100%; 
+			width: 100%; 		
+		}
+	}  	
+	
+	a {
+		color: $text-color;
+		display: block;
+		white-space: nowrap;	
+	}
+
+	.current_page_item > a, 
+	.current-menu-item > a {
+		color: $highlight-color; 
+	}	
+
+ 	ul {
+ 		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		@media (max-width: $medium) {
+			.resp & {
+				text-align: center;
+			}
+		}		
+
+		li {
+			display: inline-block;
+			padding: 0 1.6518em 0 0; 
+			position: relative;
+			
+			&:hover > a {
+				color: $highlight-color;
+			}
+
+			&:last-of-type {
+				padding-right: 0; 
+			}
+		}	
+
+		ul {
+			display: none;
+			left: 0; 
+			padding-top: 0.1875em; 
+			position: absolute;
+			text-align: left !important;
+			z-index: 300;  
+			
+			@media (max-width: $large) {
+				.resp & {
+					display: none;
+				}
+			}  		
+					
+			li {
+				background: $background-color; 
+				margin: 0;
+				min-width: 9.6429em;
+				padding: 0;
+				width: 100%; 
+								
+				a {
+					padding: 0.5714em 1.1429em 0.5179em;			 					
+				}
+
+				&:hover > a {
+					background: $highlight-color;
+					color: #fff; 
+				}					
+			}	
+
+			ul {
+				left: 100%;
+				padding-top: 0;
+				top: 0;
+			}		
+		}
+
+		li:hover > ul {
+			display: block;
+		}
+	}
+
+	.menu-item-has-children {
+		margin-right: 2.6607em; 
+		padding-right: 0; 		
+		
+		a:before {
+	        content: "\f063";
+	        font-family: $icon-font;
+	        font-size: 0.625em;
+	        padding: 0 0 0 0.6em;
+	        position: absolute;
+	        right: -1.5625em;
+	        top: 0.1875em; 		
+		}
+
+		.sub-menu .menu-item-has-children {
+			margin-right: 0; 
+		}
+
+		.sub-menu a:before {
+			content: none; 
+		}					 		  
+	}
+}
+
+.center-logo .main-navigation {
+	margin: 1.5804em 0 0.1875em;
+	max-width: 100%; 
+	text-align: center;
+	width: 100%; 
+	
+	@media (max-width: $medium) {
+		@at-root .resp .responsive-menu#{&} {
+			margin-top: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+6.3 - Responsive Menu
+--------------------------------------------------------------*/
+.responsive-menu {
+        
+    .menu-toggle {
+    	background: none;
+        border-radius: 0;
+        box-shadow: none;
+        color: $heading-color;
+        -webkit-appearance: none;
+        display: none;
+        height: 22px;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 2.1875rem;
+      
+        &:after {
+            content: "\f0c9";
+            font-family: $icon-font; 
+            font-size: 1.4286rem;   
+            line-height: normal;
+        }
+
+        &:hover {
+            background: none;
+        }
+    }
+
+    .main-navigation.toggled .menu-toggle:after {
+        content: "\f00d"; 
+    }
+
+    .main-navigation.toggled {
+        height: auto;
+        margin-bottom: 1.78571em;
+        max-width: 100%;
+        width: 100%;
+        
+        > div {
+            float: none;
+        }    
+        
+        ul {
+            display: block;
+            margin: 0;
+            
+			> li[class*=children] {
+
+				.sub-menu li,
+				.children li {
+					margin-bottom: 2px;
+				}
+
+				&.up > .sub-menu,
+				&.up > .children {
+					display: block;
+				}
+
+				&.up a {
+					margin-bottom: 0 !important;
+				}				
+
+				> .sub-menu,
+				> .children {
+					display: none;
+				}
+
+	      		> span {
+	      			display: block;
+	      			cursor: pointer;
+	      			height: 46px; 
+	      			line-height: 46px;
+	      			margin: 0;
+	          		position: absolute;
+	          		right: 0;
+	          		text-align: center;
+	          		top: 0;
+	          		width: 45px;
+
+	          		&:after {
+	          			content: "\f078";
+	            		font-family: $icon-font;
+	            	}
+	        	}
+
+	        	> a:hover ~ span {
+	          		color: #fff;
+	        	}
+
+	        	&.up > span:after {
+	          		content: "\f077" !important;
+	        	}
+
+				// Level one.
+				ul li { 
+
+					a {
+						padding-left: 36px;
+					}
+					
+					// Level two.
+					ul li {
+
+						a {
+							padding-left: 54px;
+						}
+						
+						// Level three.
+						ul li {
+							
+							a {
+								padding-left: 72px;
+							}
+
+							// Level three.
+							ul li {
+
+								a {
+									padding-left: 90px; 
+								}
+								
+								// Level four.
+								ul li {
+									a {
+										padding-left: 108px;
+									}
+									
+									// Level five.
+									ul li a {
+										padding-left: 126px;  
+									}
+								}
+							}
+						}
+					}
+				}	        	       				     
+			}       
+            
+            li {
+                display: block;
+                margin: 0;
+                width: 100%;
+                
+                a {
+	            	background: $background-color;
+                    color: $text-color;
+                    height: auto !important;
+                    line-height: normal !important;
+                    margin: 0 0 2px; 
+                    padding: 14px 18px 15px;
+                    text-align: left;
+                    @include transition(none);
+                    
+                    &:hover,
+                    &:hover:before {
+                        background: $highlight-color;
+                        border-bottom: none;
+                        color: #fff;
+                    }
+                }                            
+            }
+	               			
+            > ul > li > a:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .menu-item-has-children,
+            .page_item_has_children { 
+
+                a:before {
+                    content: none;
+                }
+
+                > a:hover {
+                    border-bottom: none;
+                }
+            }                  
+
+            ul { 
+                background: none;
+                display: none; 
+                margin-top: 2px; 
+                opacity: 1 !important;
+                padding-top: 0;
+                position: static;
+                z-index: 2;
+                
+                li {
+                	background: #fff; 
+                }  
+                
+                li:hover > a {
+                    background: $background-color;
+                    color: $text-color;
+                }   
+                 
+                li a {
+                    line-height: normal;
+                    
+                    &:hover {
+                        background: $highlight-color;
+                        border-bottom: none;
+                        color: #fff;    
+                    }
+                    
+                }
+            }                        
+        }          
+    }
+}
+
+/*--------------------------------------------------------------
+6.4 - Comment, Post and Page Navigation
+--------------------------------------------------------------*/
+.site-main .comment-navigation,
+.site-main .post-navigation {
+	margin-top: 3.375em;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+
+.site-main .comment-navigation {
+	margin-bottom: 3.375em;
+}
+
+.comment-navigation .nav-links,
+.paging-navigation .nav-links,
+.post-navigation .nav-links {
+	text-align: center;	
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	position: relative;
+	
+	@media (max-width: $medium) {
+		.resp & {
+			float: none;
+			margin-bottom: 1.6875em;
+			width: 100%; 
+		}
+	} 		
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	position: relative;
+	@media (max-width: $medium) {
+		.resp & {
+			float: none;
+			width: 100%; 
+		}
+	} 	
+}
+
+.comment-navigation, .post-navigation {
+	.nav-previous a:before, .nav-next a:after {
+		font-family: 'FontAwesome'; 
+		font-size: 0.8125em; 
+	}
+
+	.nav-previous a:before {
+		content: "\f060";
+		padding-right: 0.5179em; 
+	}
+
+	.nav-next a:after {
+		content: "\f061";	
+		padding-left: 0.5179em; 
+	}
+}
+
+.paging-navigation {
+	margin-top: 3.375em;	  
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	text-align: center;
+	
+	.page-numbers {
+		border: 1px solid $border-color;
+		border-radius: 4px;
+		color: $text-secondary-color; 
+		display: inline-block;
+		margin-right: 0.3125em; 
+		padding: 0.4375em 1.0625em 0.375em;	
+			
+		&:hover {
+			color: $highlight-color;
+			border-color: $highlight-color; 
+		}
+	}
+
+	.dots {
+		border: none;
+		padding-right: 0;
+		padding-left: 0; 
+		
+		&:hover {
+			color: $text-color;
+		}
+	}
+
+	.current {
+		border-color: $highlight-color;
+		color: $highlight-color;
+	}
+
+	.prev, 
+	.next { 
+		display: block;
+		float: left;
+		margin-right: 0;
+		padding-right: 1.625em;
+		padding-left: 1.625em;
+	}	
+
+	.next {
+		float: right;
+	}
+}
+
+.meta-nav { 
+	font-size: 0.8125em; 
+}
+
+.nav-previous .meta-nav {
+	margin-right: 0.1875em; 
+}
+
+.nav-next .meta-nav {
+	margin-left: 0.1875em; 
+}
+
+/*--------------------------------------------------------------
+6.5 - Social Menu
+--------------------------------------------------------------*/
+.social-links-menu {
+	@media (max-width: $medium) {
+		.resp & {
+			float: left;
+			width: 100%; 
+		}
+	} 	
+	
+	.screen-reader-text {
+		left: -9999rem;
+		position: absolute;
+		top: -9999rem;
+	}
+
+	ul {
+		list-style: none;
+		position: relative;
+		margin: 0;
+			
+		li {
+			display: inline-block;
+			color: transparent; 
+			font-size: 0;
+			line-height: 0; 
+			padding: 0 0.3125rem;
+			
+			a {
+				display: block;
+				text-align: center;
+			}
+
+			&:last-of-type {
+				padding-right: 0; 
+			}
+
+			a:before {
+				display: block;
+				color: $text-secondary-color; 
+				content: "\f08e";
+				font-family: $icon-font; 
+				font-size: 1.125rem;
+				vertical-align: top;
+			}	
+
+			a:hover:before {
+				color: $highlight-color;
+			}
+
+			a[href*="500px"]:before {
+				content: "\f26e";
+			}		
+
+			a[href*="angel.co"]:before {
+				content: "\f209";
+			}					
+
+			a[href*="behance.net"]:before {
+				content: "\f1b4";
+			}	
+
+			a[href*="bitbucket.org"]:before {
+				content: "\f171";
+			}			
+
+			a[href*="codepen.io"]:before {
+				content: "\f1cb";
+			}
+
+			a[href*="delicious.com"]:before {
+				content: "\f1a5";
+			}
+
+			a[href*="deviantart.com"]:before {
+				content: "\f1bd";
+			}
+
+			a[href*="digg.com"]:before {
+				content: "\f1a6";
+			}
+
+			a[href*="dribbble.com"]:before {
+				content: "\f17d";
+			}
+
+			a[href*="facebook.com"]:before {
+				content: "\f230";
+			}
+
+			a[href*="flickr.com"]:before {
+				content: "\f16e";
+			}
+
+			a[href*="foursquare.com"]:before {
+				content: "\f180";
+			}
+
+			a[href*="github.com"]:before {
+				content: "\f09b";
+			}
+
+			a[href*="plus.google.com"]:before {
+				content: "\f0d5";
+			}
+
+			a[href*="instagram.com"]:before {
+				content: "\f16d";
+			}
+
+			a[href*="linkedin.com"]:before {
+				content: "\f0e1";
+			}
+
+			a[href*="pinterest.com"]:before {
+				content: "\f0d2";
+			}
+
+			a[href*="reddit.com"]:before {
+				content: "\f1a1";
+			}
+
+			a[href*="skype:"]:before,
+			a[href*="callto:"]:before {
+				content: "\f17e";
+			}			
+
+			a[href*="slack.com"]:before {
+				content: "\f198";
+			}						
+
+			a[href*="soundcloud.com"]:before {
+				content: "\f1be";
+			}			
+
+			a[href*="stackexchange.com"]:before {
+				content: "\f18d";
+			}
+
+			a[href*="stackoverflow.com"]:before {
+				content: "\f16c";
+			}
+
+			a[href*="stumbleupon.com"]:before {
+				content: "\f1a4";
+			}	
+
+			a[href*="trello.com"]:before {
+				content: "\f181";
+			}					
+
+			a[href*="tumblr.com"]:before {
+				content: "\f173";
+			}
+
+			a[href*="twitter.com"]:before {
+				content: "\f099";
+			}
+
+			a[href*="twitch.tv"]:before {
+				content: "\f1e8";
+			}
+
+			a[href*="vimeo.com"]:before {
+				content: "\f194";
+			}
+
+			a[href*="vine.co"]:before {
+				content: "\f1ca";
+			}
+
+			a[href*="vk.com"]:before {
+				content: "\f189";
+			}
+
+			a[href*="weibo.com"]:before {
+				content: "\f18a";
+			}
+
+			a[href*="wordpress.com"]:before {
+				content: "\f19a";
+			}
+
+			a[href*="xing"]:before {
+				content: "\f168";
+			}
+
+			a[href*="youtube.com"]:before {
+				content: "\f16a";
+			}
+
+		}
+	}
+}

@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+2.0 - Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.1 - Basic Structure
+--------------------------------------------------------------*/
+#page {
+	margin: 0 auto;
+	max-width: 67.5rem; 
+	padding: 0 5%;
+}
+
+body:not(.resp) #page {
+	width: 67.5rem;
+}
+
+#primary {
+	box-sizing: border-box;
+	float: left;
+}
+
+.sidebar #primary {
+	border-color: $border-color;
+	border-style: solid;
+	border-width: 0 0.0625em 0 0;
+	padding-right: 3.5%;
+	width: 75%;	
+	
+	@at-root .sidebar-position-left #primary {
+		border-right-width: 0; 
+		border-left-width: 0.0625rem; 
+		float: right; 
+		padding: 0 0 0 3.5%;
+	}	 
+
+	@media (max-width: $medium) {
+		@at-root .resp#{&} {
+			border: none;
+			padding-right: 0;
+			padding-left: 0; 
+			width: 100%;
+		}
+	} 	
+}
+
+#secondary {
+	box-sizing: border-box;
+	border-color: $border-color;
+	border-style: solid;
+	float: right;	
+	padding-left: 3.5%;
+	width: 25%;
+	
+	@at-root .sidebar-position-left #secondary {
+		float: left; 
+		padding: 0 3.5% 0 0;
+	}
+
+	@media (max-width: $medium) {
+		.resp & {
+			width: 100%; 
+		} 
+	}
+}
+
+@media (max-width: $medium) {
+	.resp.sidebar #secondary {
+		border-color: $border-color;
+		border-top-style: solid;
+    	border-top-width: 0.0625em;
+    	margin-top: 3em;
+   	 	padding-top: 2.9375em;				
+	}
+}
+
+/*--------------------------------------------------------------
+2.2 - Additional Structure
+One Column - No Sidebar Widgets Added
+Full Width Page
+Full Width Page - No Title
+Full Width Page - Unconstrained Content
+Full Width Page - Unconstrained Content - No Title
+404 Page
+--------------------------------------------------------------*/
+.one-column #primary, 
+.page-template-page-templatesfull-width-php #primary, 
+.page-template-page-templatesfull-width-no-title-php #primary,
+.page-template-page-templatesfull-width-unconstrained-content-php #primary,
+.page-template-page-templatesfull-width-unconstrained-content-no-title-php #primary,
+.error404 #primary {
+	border: none; 
+	float: none;
+	padding: 0;
+	width: 100%;  
+}
+
+.one-column #primary #main, 
+.page-template-page-templatesfull-width-php #primary #main, 
+.page-template-page-templatesfull-width-no-title-php #primary #main, 
+.error404 #primary #main {
+	margin-right: auto;
+	margin-left: auto; 
+	max-width: 71.3889%;
+	
+	@media (max-width: $medium) {
+		max-width: 100%; 
+	}
+}
+
+.page-template-page-templatesfull-width-unconstrained-content-php #primary #main, 
+.page-template-page-templatesfull-width-unconstrained-content-no-title-php #primary #main {
+	margin-right: auto;
+	margin-left: auto; 
+	max-width: 100%;
+}

@@ -11,24 +11,18 @@ function puro_premium_upgrade_content($content){
 
 	$content['features'][] = array(
 		'heading' => __('Premium Email Support', 'puro'),
-		'content' => __("Puro Premium comes with email support. Let us know if you run into any challenges or simply need a hand getting setup. We're here to help.", 'puro'),
+		'content' => __("Puro Premium comes with quick and friendly email support. Let us know if you run into any challenges or simply need a hand getting setup. We're here to help.", 'puro'),
 	);
 
 	$content['features'][] = array(
 		'heading' => __('Name the Price', 'puro'),
-		'content' => __("You choose the price, so you can pay what Puro is worth to you. Choose from one our suggested options or specify your own custom price. Regardless of what you pay you'll receive the same upgrade file and be supporting the continued development of the theme.", 'puro'),
+		'content' => __("You choose the price, so you can pay what Puro is worth to you. Choose from one our suggested options or specify your own custom price. Regardless of what you pay you'll receive the same upgrade file and be supporting the continued development of Puro.", 'puro'),
 	);
 
 	$content['features'][] = array(
 		'heading' => __("Retina Logo", 'puro'),
-		'content' => __("Puro Premium allows you to upload an additional, double-sized logo, to be displayed on Apple Retina displays only.", 'puro'),
+		'content' => __("Puro Premium allows you to upload an additional, double-sized logo, to be displayed on high pixel density displays.", 'puro'),
 	);
-
-	$content['features'][] = array(
-		'heading' => __("Responsive Menu", 'puro'),
-		'content' => __("Improve your site's mobile experience with Puro's responsive menu. On smaller screens your menu will be neatly packed away. Clicking the three bar menu icon to the right of your logo will drop your menu down, revealing it's links. Each menu item has enough padding to ensure mobile users can easily touch the correct item.", 'puro'),
-		'image' => get_template_directory_uri().'/upgrade/teasers/responsive-menu.png',
-	);	
 
 	$content['features'][] = array(
 		'heading' => __('Enhanced Customizer Integration', 'puro'),
@@ -37,14 +31,14 @@ function puro_premium_upgrade_content($content){
 	);
 
 	$content['features'][] = array(
-		'heading' => __("Ajax Comments", 'puro'),
-		'content' => __("Remove page re-loads from your comment forms. This means that users can submit comments without losing their place in a gallery or interuppting a video.", 'puro'),
+		'heading' => __("AJAX Comments", 'puro'),
+		'content' => __("Remove page re-loads from your comment forms. This means that users can submit comments without losing their place in a gallery or interrupting a video.", 'puro'),
 		'image' => get_template_directory_uri().'/upgrade/teasers/ajax-comments.png',
 	);
 
 	$content['features'][] = array(
-		'heading' => __("Post Sharing", 'puro'),
-		'content' => __("Add sharing icons for Facebook, Twitter, Google Plus and LinkedIn to the bottom of your posts.", 'puro'),
+		'heading' => __("Post and Page Sharing", 'puro'),
+		'content' => __("Add sharing icons for Facebook, Twitter, Google Plus and LinkedIn to the bottom of your posts and pages.", 'puro'),
 		'image' => get_template_directory_uri().'/upgrade/teasers/social-sharing.png',
 	);
 
@@ -84,11 +78,3 @@ function puro_premium_upgrade_content($content){
 	return $content;
 }
 add_filter('siteorigin_premium_content', 'puro_premium_upgrade_content');
-
-/**
- * Add a feature notice
- */
-function puro_upgrade_panels_upgrade_note(){
-	?><p><?php printf( __('Additional styles are available in <a href="%s" target="_blank">Puro Premium</a>.', 'puro'), admin_url('themes.php?page=premium_upgrade') ) ?></p><?php
-}
-add_action('siteorigin_panels_widget_after_styles', 'puro_upgrade_panels_upgrade_note');

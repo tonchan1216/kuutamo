@@ -13,63 +13,67 @@
  * @since puro 1.0
  */
 function puro_theme_settings(){
+	$settings = SiteOrigin_Settings::single();
 
-	siteorigin_settings_add_section( 'header', __('Header', 'puro' ) );
-	siteorigin_settings_add_section( 'navigation', __('Navigation', 'puro' ) );
-	siteorigin_settings_add_section( 'layout', __('Layout', 'puro' ) );
-	siteorigin_settings_add_section( 'home', __('Home', 'puro' ) );
-	siteorigin_settings_add_section( 'pages', __('Pages', 'puro' ) );
-	siteorigin_settings_add_section( 'blog', __('Blog', 'puro' ) );
-	siteorigin_settings_add_section( 'comments', __('Comments', 'puro' ) );
-	siteorigin_settings_add_section( 'social', __('Social', 'puro' ) );	
-	siteorigin_settings_add_section( 'footer', __('Footer', 'puro' ) );
+	$settings->add_section( 'header', __('Header', 'puro' ) );
+	$settings->add_section( 'navigation', __('Navigation', 'puro' ) );
+	$settings->add_section( 'layout', __('Layout', 'puro' ) );
+	$settings->add_section( 'home', __('Home', 'puro' ) );
+	$settings->add_section( 'pages', __('Pages', 'puro' ) );
+	$settings->add_section( 'blog', __('Blog', 'puro' ) );
+	$settings->add_section( 'comments', __('Comments', 'puro' ) );
+	$settings->add_section( 'social', __('Social', 'puro' ) );	
+	$settings->add_section( 'footer', __('Footer', 'puro' ) );
 
-	// Header
-	siteorigin_settings_add_field('header', 'image', 'media', __('Logo Image', 'puro'), array(
+	// Header.
+	$settings->add_field('header', 'image', 'media', __('Logo Image', 'puro'), array(
 		'choose' => __('Choose Image', 'puro'),
 		'update' => __('Set Logo', 'puro'),
 		'description' => __('Your own custom logo.', 'puro')
 	) );
 
-	siteorigin_settings_add_teaser('header', 'image_retina', __('Retina Logo', 'puro'), array(
+	$settings->add_teaser('header', 'image_retina', 'media', __('Retina Logo', 'puro'), array(
 		'choose' => __('Choose Image', 'puro'),
 		'update' => __('Set Logo', 'puro'),
 		'description' => __('A double sized version of your logo for use on high pixel density displays. Must be used in addition to standard logo.', 'puro'),
 	) );
 
-	siteorigin_settings_add_field('header', 'center_logo', 'checkbox', __('Center Logo', 'puro'), array(
+	$settings->add_field('header', 'center_logo', 'checkbox', __('Center Logo', 'puro'), array(
 		'description' => __('Display a centered header logo.', 'puro')
 	) );
 
-	siteorigin_settings_add_field('header', 'display_tagline', 'checkbox', __('Display Tagline', 'puro'), array(
+	$settings->add_field('header', 'display_tagline', 'checkbox', __('Display Tagline', 'puro'), array(
 		'description' => __('Display the website tagline.', 'puro')
 	) );	
 
-	// Navigation
-	siteorigin_settings_add_field( 'navigation', 'post_nav', 'checkbox', __('Post Navigation', 'puro'), array(
+	// Navigation.
+	$settings->add_field( 'navigation', 'post_nav', 'checkbox', __('Post Navigation', 'puro'), array(
 		'description' => __('Display next/previous post navigation.', 'puro')
 	) );		
 
-	siteorigin_settings_add_field('navigation', 'header_menu', 'checkbox', __('Header Menu', 'puro'), array(
+	$settings->add_field('navigation', 'header_menu', 'checkbox', __('Header Menu', 'puro'), array(
 		'description' => __('Display the header menu.', 'puro')
 	));	
 
-	siteorigin_settings_add_teaser('navigation', 'responsive_menu', __('Responsive Menu', 'puro'), array(
+	$settings->add_field('navigation', 'responsive_menu', 'checkbox', __('Mobile Menu', 'puro'), array(
 		'description' => __('Use a special responsive menu for small screen devices.', 'puro'),
-		'teaser-image' => get_template_directory_uri().'/upgrade/teasers/responsive-menu.png',
-	));			
+	));
 
-	// Layout
-	siteorigin_settings_add_field( 'layout', 'responsive', 'checkbox', __('Responsive Layout', 'puro'), array(
+	$settings->add_field('navigation', 'responsive_menu_collapse', 'number', __('Mobile Menu Collapse', 'puro'), array(
+		'description' => __('The pixel resolution when the primary menu changes to a mobile menu.', 'puro')
+	) );	
+
+	// Layout.
+	$settings->add_field( 'layout', 'responsive', 'checkbox', __('Responsive Layout', 'puro'), array(
 		'description' => __('Adapt the site layout for mobile devices.', 'puro')
 	) );	
 
-	siteorigin_settings_add_field('layout', 'fitvids', 'checkbox', __('Enable FitVids.js', 'puro'), array(
+	$settings->add_field('layout', 'fitvids', 'checkbox', __('Enable FitVids.js', 'puro'), array(
 		'description' => __('Include FitVids.js for fluid width video embeds.', 'puro')
 	));			
 
-	// Home
-	siteorigin_settings_add_field('home', 'slider', 'select', __('Home Page Slider', 'puro'), array(
+	// Home.
+	$settings->add_field('home', 'slider', 'select', __('Home Page Slider', 'puro'), array(
 		'options' => siteorigin_metaslider_get_options(true),
 		'description' => sprintf(
 			__('This theme supports <a href="%s" target="_blank">Meta Slider</a>. <a href="%s">Install it</a> for free to easily build beautiful responsive sliders - <a href="%s" target="_blank">read more</a>.', 'puro'),
@@ -79,23 +83,23 @@ function puro_theme_settings(){
 		)
 	));
 
-	// Pages
-	siteorigin_settings_add_field('pages', 'page_featured_image', 'checkbox', __('Page Featured Image', 'puro'), array(
+	// Pages.
+	$settings->add_field('pages', 'page_featured_image', 'checkbox', __('Page Featured Image', 'puro'), array(
 		'description' => __('Display the featured image on pages.', 'puro')
 	) );		
 
 
-	// Blog
-	siteorigin_settings_add_field('blog', 'archive_layout', 'select', __('Blog Archive Layout', 'puro'), array(
+	// Blog.
+	$settings->add_field('blog', 'archive_layout', 'select', __('Blog Archive Layout', 'puro'), array(
 		'options' => puro_blog_layout_options(),
 		'description' => __('Choose the layout to be used on blog and archive pages.', 'puro')
 	) );
 
-    siteorigin_settings_add_field('blog', 'archive_featured_image', 'checkbox', __('Archive Featured Image', 'puro'), array(
+    $settings->add_field('blog', 'archive_featured_image', 'checkbox', __('Archive Featured Image', 'puro'), array(
         'description' => __('Display the featured image on the blog archive pages.', 'puro')
     ) );   
 
-    siteorigin_settings_add_field('blog', 'archive_content', 'select', __('Archive Post Content', 'puro'), array(
+    $settings->add_field('blog', 'archive_content', 'select', __('Archive Post Content', 'puro'), array(
         'options' => array(
             'full' => __('Full Post Content', 'puro'),
             'excerpt' => __('Post Excerpt', 'puro'),
@@ -103,86 +107,75 @@ function puro_theme_settings(){
         'description' => __('Choose how to display your post content on blog and archive pages. Select Full Post Content if using the "more" quicktag.', 'puro'),
     ));
 
-    siteorigin_settings_add_field('blog', 'read_more', 'text', __('Read More Text', 'puro'), array(
+    $settings->add_field('blog', 'read_more', 'text', __('Read More Text', 'puro'), array(
         'description' => __('The link text displayed when posts are split using the "more" quicktag.', 'puro'),
-        'conditional' => array(
-            'show' => array(
-                'blog_archive_content' => 'full',
-            ),
-            'hide' => 'else'
-        )
     ));
     
-    siteorigin_settings_add_field('blog', 'excerpt_length', 'number', __('Post Excerpt Length', 'puro'), array(
+    $settings->add_field('blog', 'excerpt_length', 'number', __('Post Excerpt Length', 'puro'), array(
         'description' => __('If no manual post excerpt is added one will be generated. How many words should it be?', 'puro'),
-        'conditional' => array(
-            'show' => array(
-                'blog_archive_content' => 'excerpt',
-            ),
-            'hide' => 'else'
-        )
     ));
 
-	siteorigin_settings_add_field('blog', 'post_featured_image', 'checkbox', __('Post Featured Image', 'puro'), array(
+    $settings->add_field('blog', 'excerpt_more', 'checkbox', __('Post Excerpt Read More Link', 'puro'), array(
+        'description' => __('Display the Read More Text below the post excerpt. Only applicable if Post Excerpt has been selected from the Archive Post Content setting.', 'puro'),
+    ));    
+
+	$settings->add_field('blog', 'post_featured_image', 'checkbox', __('Post Featured Image', 'puro'), array(
 		'description' => __('Display the featured image on the single post page.', 'puro')
 	) );    
 
-    siteorigin_settings_add_field('blog', 'post_date', 'checkbox', __('Post Date', 'puro'), array(
+    $settings->add_field('blog', 'post_date', 'checkbox', __('Post Date', 'puro'), array(
 		'description' => __('Display the post date.', 'puro')
 	));	
 
-	siteorigin_settings_add_field('blog', 'post_author', 'checkbox', __('Post Author', 'puro'), array(
+	$settings->add_field('blog', 'post_author', 'checkbox', __('Post Author', 'puro'), array(
 		'description' => __('Display the post author.', 'puro')
 	));	
 
-	siteorigin_settings_add_field('blog', 'post_cats', 'checkbox', __('Post Categories', 'puro'), array(
+	$settings->add_field('blog', 'post_cats', 'checkbox', __('Post Categories', 'puro'), array(
 		'description' => __('Display the post categories.', 'puro')
 	));		
 
-	siteorigin_settings_add_field('blog', 'post_tags', 'checkbox', __('Post Tags', 'puro'), array(
+	$settings->add_field('blog', 'post_tags', 'checkbox', __('Post Tags', 'puro'), array(
 		'description' => __('Display the post tags.', 'puro')
 	));
 
-	siteorigin_settings_add_field('blog', 'post_comment_count', 'checkbox', __('Post Comment Count', 'puro'), array(
+	$settings->add_field('blog', 'post_comment_count', 'checkbox', __('Post Comment Count', 'puro'), array(
 		'description' => __('Display the post comment count.', 'puro')
 	));	
+
+	$settings->add_field('blog', 'post_author_box', 'checkbox', __('Post Author Box', 'puro'), array(
+		'description' => __('Display the post author biographical info.', 'puro')
+	));		
     
-	siteorigin_settings_add_field( 'blog', 'edit_link', 'checkbox', __( 'Post Edit Link', 'puro' ), array(
+	$settings->add_field( 'blog', 'edit_link', 'checkbox', __( 'Post Edit Link', 'puro' ), array(
 		'description' => __( 'Display an Edit link below post content. Visible if a user is logged in and allowed to edit the content. Also applies to Pages.', 'puro' )
 	) );	
 
-	// Comments
-	siteorigin_settings_add_field('comments', 'comment_form_tags', 'checkbox', __('Comment Form Allowed Tags', 'puro'), array(
+	// Comments.
+	$settings->add_field('comments', 'comment_form_tags', 'checkbox', __('Comment Form Allowed Tags', 'puro'), array(
 		'description' => __('Display the explanatory text below the comment form that lets users know which HTML tags may be used.', 'puro')
 	) );				
 
-	siteorigin_settings_add_teaser('comments', 'ajax_comments', __('Ajax Comments', 'puro'), array(
+	$settings->add_teaser('comments', 'ajax_comments', 'checkbox', __('AJAX Comments', 'puro'), array(
 		'description' => __('Allow users to submit comments without a page re-load on submit.', 'puro'),
-		'teaser-image' => get_template_directory_uri().'/upgrade/teasers/ajax-comments.png',
-	));			 		
+	));	 		
 
-	// Social 
-	siteorigin_settings_add_teaser('social', 'share_post', __('Post Sharing', 'puro'), array(
+	// Social.
+	$settings->add_teaser('social', 'share_post', 'checkbox', __('Post and Page Sharing', 'puro'), array(
 		'description' => __('Show icons to share your posts on Facebook, Twitter, Google+ and LinkedIn.', 'puro'),
-		'teaser-image' => get_template_directory_uri().'/upgrade/teasers/social-sharing.png',
 	));
 
-	siteorigin_settings_add_teaser('social', 'twitter', __('Twitter Handle', 'puro'), array(
-		'description' => __('This handle will be recommended after a user shares one of your posts.', 'puro'),
-		'teaser-image' => get_template_directory_uri().'/upgrade/teasers/twitter-share-handle.png',
-	));	
-
-	// Footer
-	siteorigin_settings_add_field( 'footer', 'copyright_text', 'text', __( 'Footer Copyright Text', 'puro' ), array(
-		'description' => __( '{site-title}, {copyright} and {year} can be used to display your website title, a copyright symbol and the current year.', 'puro' )
+	// Footer.
+	$settings->add_field( 'footer', 'copyright_text', 'text', __( 'Footer Copyright Text', 'puro' ), array(
+		'description' => __( '{site-title}, {copyright} and {year} can be used to display your website title, a copyright symbol and the current year.', 'puro' ),
+		'sanitize_callback' => 'wp_kses_post',
 	) );
 
-	siteorigin_settings_add_teaser('footer', 'attribution', __('Footer Attribution Link', 'puro'), array(
+	$settings->add_teaser('footer', 'attribution', 'checkbox', __('Footer Attribution Link', 'puro'), array(
 		'description' => __('Remove the theme attribution link from your footer without editing any code.', 'puro'),
-		'teaser-image' => get_template_directory_uri().'/upgrade/teasers/attribution.png',
 	));	
 
-	siteorigin_settings_add_field('footer', 'js_enqueue', 'checkbox', __('Enqueue JavaScript in Footer', 'puro'), array(
+	$settings->add_field('footer', 'js_enqueue', 'checkbox', __('Enqueue JavaScript in Footer', 'puro'), array(
 		'description' => __('Enqueue theme JavaScript files in the footer. Doing so can improve site load time.', 'puro'),
 	));	
 
@@ -205,6 +198,7 @@ function puro_theme_setting_defaults($defaults){
 	$defaults['navigation_post_nav'] = true;
 	$defaults['navigation_header_menu'] = true;
 	$defaults['navigation_responsive_menu'] = true;
+	$defaults['navigation_responsive_menu_collapse'] = 768;
 
 	$defaults['layout_responsive'] = true;
 	$defaults['layout_fitvids'] = true;
@@ -218,19 +212,22 @@ function puro_theme_setting_defaults($defaults){
 	$defaults['blog_archive_content'] = 'full';
 	$defaults['blog_read_more'] = __('Continue reading', 'puro');
 	$defaults['blog_excerpt_length'] = 55;
+	$defaults['blog_excerpt_more'] = false;
 	$defaults['blog_post_featured_image'] = true;
 	$defaults['blog_post_date'] = true;
 	$defaults['blog_post_author'] = true;
 	$defaults['blog_post_cats'] = true;
 	$defaults['blog_post_tags'] = true;	
-	$defaults['blog_post_comment_count'] = true;			
+	$defaults['blog_post_comment_count'] = true;
+	$defaults['blog_post_author_box'] = false;			
 	$defaults['blog_edit_link'] = true;
 
 	$defaults['comments_comment_form_tags'] = true;		
 	$defaults['comments_ajax_comments'] = true;	
 
 	$defaults['social_share_post'] = true;
-	$defaults['social_twitter'] = '';		
+	$defaults['social_share_page'] = false;
+	$defaults['social_twitter'] = '';
 
 	$defaults['footer_copyright_text'] = __('Copyright {year}', 'puro');
 	$defaults['footer_attribution'] = true;
@@ -238,22 +235,17 @@ function puro_theme_setting_defaults($defaults){
 
 	return $defaults;
 }
-add_filter('siteorigin_theme_default_settings', 'puro_theme_setting_defaults');
+add_filter('siteorigin_settings_defaults', 'puro_theme_setting_defaults');
 
-function puro_siteorigin_settings_page_icon($icon){
-	return get_template_directory_uri().'/images/settings-icon.png';
-}
-add_filter('siteorigin_settings_page_icon', 'puro_siteorigin_settings_page_icon');
-
-function puro_blog_layout_options(){
+function puro_blog_layout_options() {
 	$layouts = array();
-	foreach( glob(get_template_directory().'/loops/loop-*.php') as $template ) {
+	foreach ( glob( get_template_directory().'/loops/loop-*.php') as $template ) {
 		$headers = get_file_data( $template, array(
 			'loop_name' => 'Loop Name',
 		) );
 
-		preg_match('/loop\-(.*?)\.php/', basename($template), $matches);
-		if(!empty($matches[1])) {
+		preg_match( '/loop\-(.*?)\.php/', basename( $template ), $matches );
+		if ( ! empty( $matches[1] ) ) {
 			$layouts[$matches[1]] = $headers['loop_name'];
 		}
 	}

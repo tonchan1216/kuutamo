@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+14.0 - Footer
+--------------------------------------------------------------*/
+.site-footer {
+	border-top-style: solid;
+  	border-top-width: 0.0625em;
+  	margin-top: 5.0625em;
+  	padding-top: 3.3125em;	
+	padding-bottom: 3.375em;
+	border-color: $border-color;
+	 
+	@for $i from 1 through 10 {
+		$margin: ($i - 1) * 2.5;
+		
+		.widget-count-#{$i} {
+			width: (100% - $margin) / $i;			
+		}
+	}	
+
+	.widget {
+		box-sizing: content-box;
+		margin-right: 2.5%; 
+		float: left;			
+
+		&:last-of-type {
+				margin-right: 0;
+		}
+
+		@media (max-width: $medium) {
+			@at-root .resp .site-footer .widget {
+				width: 100%;
+			}
+		}				
+	}
+
+	ul {
+		margin-bottom: -0.3125em;
+	}	
+
+	.site-info, 
+	.theme-attribution {
+		@include font-size(0.8125);
+		color: $text-secondary-color; 
+		float: left;
+		line-height: 2.07692em;
+		margin-top: 1.6875em; 
+		text-align: left;
+		
+		a {
+			color: $text-secondary-color;
+			
+			&:hover {
+				color: $highlight-color;	
+			}
+		}
+	}
+
+	.social-links-menu {
+		float: right;
+		margin-top: 1.6875em; 
+	}
+}

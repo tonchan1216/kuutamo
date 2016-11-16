@@ -1,0 +1,277 @@
+/*--------------------------------------------------------------
+17.0 - Jetpack	
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+17.1 - Contact Form
+--------------------------------------------------------------*/
+div[id*="contact-form"] {
+
+	div {
+		margin-bottom: 1.6875em; 
+	
+		label {
+			margin-bottom: 0.42188em;
+	
+			span {
+				@include font-size(0.8125);
+				color: $text-secondary-color;
+				line-height: 2.07692em;
+			}
+		}
+	
+		input, 
+		input[type='text'], 
+		input[type='email'] {
+			margin-bottom: 0;
+		}
+	
+		textarea {
+			box-sizing: border-box;
+			margin: 0;
+			overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+			padding: 0.625em;
+			vertical-align: top; /* Improves readability and alignment in all browsers */	
+		}
+	}	
+	
+	h3 {
+		@include font-size(1.25);
+		line-height: 1.35em;
+		margin: 0;
+	}
+	
+	blockquote {
+		@include font-size(1);
+		line-height: 1.6875em;
+	}	
+	
+	.form-error {
+		@include font-size(0.875);
+		background: $error-background-color;
+		border-top: 1px solid $error-border-color;
+		border-bottom: 1px solid $error-border-color; 
+		color: $error-text-color;
+		line-height: 1.92857em;
+		margin-bottom: 1.6875em;
+		padding: 0.50625em 1.6875em 0.84375em;
+		
+		h3 {	
+			@include font-size(1);
+			color: $error-text-color;
+			line-height: 1.6875em;
+		}
+
+		.form-errors {
+			margin-bottom: 0;
+			
+			.form-error-message {
+				color: $error-text-color;
+			}
+		}
+	}
+}
+
+#secondary div[id*="contact-form"], 
+#colophon div[id*="contact-form"] {
+
+	h3 {
+		@include font-size(1);
+		line-height: 1.6875em;
+		margin: 0;
+	}
+
+	blockquote {
+		@include font-size(1);
+		line-height: 1.92857em;
+	}	
+
+	.form-error {
+		@include font-size(0.875);
+		line-height: 1.92857em;
+		margin-bottom: 0.84375em;
+		padding: rhythm(0.15) 0.84375em rhythm(0.25);
+		
+		h3 {	
+			@include font-size(1);
+			color: $error-text-color;
+			line-height: 1.6875em;
+		}	
+	}	
+}
+
+/*--------------------------------------------------------------
+17.2 - Gravatar Profile
+--------------------------------------------------------------*/
+#secondary .widget-grofile, #colophon .widget-grofile {
+
+	h4 {
+		@include font-size(0.875);
+		line-height: 1.92857em;
+		margin: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+17.3 - Infinite Scroll
+--------------------------------------------------------------*/
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+#infinite-handle {
+	margin: 3.375em 0 0;
+	text-align: center;
+	
+	span {
+		@include transition(0.3s);
+		background: rgba(42, 193, 118, 0.8);
+		border: none;
+		border-radius: 3px;
+		box-shadow: $highlight-color-dark 0 1px 0;
+		color: #FFF;
+		cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+		font-weight: 400; 
+		padding: 0.5em 1em 0.375em;
+		text-transform: uppercase;
+		
+		&:hover {
+			background: rgba(42, 193, 118, 1);
+		}
+	}	
+}
+
+.infinite-scroll .infinite-loader {
+	height: 1.625em;
+	padding: 4.21875em 0 0;
+	
+	.spinner {
+		margin: 0 auto;
+		top:  0.3125rem !important;
+		left: 0 !important;
+	}
+}
+
+.infinite-scroll.neverending .infinite-loader {
+
+	.spinner {
+		top: -3.3125rem !important;
+	}
+}
+
+.rtl .infinite-loader .spinner {
+	right: 0 !important;
+	left: auto !important;
+}	
+
+.infinite-wrap {
+	border-color: $border-color;
+	border-top-style: solid;
+	border-top-width: 0.0625em;
+ 	margin-top: 3.375em;
+  	padding-top: 3.3125em;
+}
+
+#infinite-footer {
+
+	.container {
+		border-color: $border-color;
+	}
+
+	.blog-info a {
+		@include font-size(0.8125);
+		color: $heading-color;
+		line-height: 2.07692em;
+		
+		&:hover {
+			color: $highlight-color; 
+			text-decoration: none;
+		}
+	}
+
+	.blog-credits {
+		@include font-size(0.6875);
+		color: $text-color;
+		line-height: 2.45455em;
+		
+		a {
+			color: $text-color;
+			&:hover {
+				color: $highlight-color; 
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+17.4 - RSS Links
+--------------------------------------------------------------*/
+.widget_rss_links {
+
+	p {
+		font-weight: 600;
+		margin: 0 0 0.84375em;
+		
+		img {
+			display: block;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+17.5 - Subscriptions
+--------------------------------------------------------------*/
+p.comment-subscription-form {
+	margin-bottom: 0; 
+	
+	input[type="checkbox"] {
+		@include font-size(0.875);
+		line-height: 1.92857em;
+	}
+
+	label.subscribe-label {
+		@include font-size(0.875);
+		font-weight: normal;
+		line-height: 1.92857em;
+		margin-bottom: 0; 
+	}
+}
+
+/*--------------------------------------------------------------
+17.6 - Tiled Gallery
+--------------------------------------------------------------*/
+.entry-content .tiled-gallery {
+	margin: 0 0 1.6875em;	 
+}
+
+/*--------------------------------------------------------------
+17.7 - Video Player
+--------------------------------------------------------------*/
+.entry-content .video-player {
+	margin: 0 0 1.6875em;	
+}
+
+/*--------------------------------------------------------------
+17.8 - WordPress Posts
+--------------------------------------------------------------*/
+#secondary .jetpack-display-remote-posts, 
+#colophon .jetpack-display-remote-posts {
+
+	h4 {
+		@include font-size(0.875);
+		font-size: 100%;
+		line-height: 1.92857em;
+		margin: 0 0 0.84375em; 
+	}
+
+	p {
+		font-size: 100%;
+		line-height: 1.625em !important;
+		margin: 0 0 1.6875em !important;
+	}	
+}

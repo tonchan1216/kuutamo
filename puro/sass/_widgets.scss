@@ -1,0 +1,233 @@
+/*--------------------------------------------------------------
+10.0 - Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 - General Styles
+--------------------------------------------------------------*/
+#secondary .widget {
+	margin-bottom: 2.5313em;
+	width: 100%; 
+	
+	&:last-of-type {
+		margin-bottom: 0; 
+	} 
+}
+
+#colophon .widget {
+	margin-bottom: 3.375em;
+}
+#secondary .widget,
+
+#colophon .widget {
+	@include font-size(0.875);
+	line-height: 1.92857em;
+	
+	h3.widget-title {
+		@include font-size(1.125);
+		line-height: 1.5em;
+		margin-bottom: 0.8438em; 
+		
+		a {
+			color: $heading-color;
+			
+			&:hover {
+				color: $highlight-color;
+			}
+		}
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+
+#secondary .widget ul,
+#colophon .widget ul {
+	list-style: none;
+	margin-left: 0; 
+	
+	li > ul {
+		margin-left: 1em;
+	} 
+}
+
+#colophon .widget ul {
+	margin: 0;
+}
+
+#secondary .widget, #colophon .widget {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="date"],
+	input[type="password"],
+	input[type="search"] {
+		box-sizing: border-box;
+		width: 100%; 
+	}	
+}
+
+#secondary .widget, #colophon .widget {
+
+	select {
+		max-width: 100%;	
+	}
+}
+
+#secondary .widget, #colophon .widget {
+	textarea {
+		width: 100%; 
+	}
+}
+
+/*--------------------------------------------------------------
+10.2 - Calendar
+--------------------------------------------------------------*/
+#wp-calendar {
+	border: none;
+	margin: 0;
+	
+	caption { 
+		font-weight: 600;
+		text-align: right;
+		padding-bottom: 0.4286em;
+	}
+
+	th, 
+	td {
+		border: none;
+		padding: 0.2143em 0.2143em 0.1429em !important;
+	}
+
+	thead th {
+		text-align: center;
+		padding-bottom: 0.4286em !important; 
+	}
+
+	tbody {
+	
+		.pad {
+			background: none;
+		}
+	
+		td { 
+			background: $background-color; 
+			border: 0.1429em solid #fff;
+			text-align: center;
+	
+			&:hover {
+				background: #FFF;  			
+			}
+	
+			a {
+				display: block;
+			}
+		}		
+	}
+	
+	tfoot {
+	
+		#prev, 
+		#next {
+			padding-top: 0.4286em !important; 
+		}
+
+		#next {
+			text-align: right;			
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+10.3 - RSS
+--------------------------------------------------------------*/
+#secondary .widget_rss, #colophon .widget_rss {
+	
+	h3.widget-title:before {
+		content: "\f09e";
+		display: inline-block;
+		font-family: 'FontAwesome';  
+	}
+	
+	h3.widget-title .rsswidget {
+		display: inline-block;
+	}
+	
+	img {
+		display: none;
+	}	
+	
+	li {
+		margin-bottom: 1.9286em;  
+	
+		&:last-of-type {
+			margin-bottom: 0; 
+		}
+	}
+
+	.rsswidget {
+		display: block;
+	}
+
+	.rss-date {
+		display: inline-block;
+	}
+
+	cite { 
+		display: inline-block;
+	}
+}
+
+/*--------------------------------------------------------------
+10.4 - Recent Comments
+--------------------------------------------------------------*/
+#secondary .widget_recent_comments, #colophon .widget_recent_comments {
+
+	li {
+		margin-bottom: 0.6429em; 
+		
+		&:last-of-type {
+			margin-bottom: 0; 
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+10.5 - Recent Posts
+--------------------------------------------------------------*/
+#secondary .widget_recent_entries span, 
+#colophon .widget_recent_entries span {
+	line-height: 0.84375em;
+	margin-bottom: 1em; 
+	display: block;
+}
+
+/*--------------------------------------------------------------
+10.6 - Search
+--------------------------------------------------------------*/
+#secondary .widget_search, #colophon .widget_search {
+
+	.widget-title {
+		margin-bottom: 1.1875em; 
+	}
+
+	.search-form {
+		label {
+			display: block !important;
+		}
+	
+		input[type="search"] {
+			box-sizing: border-box;
+			display: block;
+			font-weight: normal; 
+			max-width: 19.2857em; 
+			width: 100%; 
+		}
+	
+		.search-submit {
+			display: none;
+		}	
+	}
+}

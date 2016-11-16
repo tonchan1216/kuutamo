@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+8.0 - Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+.alignnone {
+	clear: both;
+	display: block;
+}
+blockquote.alignleft,
+figure.wp-caption.alignleft,
+img.alignleft {
+	margin: 0 1.6875em 1.6875em 0;
+}
+blockquote.alignright,
+figure.wp-caption.alignright,
+img.alignright {
+	margin: 0 0 1.6875em 1.6875em;
+}
+blockquote.aligncenter,
+figure.wp-caption.aligncenter,
+img.aligncenter {
+	margin-bottom: 1.6875em;
+}
+blockquote.alignnone,
+figure.wp-caption.alignnone,
+img.alignnone {
+	margin-bottom: 1.6875em;
+}

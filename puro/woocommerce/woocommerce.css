@@ -1,0 +1,88 @@
+/*
+Theme Name: Puro
+Description: Adds support for WooCommerce.
+*/
+.woocommerce .woocommerce-breadcrumb {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.woocommerce #page .page-title {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.6875em;
+  margin: 0; }
+  @media (max-width: 30rem) {
+    .resp.woocommerce #page .page-title {
+      font-size: 23px;
+      font-size: 1.4375rem;
+      line-height: normal; } }
+
+.woocommerce .woocommerce-ordering,
+.woocommerce .woocommerce-result-count {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.woocommerce a.added_to_cart {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.woocommerce div.product .product_title {
+  margin-bottom: 0; }
+
+.woocommerce .product_meta {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.woocommerce nav.woocommerce-pagination ul.page-numbers {
+  border: none; }
+  .woocommerce nav.woocommerce-pagination ul.page-numbers li {
+    border-right: 0;
+    margin-right: 0.3125em; }
+    .woocommerce nav.woocommerce-pagination ul.page-numbers li a {
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      color: #999;
+      line-height: 1.6875;
+      min-width: auto;
+      padding: 0.4375em 1.0625em 0.375em; }
+      .woocommerce nav.woocommerce-pagination ul.page-numbers li a:hover {
+        background: none;
+        border-color: #2ac176;
+        color: #2ac176; }
+      .woocommerce nav.woocommerce-pagination ul.page-numbers li a:focus {
+        background: none; }
+    .woocommerce nav.woocommerce-pagination ul.page-numbers li span {
+      line-height: 1.6875;
+      min-width: auto;
+      padding: 0.4375em 1.0625em 0.375em; }
+    .woocommerce nav.woocommerce-pagination ul.page-numbers li span.current {
+      background: none;
+      border: 1px solid #e5e5e5;
+      border-color: #2ac176;
+      border-radius: 4px;
+      color: #2ac176; }
+    .woocommerce nav.woocommerce-pagination ul.page-numbers li .dots {
+      border: none;
+      padding-right: 0;
+      padding-left: 0; }
+      .woocommerce nav.woocommerce-pagination ul.page-numbers li .dots:hover {
+        color: #666; }
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  line-height: 1.6875;
+  padding: 8px 16px 7px; }
+
+.woocommerce table.shop_table {
+  border-collapse: collapse; }
+
+#add_payment_method
+.cart-collaterals .cart_totals table,
+.woocommerce-cart .cart-collaterals .cart_totals table,
+.woocommerce-checkout .cart-collaterals .cart_totals table {
+  border-collapse: collapse; }

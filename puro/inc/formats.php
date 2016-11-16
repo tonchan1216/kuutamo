@@ -1,8 +1,10 @@
 <?php
-
 /**
  * Get the video from the current post.
  *
+ * @package puro
+ * @since puro 1.0.5
+ * @license GPL 2.0
  * @return mixed
  */
 function puro_get_video(){
@@ -34,7 +36,6 @@ function puro_get_video(){
  * Removes the video from the page
  *
  * @param $content
- *
  * @return mixed
  */
 function puro_filter_video($content){

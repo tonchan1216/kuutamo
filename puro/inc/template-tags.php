@@ -7,6 +7,31 @@
  * @license GPL 2.0
  */
 
+if ( ! function_exists( 'puro_author_box' ) ) :
+/**
+ * Displays the author author biographical info on single posts.
+ */
+function puro_author_box() { ?>
+	<div class="author-box">
+		<div class="author-avatar">
+			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
+			</a>
+		</div><!-- .author-avatar -->
+		<div class="author-description">
+			<h3><?php echo get_the_author(); ?></h3>
+			<span class="author-posts">
+				<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+					<?php esc_html_e( 'View posts by ', 'puro' );
+					echo get_the_author(); ?>
+				</a>
+			</span>	
+			<div><?php echo wp_kses( get_the_author_meta( 'description' ), null ); ?></div>
+		</div><!-- .author-description -->
+	</div>
+<?php }
+endif;
+
 if ( ! function_exists( 'puro_pagination' ) ) :
 /**
  * Display post pagination where applicable.
@@ -76,7 +101,6 @@ if ( ! function_exists( 'puro_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time, author, comment count and categories.
  */
-
 function puro_posted_on() {
 
 	if ( is_sticky() && is_home() && ! is_paged() ) {
@@ -121,9 +145,8 @@ function puro_display_logo(){
 	$logo = apply_filters('puro_logo_image_id', $logo);
 
 	if( empty($logo) ) {
-		if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_has_site_logo() ) {
-			// We'll let Jetpack handle things
-			jetpack_the_site_logo();
+		if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
+			the_custom_logo();
 			return;
 		}
 

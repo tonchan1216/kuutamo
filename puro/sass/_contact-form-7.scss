@@ -1,0 +1,94 @@
+/*--------------------------------------------------------------
+18.0 - Contact Form 7
+--------------------------------------------------------------*/
+.wpcf7 {
+
+	p {
+		font-weight: 600; 
+		
+		span {
+			font-weight: 400; 
+			
+			&[style] {
+				display: block !important;
+			}
+		}
+
+		.wpcf7-form-control-wrap, .wpcf7-form-control {
+			display: block;
+			margin-top: 0.42188em; 
+		}	
+
+		.wpcf7-not-valid-tip {
+			@include font-size(0.875);
+			background: $error-background-color;
+			border-top: 0.0625rem solid $error-border-color;
+			border-bottom: 0.0625rem solid $error-border-color;
+			color: $error-text-color;
+			line-height: 1.92857em;
+			margin-top: 1.6875em; 	
+			padding: 0.42188em;
+		}
+
+		select.wpcf7-select option::selection {
+			background: red;
+		}
+
+		span.wpcf7-list-item-label {
+			margin-right: 0.3125em;  
+		}
+
+		span.wpcf7-list-item {
+			margin: 0 0.75em 0 0; 
+		}
+
+		.wpcf7-form-control.wpcf7-submit {
+			float: left;
+			margin: 0;
+		}
+
+		img.ajax-loader {
+			float: left;
+			display: block;
+			margin: 0.75em 0 0 1.5em;
+		}
+	}
+
+	.wpcf7-validation-errors {
+		background: $error-background-color;
+		border: none;
+		border-top: 0.0625rem solid $error-border-color;
+		border-bottom: 0.0625rem solid $error-border-color;
+		color: $error-text-color;	
+		float: left;
+		margin-top: 1.6875em; 
+	}
+
+	.wpcf7-response-output {
+		@include font-size(0.875);
+		box-sizing: border-box;
+		clear: both;
+		line-height: 1.92857em;
+		margin: 1.6875em 0 0; 
+		padding: 0.84375em;	
+		width: 100%; 	
+	}
+
+	.wpcf7-mail-sent-ok {
+		background: $success-background-color;
+		border: none;
+		border-top: 0.0625rem solid $success-border-color;
+		border-bottom: 0.0625rem solid $success-border-color;
+		color: $success-text-color;
+		float: left;
+		margin-top: 1.6875em; 
+	}
+	
+	&:after {
+		content: "."; 
+   		clear: both;
+   		display: block; 
+   		height: 0; 
+   		visibility: hidden; 
+	}
+}

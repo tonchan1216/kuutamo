@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+19.0 - Gravity Forms
+--------------------------------------------------------------*/
+.gform_wrapper {
+	.gfield_checkbox li input[type=checkbox],
+	.gfield_radio li input[type=radio],
+	.gfield_checkbox li input {
+		margin-left: 0.125em;
+	}		
+}
+
+.ui-datepicker a {
+	@include transition(0);
+}
+
+.gform_confirmation_wrapper {
+
+	.gform_confirmation_message {
+		background: $success-background-color;
+		border: 0.0625em solid $success-border-color !important;
+		border-right: none !important;
+		border-left: none !important; 
+		color: $success-text-color;
+		font-size: 1em !important;
+		line-height: 1.6875em;
+		padding: 1.2656em 0.8438em;			
+	}
+}
+
+#secondary .gform_confirmation_wrapper, #colophon .gform_confirmation_wrapper {
+
+	.gform_confirmation_message	{
+		font-size: 0.875em !important;
+	}	
+}	
