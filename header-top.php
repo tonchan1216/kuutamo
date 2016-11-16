@@ -13,7 +13,7 @@
 	<link href="<?php echo get_stylesheet_directory_uri();?>/css/bookblock.min.css" rel="stylesheet" type="text/css" />
 	<!-- custom style -->
 	<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
-	<link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo get_stylesheet_directory_uri();?>/css/common-style.css" rel="stylesheet" type="text/css" />
 	<?php if(!is_mobile()):?>
 		<link href="<?php echo get_stylesheet_directory_uri();?>/css/pc.min.css" rel="stylesheet" type="text/css" />
 	<?php else: ?>
