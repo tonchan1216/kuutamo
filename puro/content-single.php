@@ -7,7 +7,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() && siteorigin_setting('blog_post_featured_image') ) : ?>
+	<?php if ( has_post_thumbnail() && siteorigin_setting( 'blog_post_featured_image' ) ) : ?>
 		<div class="entry-thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>			
@@ -34,7 +34,7 @@
 	</div><!-- .entry-content -->
 	
 	<footer class="entry-footer">
-		<?php do_action('puro_entry_main_bottom') ?>
+		<?php do_action( 'puro_entry_main_bottom' ); ?>
 		<?php if ( siteorigin_setting( 'blog_edit_link' ) ) { edit_post_link( __( 'Edit', 'puro' ), '<span class="edit-link">', '</span>' ); } ?>
 	</footer><!-- .entry-footer -->		
 </article><!-- #post-## -->

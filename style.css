@@ -1,4 +1,44 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;margin:0;padding:0;}
-body{background:none;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-justify:inter-ideograph;-webkit-font-smoothing:antialiased;font-family:'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;}
-img{zoom:1;*zoom:1;zoom:1;max-width:100%;height:auto;border-style:none;max-width:100%;height:auto;}
-html{height:100%;background:url(images/bg.jpg) repeat;}
+/*
+Template:puro
+Theme Name:kuutamo
+Theme URI:http://kuutamo.tokyo/
+Description:puro の子テーマです
+Author:F.T
+Version:1.0
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: none;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-justify: inter-ideograph;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+
+img {
+	zoom: 1;
+	*zoom: 1;
+	zoom: 1;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+	background:url(images/bg.jpg) repeat;
+}
