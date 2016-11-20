@@ -9,8 +9,10 @@
 
 			<nav>
 				<ul>
-					<li><a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a></li>
-					<li><a href="https://www.facebook.com/kuutamogohan" title="Facebookページ">Facebook</a></li>
+					<li id="icon-blog"><a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a></li>
+					<li id="icon-fb"><a href="https://www.facebook.com/kuutamogohan" title="Facebookページ"></a></li>
+					<li id="icon-tw"><a href="https://twitter.com/kuutamo_gohan" title="Twitterページ"></a></li>
+					<li id="icon-insta"><a href="https://www.instagram.com/kuutamo_gohan/" title="Instagramページ"></a></li>
 				</ul>
 			</nav>
 		</header><!-- /header -->
