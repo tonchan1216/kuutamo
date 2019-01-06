@@ -7,13 +7,13 @@
 			<div class="menu-panel">
 				<h3>kuutamo</h3>
 				<ul id="menu-toc" class="menu-toc">
-					<li class="menu-toc-current"><a href="#item1"　title="コンセプト">Conept</a></li>
-					<li><a href="#item2"　title="メニュー">Menu</a></li>
-					<li><a href="#item3"　title="インフォメーション">Info</a></li>
-					<li><a href="#item4"　title="ギャラリー">Gallery</a></li>
-					<li><a href="#item5"　title="本の紹介">Book</a></li>
-					<li><a href="#item6"　title="アクセス">Acccess</a></li>
-					<li><a href="#item7"　title="ニュース">News</a></li>
+					<li class="menu-toc-current"><a href="#item1" title="コンセプト">Conept</a></li>
+					<li><a href="#item2" title="メニュー">Menu</a></li>
+					<li><a href="#item3" title="インフォメーション">Info</a></li>
+					<li><a href="#item4" title="ギャラリー">Gallery</a></li>
+					<li><a href="#item5" title="本の紹介">Book</a></li>
+					<li><a href="#item6" title="アクセス">Acccess</a></li>
+					<li><a href="#item7" title="ニュース">News</a></li>
 				</ul>
 				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
@@ -233,8 +233,8 @@
 			</div>
 
 			<nav>
-				<span id="bb-nav-prev"><i class="fa fa-arrow-left"　title="前へ"></i></span>
-				<span id="bb-nav-next"><i class="fa fa-arrow-right"　title="次へ"></i></span>
+				<span id="bb-nav-prev"><i class="fa fa-arrow-left" title="前へ"></i></span>
+				<span id="bb-nav-next"><i class="fa fa-arrow-right" title="次へ"></i></span>
 			</nav>
 
 			<span id="tblcontents" class="menu-button">kuutamo</span>

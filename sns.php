@@ -10,7 +10,7 @@
       </div>
     </a>
   </div>
-  
+
   <div class="cs-share-this-product twitter ">
     <a title="Share on Twitter" target="_blank" href="https://twitter.com/share?url=<?php echo wp_get_shortlink($p); ?>&text=<?php echo get_the_title();?>">
       <div class="social-share-icon-block">
@@ -19,7 +19,7 @@
       </div>
     </a>
   </div>
-  
+
   <div class="cs-share-this-product google-plus ">
     <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
@@ -28,7 +28,7 @@
       </div>
     </a>
   </div>
-  
+
   <div class="cs-share-this-product pocket ">
     <a title="Share on Pocket" target="_blank" href="http://getpocket.com/edit?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
@@ -37,7 +37,7 @@
       </div>
     </a>
   </div>
-    
+
   <div class="cs-share-this-product hatena ">
     <a title="Share via Email" href="http://b.hatena.ne.jp/add?url=<?php echo wp_get_shortlink($p); ?>">
       <div class="social-share-icon-block">
@@ -57,9 +57,9 @@
       <div class="count"></div>
     </a>
   </div>
-  
+
   <div class="clearfix"></div>
-  
+
 </div>
 
 <style>
@@ -158,7 +158,7 @@
     }
     .cs-share-this-product.hatena {
       background: #008FDE;
-    }    
+    }
     .cs-share-this-product.line {
       background: #00C300;
     }

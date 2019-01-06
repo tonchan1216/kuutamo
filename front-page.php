@@ -235,10 +235,10 @@
 						<div>
 							<h2>News &amp; Blog</h2>
 							<p>
-								<dl>			
-									<?php 
+								<dl>
+									<?php
 									$query_args = array(
-										'post_type' => array('post','event') 
+										'post_type' => array('post','event')
 										);
 									$the_query = new WP_Query($query_args);
 									if ( $the_query->have_posts() ) :	while ( $the_query->have_posts() ) : $the_query->the_post();?>
