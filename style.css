@@ -6,3 +6,19 @@ Description:puro の子テーマです
 Author:F.T
 Version:1.0
 */
+
+form.wpcf7-form {
+    font-size: 10px;
+}
+
+form.wpcf7-form .form_title {
+    font-size: 15px;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+div.wpcf7 {
+    border: 3px solid #F5A9F2;
+    padding: 3%;
+    background-color: #F8E0F7;
+}

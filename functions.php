@@ -109,3 +109,4 @@ function _tinyMCESettings($arr){
   return $arr;
 }
 add_filter('tiny_mce_before_init','_tinyMCESettings',1000);
+
