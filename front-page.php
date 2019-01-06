@@ -10,6 +10,7 @@
 			<nav>
 				<ul>
 					<li id="icon-blog"><a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a></li>
+					<li id="icon-blog"><a href="https://kuutamobg.thebase.in/" title="ショップサイト">Shop</a></li>
 					<li id="icon-fb"><a href="https://www.facebook.com/kuutamogohan" title="Facebookページ"></a></li>
 					<li id="icon-tw"><a href="https://twitter.com/kuutamo_gohan" title="Twitterページ"></a></li>
 					<li id="icon-insta"><a href="https://www.instagram.com/kuutamo_gohan/" title="Instagramページ"></a></li>
@@ -288,7 +289,7 @@
 
 			<nav class="page-nav">
 				<a class="fa fa-arrow-left fa-2x" href="#" id="bb-nav-prev" title="前へ"></a>
-				<a class="fa fa-arrow-right fa-2x" href="#" id="bb-nav-next"　title="次へ"></a>
+				<a class="fa fa-arrow-right fa-2x" href="#" id="bb-nav-next" title="次へ"></a>
 			</nav>
 		</div><!-- /bb-wrapper -->
 	</div><!-- /container -->

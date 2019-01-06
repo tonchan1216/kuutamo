@@ -17,6 +17,7 @@
 				</ul>
 				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
+					<a href="https://kuutamobg.thebase.in/" title="ショップサイト">Shop</a>
 					<a href="https://www.facebook.com/kuutamogohan" title="Facebookページ">Facebook</a>
 					<a href="https://twitter.com/kuutamo_gohan" title="Twitterページ">Twitter</a>
 					<a href="https://www.instagram.com/kuutamo_gohan/" title="Instagramページ">Instagram</a>
@@ -206,17 +207,17 @@
 							</div>
 						</div>
 					</div>
-				</div>					
+				</div>
 
 				<div class="bb-item" id="item7">
 					<div class="content">
 						<div class="scroller">
 							<h2>News & Blog</h2>
 							<div>
-								<dl id="news">			
-									<?php 
+								<dl id="news">
+									<?php
 									$query_args = array(
-										'post_type' => array('post','event') 
+										'post_type' => array('post','event')
 										);
 									$the_query = new WP_Query($query_args);
 									if ( $the_query->have_posts() ) :	while ( $the_query->have_posts() ) : $the_query->the_post();?>
