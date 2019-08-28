@@ -12,8 +12,7 @@
 					<li><a href="#item3" title="インフォメーション">Info</a></li>
 					<li><a href="#item4" title="ギャラリー">Gallery</a></li>
 					<li><a href="#item5" title="本の紹介">Book</a></li>
-					<li><a href="#item6" title="アクセス">Acccess</a></li>
-					<li><a href="#item7" title="ニュース">News</a></li>
+					<li><a href="#item6" title="ニュース">News</a></li>
 				</ul>
 				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
@@ -184,23 +183,6 @@
 								if ( has_post_thumbnail() ) {
 									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
 								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="bb-item" id="item6">
-					<div class="content">
-						<div class="scroller">
-							<h2>Access</h2>
-							<div>
-								<img id="map" src="<?php echo get_stylesheet_directory_uri();?>/images/map.jpg" alt="中村橋駅からのアクセスマップ">
-								<?php query_posts('post_type=book_contents&name=access'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
 								endwhile; endif;
 								wp_reset_query();
 								?>
