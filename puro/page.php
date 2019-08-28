@@ -1,3 +1,8 @@
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+	if ($post->post_parent == 14 | $post->post_parent == 39) {
+		include(TEMPLATEPATH .'/404.php');
+	} else { ?>
+
 <?php
 /**
  * The template for displaying all pages.
@@ -17,8 +22,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php
@@ -28,10 +31,12 @@ get_header(); ?>
 					endif;
 				?>
 
-			<?php endwhile; // end of the loop. ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+<?php }
+	endwhile; endif;
+	wp_reset_query();
+?>

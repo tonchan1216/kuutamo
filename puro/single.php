@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * The Template for displaying all single posts.
  *
  * @package puro
  * @since puro 1.0
@@ -16,11 +14,11 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'content', get_post_format() ); ?>
 
-			<?php if ( siteorigin_setting('navigation_post_nav') ) the_post_navigation(); ?>
+			<?php get_template_part('sns'); ?>
 
-			<?php if ( siteorigin_setting( 'blog_post_author_box' ) ) puro_author_box(); ?>			
+			<?php if( siteorigin_setting('navigation_post_nav') ) the_post_navigation(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
