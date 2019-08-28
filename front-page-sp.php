@@ -7,12 +7,11 @@
 			<div class="menu-panel">
 				<h3>kuutamo</h3>
 				<ul id="menu-toc" class="menu-toc">
-					<li class="menu-toc-current"><a href="#item1" title="コンセプト">Conept</a></li>
-					<li><a href="#item2" title="メニュー">Menu</a></li>
-					<li><a href="#item3" title="インフォメーション">Info</a></li>
-					<li><a href="#item4" title="ギャラリー">Gallery</a></li>
-					<li><a href="#item5" title="本の紹介">Book</a></li>
-					<li><a href="#item6" title="ニュース">News</a></li>
+					<li class="menu-toc-current"><a href="#item1" title="I">I</a></li>
+					<li><a href="#item2" title="II">II</a></li>
+					<li><a href="#item3" title="III">III</a></li>
+					<li><a href="#item4" title="IV">IV</a></li>
+					<li><a href="#item5" title="ニュース">News</a></li>
 				</ul>
 				<div class="menu-link">
 					<a href="<?php echo home_url('/blog/');?>" title="ブログトップ | kuutamo">Blog</a>
@@ -31,7 +30,7 @@
 						<div class="scroller">
 							<h2>Hello kuutamo</h2>
 							<div>
-								<?php query_posts('post_type=book_contents&name=concept'); ?>
+								<?php query_posts('post_type=book_contents&name=1-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -45,9 +44,9 @@
 				<div class="bb-item" id="item2">
 					<div class="content">
 						<div class="scroller">
-							<h2>Menu</h2>
+							<h2>II</h2>
 							<div>
-								<?php query_posts('post_type=book_contents&name=menu1'); ?>
+								<?php query_posts('post_type=book_contents&name=2-1'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								endwhile; endif;
@@ -56,59 +55,7 @@
 							</div>
 
 							<div>
-								<?php query_posts('post_type=book_contents&name=menu2'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<h3>Soft Drink</h3>
-								<?php query_posts('post_type=book_contents&name=menu5'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<h3>Alcohol</h3>
-								<?php query_posts('post_type=book_contents&name=menu6'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<h3>Food</h3>
-								<?php query_posts('post_type=book_contents&name=menu7'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<h3>Sweets</h3>
-								<?php query_posts('post_type=book_contents&name=menu8'); ?>
+								<?php query_posts('post_type=book_contents&name=2-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -125,9 +72,21 @@
 				<div class="bb-item" id="item3">
 					<div class="content">
 						<div class="scroller">
-							<h2>Infomation</h2>
+							<h2>III</h2>
 							<div>
-								<?php query_posts('post_type=book_contents&name=information'); ?>
+								<?php query_posts('post_type=book_contents&name=3-1'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<?php query_posts('post_type=book_contents&name=3-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -144,9 +103,21 @@
 				<div class="bb-item" id="item4">
 					<div class="content">
 						<div class="scroller">
-							<h2>Gallery</h2>
+							<h2>IV</h2>
 							<div>
-								<?php query_posts('post_type=book_contents&name=gallary'); ?>
+								<?php query_posts('post_type=book_contents&name=4-1'); ?>
+								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+								the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
+								}
+								endwhile; endif;
+								wp_reset_query();
+								?>
+							</div>
+
+							<div>
+								<?php query_posts('post_type=book_contents&name=4-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -161,37 +132,6 @@
 				</div>
 
 				<div class="bb-item" id="item5">
-					<div class="content">
-						<div class="scroller">
-							<h2>Book</h2>
-							<div>
-								<?php query_posts('post_type=book_contents&name=book1'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-
-							<div>
-								<?php query_posts('post_type=book_contents&name=book2'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-								}
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="bb-item" id="item7">
 					<div class="content">
 						<div class="scroller">
 							<h2>News & Blog</h2>
