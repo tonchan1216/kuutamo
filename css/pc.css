@@ -206,39 +206,39 @@
 	height: 130px;
 }
 
-.nav-concept{
+.nav-I{
 	right:300px;
 	background-color: #E3CFB6;
 }
 
-.bb-side .nav-concept{
+.bb-side .nav-I{
 	right:290px;
 }
 
-.nav-menu{
+.nav-II{
 	right:250px;
 	background-color: #5D9F95;
 }
 
-.bb-side .nav-menu{
+.bb-side .nav-II{
 	right:240px;
 }
 
-.nav-info{
+.nav-III{
 	right: 200px;
 	background-color: #E3CFB6;
 }
 
-.bb-side .nav-info{
+.bb-side .nav-III{
 	right:190px;
 }
 
-.nav-book{
+.nav-IV{
 	right: 150px;
 	background-color: #5D9F95;
 }
 
-.bb-side .nav-book{
+.bb-side .nav-IV{
 	right:140px;
 }
 

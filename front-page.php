@@ -31,9 +31,9 @@
 					</div>
 
 					<div class="bb-side page-layout-1">
-						<p class="nav nav-concept"></p>
+						<p class="nav nav-I"></p>
 						<div>
-							<?php query_posts('post_type=book_contents&name=concept'); ?>
+							<?php query_posts('post_type=book_contents&name=1-2'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
 							endwhile; endif;
@@ -44,10 +44,10 @@
 				</div>
 
 				<div class="bb-item" id="page-menu">
-					<div class="bb-side page-layout-2">
+					<div class="bb-side page-layout-1">
 						<div>
-							<h2>Menu</h2>
-							<?php query_posts('post_type=book_contents&name=menu1'); ?>
+							<h2>II</h2>
+							<?php query_posts('post_type=book_contents&name=2-1'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
 							endwhile; endif;
@@ -57,74 +57,9 @@
 					</div>
 
 					<div class="bb-side page-layout-1">
-						<p class="nav nav-menu"></p>
+						<p class="nav nav-II"></p>
 						<div>
-							<?php query_posts('post_type=book_contents&name=menu2'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-							}
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-				</div>
-
-				<div class="bb-item">
-					<div class="bb-side page-layout-2">
-						<div>
-							<h2>Soft Drink</h2>
-							<?php query_posts('post_type=book_contents&name=menu5'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-							}
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-
-					<div class="bb-side page-layout-2">
-						<div>
-							<h2>Alcohol</h2>
-							<?php query_posts('post_type=book_contents&name=menu6'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-							}
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="bb-item">
-					<div class="bb-side page-layout-2">
-						<div>
-							<h2>Food</h2>
-							<?php query_posts('post_type=book_contents&name=menu7'); ?>
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'thumbnail', 'class=eyecatchimg' );
-							}
-							endwhile; endif;
-							wp_reset_query();
-							?>
-						</div>
-					</div>
-
-					<div class="bb-side page-layout-2">
-						<div>
-							<h2>Sweets</h2>
-							<?php query_posts('post_type=book_contents&name=menu8'); ?>
+							<?php query_posts('post_type=book_contents&name=2-2'); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 							the_content();
 							if ( has_post_thumbnail() ) {
@@ -140,9 +75,9 @@
 				<div class="bb-item" id="page-map">
 					<div class="bb-side page-layout-1">
 						<div>
-							<h2>Infomation</h2>
+							<h2>III</h2>
 							<p>
-								<?php query_posts('post_type=book_contents&name=information'); ?>
+								<?php query_posts('post_type=book_contents&name=3-1'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -156,11 +91,10 @@
 					</div>
 
 					<div class="bb-side page-layout-1">
-						<p class="nav nav-info"></p>
+						<p class="nav nav-III"></p>
 						<div>
-							<h2>Gallary</h2>
 							<p>
-								<?php query_posts('post_type=book_contents&name=gallary'); ?>
+								<?php query_posts('post_type=book_contents&name=3-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -177,9 +111,9 @@
 				<div class="bb-item">
 					<div class="bb-side page-layout-1">
 						<div>
-							<h2>Book</h2>
+							<h2>IV</h2>
 							<p>
-								<?php query_posts('post_type=book_contents&name=book1'); ?>
+								<?php query_posts('post_type=book_contents&name=4-1'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -193,10 +127,10 @@
 					</div>
 
 					<div class="bb-side page-layout-1">
-						<p class="nav nav-book"></p>
+						<p class="nav nav-IV"></p>
 						<div>
 							<p>
-								<?php query_posts('post_type=book_contents&name=book2'); ?>
+								<?php query_posts('post_type=book_contents&name=4-2'); ?>
 								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 								the_content();
 								if ( has_post_thumbnail() ) {
@@ -240,20 +174,20 @@
 
 			<nav id="head-nav">
 				<ul>
-					<li class="nav-concept active">
-						<a href="#" title="カフェのコンセプト"><span>C</span>oncept</a>
+					<li class="nav-I active">
+						<a href="#" title="カフェのコンセプト"><span>I</span></a>
 					</li>
 
-					<li class="nav-menu">
-						<a href="#" title="メニュー"><span>M</span>enu</a>
+					<li class="nav-II">
+						<a href="#" title="メニュー"><span>II</span></a>
 					</li>
 
-					<li class="nav-info">
-						<a href="#" title="インフォメーション"><span>G</span>llery</a>
+					<li class="nav-III">
+						<a href="#" title="インフォメーション"><span>III</span></a>
 					</li>
 
-					<li class="nav-book">
-						<a href="#" title="本の紹介"><span>B</span>ook</a>
+					<li class="nav-IV">
+						<a href="#" title="本の紹介"><span>IV</span></a>
 					</li>
 
 					<li class="nav-news">
