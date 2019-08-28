@@ -242,22 +242,13 @@
 	right:140px;
 }
 
-.nav-access{
+.nav-news{
 	right:100px;
 	background-color: #E3CFB6;
 }
 
-.bb-side .nav-access{
-	right:90px;
-}
-
-.nav-news{
-	right:50px;
-	background-color: #5D9F95;
-}
-
 .bb-side .nav-news{
-	right:40px;
+	right:90px;
 }
 
 /*page navigation*/

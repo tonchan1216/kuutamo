@@ -210,27 +210,6 @@
 					</div>
 				</div>
 
-				<div class="bb-item" id="page-access">
-					<div class="bb-side page-layout-1">
-						<div>
-							<h2>Access</h2>
-							<p>
-								<?php query_posts('post_type=book_contents&name=access'); ?>
-								<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-								the_content();
-								endwhile; endif;
-								wp_reset_query();
-								?>
-							</p>
-						</div>
-					</div>
-
-					<div class="bb-side page-layout-1">
-						<p class="nav nav-access"></p>
-						<img id="map" src="<?php echo get_stylesheet_directory_uri();?>/images/map.jpg" alt="中村橋駅からのアクセスマップ">
-					</div>
-				</div>
-
 				<div class="bb-item" id="page-news">
 					<div class="bb-side page-layout-1">
 						<div>
@@ -275,10 +254,6 @@
 
 					<li class="nav-book">
 						<a href="#" title="本の紹介"><span>B</span>ook</a>
-					</li>
-
-					<li class="nav-access">
-						<a href="#" title="お店までのアクセス"><span>A</span>ccess</a>
 					</li>
 
 					<li class="nav-news">
