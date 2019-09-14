@@ -4,7 +4,7 @@
 	<div class="container">
 		<header id="header">
 			<h1>
-				<a href="<?php echo home_url();?>" title="中村橋のカフェkuutamo"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo | 中村橋のデリカフェ"></a>
+				<a href="<?php echo home_url();?>" title="kuutamo"><img class="logo" src="<?php echo get_stylesheet_directory_uri();?>/images/kuutamo_logo1.png" alt="kuutamo"></a>
 			</h1>
 
 			<nav>
@@ -26,7 +26,7 @@
 						<div>
 							<h2>Hello kuutamo</h2>
 
-							<img  class="rabbit" src="<?php echo get_stylesheet_directory_uri();?>/images/rabbit1.png" alt="kuutamo rabbit">
+							<img  class="rabbit" src="<?php echo get_stylesheet_directory_uri();?>/images/bookshelf.png" alt="kuutamo rabbit">
 						</div>
 					</div>
 
